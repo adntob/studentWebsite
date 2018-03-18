@@ -1,0 +1,189 @@
+
+ <!-- ctrl + f5 vil refreshe CSS-ark også-->
+<!DOCTYPE html>
+	<html>
+
+		<head>
+			<meta charset="utf-8" />  <!--Dette er for å få til skandinaviske språk -->
+			<title> Her skal det stå en tittel</title>
+			<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+			<style>
+				*{
+					font-family: 'Roboto', sans-serif;
+				}
+				#lerret{
+					border:solid;
+				}
+			</style>
+			
+			//<script src ="script.js"></script>
+			
+			<script>
+			
+				var idag;
+			
+				var pynt = []; 
+				
+				var flyInfo = [];
+			
+				var ctx;
+				var height;
+				var width;
+				
+				var xmlhttp;
+				
+				
+				var fil;
+				var  flyplassXML;
+				var avgang;
+				var ankomst;
+				window.onload = run;
+				
+				function run() {
+					ctx = document.getElementById("lerret").getContext("2d");
+					width = 800;
+					height = 800;
+					idag = new Date();
+					pynt = ["Flight", "dest.","time", "a/d"];
+		
+					fil = "avinor.proxy.php" + "?id=" + Math.random();	
+					//fil = "copy.xml" + "?id=" + Math.random;
+					xmlhttp = new XMLHttpRequest();
+					xmlhttp.onreadystatechange = forandringsstatus;
+					xmlhttp.open("GET", fil, "TRUE");
+					xmlhttp.send();
+					
+				}
+				
+				// Importer data
+				
+				function forandringsstatus() {
+				
+					if (xmlhttp.readyState === 4 && xmlhttp.status === 200){
+								
+						flyplassXML = xmlhttp.responseXML;
+						
+						
+						var flight = flyplassXML.getElementsByTagName("flight");
+						
+						for (var i = 0; i<flight.length; i++){
+							var tid = new Date(flyplassXML.getElementsByTagName("flights")[0].
+									getElementsByTagName("flight")[i].getElementsByTagName("schedule_time")[0].childNodes[0].nodeValue);
+							var minutter = tid.getMinutes();
+							minutt = formaterTid(minutter);
+							var timer =tid.getHours();
+							timer = formaterTid(timer);
+									
+							
+							
+							//flightid,airport,scheduleTime, arrDep
+							flyInfo.push(new Array(
+								flyplassXML.getElementsByTagName("flight_id")[i].childNodes[0].nodeValue,
+							
+								flyplassXML.getElementsByTagName("airport")[i].childNodes[0].nodeValue,
+							
+								formaterTid(timer) + ":" + formaterTid(minutter),
+
+								flyplassXML.getElementsByTagName("arr_dep")[i].childNodes[0].nodeValue
+							
+								))	;
+							
+								//status [i] = flyplassXML.getElementsByTagName("status code")[i].childNodes[0].nodeValue;
+								//domestic/s
+								//dep/arrival
+							
+						}
+						tavle()		
+					}
+				}
+				// Tegnemodul				
+				
+				//blå border (2*text (som er på en viss høyde + 0-pkt), ifra 0 til xf i x-retning) Ord må være på en fixed avstand ifra hverandre
+				
+
+
+				
+				function tavle() {
+					
+												//Avsluttes 7 tegn inn (1e gang), 5 tegn inn (2e gang), (12 tegn inn andre gang) (70 tegn inn 4e gang)
+					
+					drawRectangle(ctx, "blue", 0,0, width, 200);
+					drawRectangle(ctx, "#383838", 0, 200, width, height);
+					
+					ctx.font = "30px Roboto";
+					clock();
+					
+					/* p
+					
+					ctx.beginPath();
+					ctx.fillStyle = 
+					ctx.rect(4*width/5, 50, )
+					*/
+					//<i class="fa fa-plane" aria-hidden="true"></i>
+					
+					for (var i= 0; i<pynt.length; i++){
+						ctx.font = "30px Roboto";
+						tegnOrd(ctx, pynt[i], (	(i+1)/5)*width,	160, "yellow");
+					}
+				
+					for (var j = 0; j<flyInfo.length; j++){									//Tavlen deles i et rutenett på 5 kolonner bortover, og 9 rekker ned
+					
+						for	(	var k = 0; k<4; k++	){
+							//tegnOrd(ctx, "Test", ((k+1)/5)*width, 266 + j*66, "orange");
+							tegnOrd(ctx, flyInfo[j][k], ((k+1)/5)*width, 266 + j*66, "orange"); //Den gjenstående resten (600) delt på 9 blir omtrentlig 66 
+						}
+					}
+				
+				}
+				
+				
+				function tegnOrd(kontekst, ord, posisjonX, posisjonY, farge, ){
+				
+					kontekst.beginPath();
+					kontekst.fillStyle = farge;
+					kontekst.fillText(ord, posisjonX, posisjonY)
+					kontekst.fill();
+				}
+				
+		
+				function drawRectangle(kontekst, color, positionX, positionY, bredde, hoyde) {
+						kontekst.beginPath();
+						kontekst.fillStyle = color;
+						kontekst.rect(positionX, positionY, bredde, hoyde);
+						kontekst.fill()
+				}	
+			
+				function clock() {
+					drawRectangle(ctx, "#383838", 3*width/5 , 50, 200,75)		//ca 30/40px i bredde på hvert tegn
+					tegnOrd(ctx, formaterTid(idag.getHours()) + ":" + formaterTid(idag.getMinutes()), 3*width/5 + 75, 100	, "yellow") //480 + 100 (midtpunkt rektangel)
+				}
+				
+				function formaterTid(tidsparameter){						// For å få et ryddigere og mer lettleselig format med 0 foran tall på timer/minutter
+					if (tidsparameter.toString().length===1){
+						tidsparameter = "0"+tidsparameter;
+						return tidsparameter
+					}
+					else {
+						return tidsparameter;
+					}
+				}
+				
+			
+			</script>
+			
+		</head>
+
+		<body id ="body">
+			
+			<h1>Obligatorisk innlevering 5 - oppgave 4</h1>
+			
+			<h2>Bruk av eksterne data</h2>
+			
+			<canvas id = "lerret" width = "800px" height="800px"></canvas>
+			
+			<a href ="../obligatorisk5aogb.html">
+				Tilbake!
+			</a>
+		</body>
+
+	</html>

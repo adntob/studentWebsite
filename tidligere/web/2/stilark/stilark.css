@@ -1,0 +1,350 @@
+﻿/*Forhindrer at browseren ødelegger */
+
+@import url('normalize.css');
+body *{
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;  		
+	}
+
+body {
+	margin:0;
+	background-color:#FFFAF0;  /*background-color:#FFFAF0;*/
+}	
+	
+header, main, footer, nav, article, aside, div {
+	display: block;
+	overflow: hidden;
+	
+}
+
+/*Struktur */
+
+#wrapper{
+	margin: 0 auto;  /*Sett margen til å være 0 oppe og nede, automatisk på sidene */
+	width: 100%;
+	max-width: 800px;
+	background-color:#FFFAF0;
+}
+
+h1, h2, h3 {
+	font-family: 'Roboto Condensed', sans-serif;
+	
+}
+
+p, a, li, p, th, td, details  {
+	
+	font-family: 'Oswald', sans-serif;
+}
+
+article p{
+	text-align:justify;
+}
+
+
+th,td {
+	
+	padding:10px;
+}
+
+
+#breadCrumbs a {
+	text-decoration:none;
+	font-size:16px;
+	color:black;
+	
+}
+
+
+#currentSite {
+	font-weight: bold;
+	font-size: 16px;
+	
+}
+
+
+/*HEADER*/
+
+header h1 a {
+	text-decoration:none;
+	color:white;
+	font-family: 'Roboto Condensed', sans-serif;
+	
+}
+
+header {
+	background-color:#FFA500;
+	color:white;
+	text-shadow:2px 2px #341C09;
+	width:100%;	
+}
+
+/*imgHEADER*/
+
+
+
+
+#imgHeader{			/*PARALLAXE EFFEKT */
+	margin-top: 20px;
+	background-image: url('bakgrunnsbilder/ilya-pavlov-87438.jpg');
+	background-color:#FFFAF0;
+	background-size: cover;
+	min-height:500px;  /*Høyden er basert på forholdet mellom img-header og boksene under. Dette skal være lik phi*/
+	background-position:center;
+	background-attachment:fixed;
+	background-repeat: no-repeat;
+	height: 300px;
+	width:800px;	
+	padding: 25px;
+}
+
+#imgHeader {
+	color:yellow;
+	
+}
+
+#imgHeader p {
+	font-size: 20px;
+	
+	
+}
+
+#imgHeader ul li:first-child{
+	text-decoration: line-through;
+	
+}
+
+/* bokser*/
+
+
+
+main div{
+	margin-top:50px;
+	width: 30%;
+	margin-left:15px;
+	height: 300px;
+	display:inline-block;
+	flex:auto;
+	background-color:#FFEBDC;		/*background-color:#FFEBDC;*/
+		
+	}
+
+main div h2{
+	text-align:center;
+	
+}	
+	
+main div p {
+	padding:0 20px;
+	font-size: 18px;
+}	
+	
+
+
+/*Artikkel og artikkelsider*/
+article{
+	width:60%;
+	float:right;
+}	
+#sideNav {
+	margin-top:10px;
+	width:20%;
+	position:fixed;
+	max-width:280px; /*Forhindrer menyen fra å krympe/øke */
+	background-color:#FFEBDC;
+	
+}
+/*Git & GitHub-artikler*/
+
+#gitlogo{
+	width:33%;
+	float:right;
+	margin-top:10px
+	
+}
+
+#gitkraken{
+	width:90%;
+	float:right;
+	margin:15px;
+	
+}
+
+#githubpic{
+	width:90%;
+	float:right;
+	margin:15px;
+}
+
+#gitstaged{
+	width:40%;
+	margin:15px;
+	
+}
+
+#githubstaged{
+	width:40%;
+	margin:15px;
+	
+}
+
+#githubcommit{
+	width:40%;
+	margin:15px;
+}
+
+#githubcommited{
+	width:90%;
+	margin:15px;
+	
+}
+
+#githubpushed{
+	width:90%;
+	margin:15px;
+	
+}
+
+aside img {
+	width:70%;
+	margin: 70px 0;
+	margin-left:50px;
+	
+}
+
+
+/*About-artikkel*/
+
+.fibonacci {
+	margin:15px;
+	width:40%;
+	float:right;
+	border: 1px solid black;
+	border-radius: 4px;
+}
+
+.fibonacci:hover{
+	box-shadow:0 0 2px 1px rgba(0, 140, 186, 0.5);
+	
+}
+
+.templates{
+	margin:15px;
+	width: 30%;
+	border: 1px solid black;
+	border-radius: 4px;
+}
+
+img:hover {
+	box-shadow:0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+table, th, td {
+	padding:5px
+	
+}
+
+
+table tr:nth-child(even) {
+	
+	background-color:#FFEBDC;
+}
+
+/*MathML -artikkel*/
+.vecPics{
+	width:50%;
+	height:50%;
+}
+
+
+
+/* NAVIGATION MENU COMPUTER*/ 
+#navigationMenu ul a {
+	text-decoration:none;
+	color: #341C09;
+	padding:0 13px;  /* Padding i dette tilfellet utfÃ¸res for Ã¥ spre lenkene ifra hverandre */
+	margin:0 75px;
+	font-size:16px;
+	float: left;
+	
+}
+
+#navigationMenu ul {
+	list-style: none;
+	
+	
+}
+
+#navigationMenu ul a:hover{	
+	border-bottom:solid #341C09;
+	
+}
+#active {
+	
+	border-bottom: solid #341C09;
+}
+/*DETAILS/SUMMARY-table*/
+details{	
+	margin:	20px 0px;
+	text-align:center;
+}
+
+
+
+details table th{
+	
+	padding:10px;
+}
+/*NAVIGATION MENU MOBILE*/
+/*Denne siden ble designet med utgangspunkt for datamaskin og så tilpasset mobil, dette er ikke best-practice.*/
+
+@media screen and (max-width: 800px) { 
+	#navigationMenu {
+		display:none;
+		
+	}
+
+}
+	
+
+/*Footer STUFF */
+footer{
+	text-decoration:none;
+	background-color: #9D4502;
+	text-align:center;
+	width: 800px;
+	color: #FFEBDC;	
+	position:absolute;
+}
+
+footer p a {
+	text-decoration:none;
+	padding:5px;
+	color:#FFEBDC;	
+	
+}
+footer a:hover{
+	
+	color:gray;
+}
+
+footer a:visited{
+	color:yellow;
+}
+
+footer a:visited:hover{
+	color:gray;
+	
+}
+
+a:active {
+	color:red;
+	
+}
+
+#contact a{
+	padding:0 5px;
+	border-left:solid #FFEBDC;
+	
+}

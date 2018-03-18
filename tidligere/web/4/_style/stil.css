@@ -1,0 +1,354 @@
+@import url("normalize.css");
+/*
+=============================================================================================
+	Variables
+=============================================================================================
+*/
+/*
+=============================================================================================
+		Structure
+=============================================================================================		
+*/
+html {
+  font-size: calc(1em + 1vw);
+}
+
+body {
+  margin: 0 auto;
+  background-color: #e6dbc9;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Jura", sans-serif;
+  font-weight: lighter;
+}
+
+p, li {
+  font-family: "EB Garamond", serif;
+}
+
+/*
+=============================================================================================	
+	Navigation-menu	& Bread-crumbs
+=============================================================================================	
+*/
+#bread-crumbs {
+  grid-area: bread-crumbs;
+}
+
+#bread-crumbs ul {
+  list-style: none;
+}
+
+#bread-crumbs ul li {
+  display: inline;
+  font-size: 18px;
+}
+
+#bread-crumbs ul li + li:before {
+  padding: 8px;
+  content: ">";
+}
+
+#bread-crumbs ul li:last-child {
+  font-weight: bold;
+}
+
+#bread-crumbs ul li a {
+  color: darkBlue;
+}
+
+#bread-crumbs ul li a:hover {
+  color: red;
+}
+
+#mobile-menu {
+  display: none;
+}
+
+#navigation-menu-computer {
+  grid-area: navigation-menu;
+  background-color: #c53211;
+}
+
+#navigation-menu-computer nav ul {
+  margin-left: auto;
+}
+
+#navigation-menu-computer li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+#navigation-menu-computer li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+#navigation-menu-computer li a:active {
+  opacity: 0.5;
+}
+
+#navigation-menu-computer li a:visited {
+  color: yellow;
+}
+
+#navigation-menu-computer li a:hover {
+  border-bottom: solid white;
+}
+
+#activeSite {
+  border-bottom: solid white;
+}
+
+/*
+=============================================================================================
+	Grid
+=============================================================================================
+*/
+#master-grid {
+  display: grid;
+  grid-template-rows: 70px auto 700px auto 250px;
+  /*grid-gap:10px; */
+  grid-template-areas: "bread-crumbs" "navigation-menu" "header" "main-content" "footer";
+}
+
+#master-grid main {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/*
+=============================================================================================
+	Flex-box front page
+=============================================================================================
+*/
+main {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+main article {
+  border-style: solid;
+  border-radius: 5px;
+  width: 40%;
+  border-color: #e6dbc9;
+  margin: 10px;
+  overflow: hidden;
+  width: 45%;
+}
+
+main article p {
+  padding: 15px;
+}
+
+main article .button {
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #608CA9;
+  color: yellow;
+}
+
+main article .button:hover {
+  opacity: 0.9;
+  color: yellow;
+}
+
+/* 
+=============================================================================================
+	Article pages
+=============================================================================================
+*/
+main aside {
+  width: 25%;
+  overflow: auto;
+  flex: 1 1 auto;
+  background-color: #608CA9;
+}
+
+main aside ul li {
+  padding: 10px;
+}
+
+main aside ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+main aside ul li a:hover {
+  color: yellow;
+}
+
+main #article-article {
+  width: 70%;
+}
+
+main #article-article img {
+  display: block;
+  border: solid #e6dbc9;
+  margin: auto 10px;
+  border-radius: 10px;
+  width: 50%;
+}
+
+main #article-article img:hover {
+  opacity: 0.8;
+}
+
+/*
+=============================================================================================
+	IMG-header
+=============================================================================================
+*/
+#mainHeader {
+  background-image: url("ghost.png");
+  /*Taken from Unsplash.com, artist Rosie Fraser, modded by me, using the free software GIMP*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  grid-area: header;
+  color: yellow;
+  text-align: center;
+}
+
+#mainHeader a {
+  border-style: solid;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+}
+
+#mainHeader a:hover {
+  background-color: white;
+  color: black;
+  border-color: white;
+}
+
+h1 {
+  font-size: 60px;
+  text-shadow: 2px 2px black;
+}
+
+/*
+=============================================================================================
+	Footer
+=============================================================================================
+*/
+footer {
+  background-color: #2e3830;
+  color: white;
+  grid-area: footer;
+  text-align: center;
+}
+
+footer a {
+  opacity: 0.5;
+  color: yellow;
+}
+
+footer a:hover {
+  opacity: 1.0;
+}
+
+main {
+  grid-area: main-content;
+  background-color: #FEF6E2;
+}
+
+/*
+=============================================================================================
+	Mobile menu 
+=============================================================================================
+*/
+@media all and (max-width: 800px) {
+  #navigation-menu-computer {
+    display: none;
+  }
+  #mobile-menu {
+    grid-area: mobile-menu;
+    display: inline-block;
+  }
+  #mobile-menu ul {
+    list-style-type: none;
+  }
+  #mobile-menu ul li {
+    border-bottom: solid;
+    background-color: #2e3830;
+    text-align: center;
+    padding: 30px;
+  }
+  #mobile-menu ul li:hover {
+    background-color: #c53211;
+  }
+  #mobile-menu ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+  }
+  #drop-down-list {
+    margin-left: -50px;
+    display: none;
+  }
+  /*
+=============================================================================================
+	Flexbox & grid
+=============================================================================================
+*/
+  #master-grid {
+    grid-template-rows: auto auto auto auto 200px;
+    grid-template-areas: "bread-crumbs" "header" "mobile-menu" "main-content" "footer";
+  }
+  main aside {
+    width: 100%;
+  }
+  main #article-article {
+    width: 100%;
+  }
+  main .articleIndex {
+    width: 100%;
+  }
+  /* 
+=============================================================================================
+	IMG-header
+=============================================================================================
+
+*/
+  #mainHeader {
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /*
+=============================================================================================
+	Font-sizing 
+=============================================================================================
+*/
+  html {
+    font-size: calc(1em + 1vw);
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,155 @@
+﻿@import url('normalize.css');
+
+
+/* box-sizing fix */
+
+body * {
+	
+	-webkit-box-sizing; border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;  						/*Bruker da display-overflow og display block som standard for alle semantiske artikler */
+	
+}
+
+header, main, footer, nav, article, aside, div { //* Strukturelement for alle HTML5-dokument *//
+	display: block;
+	overflow: hidden;
+	
+}
+
+
+/* GENERELT */
+
+h1, h2, h3, h4, h5{
+	font-family: 'Roboto', sans-serif; /*Legg til en google tekst for alle overskrifter. Legg merke til at lenken ikke ligger her, den ligger i "head" på alle respektive dokumenter */
+	text-align:center;
+	
+}
+
+
+h2 {
+	padding-bottom: 10px;
+	
+}
+
+p{
+	font-family: 'Droid Sans', sans-serif; /*Både droid og robot brukes, underbevisstheten liker visst roboter. Selve lenken til  */
+	line-height: 20px;
+	font-size: 16px;
+	padding:15px;
+	
+}
+
+li{
+	font-family: 'Droid Sans', sans-serif;
+	
+}
+
+
+//*KNAPPER *//
+
+.knapp:hover {
+	background-color:gray;
+	
+}
+
+.knapp:active {
+	
+	color:red;
+	
+}
+
+.knapp{
+	font-size: 16px;
+	text-align:center;
+	padding: 1px; 
+	text-decoration: none;
+	display:block;
+	height:25px;
+	color: white;
+	background-color:blue;
+	width: 100px;
+	border-style: solid;
+	
+	
+}
+
+
+
+/*MAIN */
+
+
+#mainContainer{
+	
+	margin: 0 auto;
+	width: 800px;
+	border-style: solid;
+}
+
+/*MAIN MENU*/
+
+main h1 {
+	padding-right: 20px;
+	text-align: center;
+	
+}
+
+nav {
+	background-color: blue;
+	
+}
+
+nav ul li a {
+	width: 10px;
+	margin-right:20px;
+	color: white;
+	line-height: 44px;
+	padding-left: 30px;
+	
+	
+}
+
+nav ul li a:hover {
+	background-color: green;
+}
+
+nav ul li {
+	float: left;
+	padding-right:5px;
+	list-style: none;
+	background-color: blue;
+}
+
+
+nav ul li a{
+	text-decoration: none;
+	line-height:10px;
+}
+
+
+
+/*STILSETTING BILDER */
+
+article img{
+	float: right;
+	width:50%; 
+	padding: 15px;
+	position: relative;
+}
+
+article img:hover {  /*For vanskelig å se detaljer, vil det være en fordel å kunne zoome ved hover */
+	width: 90%;
+	
+}
+
+
+#mellomrom {
+	margin-top:100px;
+	
+}
+
+footer {
+	background-color:gray;
+	text-align:center;
+	
+}

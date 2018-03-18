@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+	<html lang = "nb">
+		<head>	
+			<title>Videre tilpasning av tema!</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta charset="utf-8"/>
+			<script src="scripts/myscript.js"></script>  <!--Eksternt JavaScript for mobilmeny -->
+			<link rel="stylesheet" type= "text/css" media =	"all" href="_style/stil.css"> 
+			<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">	
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+			<meta name	= "description" content="Dette er webinnleveringsnettstedet for oblig 4 webutvikling Ådne Tob. Dette omhandler installasjonen av WAMP og Wordpress." />
+		
+		</head>
+		
+		<body>
+
+		
+			<div id ="master-grid">
+			
+			<!--Navigation menu-computer -->
+				
+				<nav id ="bread-crumbs">
+					<ul>
+						<li><a href = "index.html">Hjem!</a></li>
+						<li>Installasjon</li>
+					</ul>
+				
+				</nav> 
+				
+				
+				
+				<nav id ="navigation-menu-computer">
+					<ul>
+						<li>
+							<a href ="index.html">                       <i class="fa fa-home" aria-hidden="true">&nbsp; </i>  Hjem! </a>
+						</li> 					
+						<li><a href = "installasjon-av-wordpress-og-wamp.html">Installasjon av wamp og wordpress</a></li>
+						<li><a href = "tema-og-tilpasning.html">Temaer og tilpasning av disse</a></li>
+						<li><a href = "widgets-utvidelser.html">Widgets og utvidelser</a></li>
+						<li><a href = "innlegg-og-sider.html">Innlegg og sider</a></li>
+						<li><a id = "activeSite" href ="dynamiske-og-statiske-sider.html">Statiske forsider i wordpress</a></li>
+						<li><a href ="_sass/stil.scss">SCSS-fil</a></li>
+					</ul>
+
+				</nav>
+				
+				<!-- Mobile-menu -->
+				
+				<nav id ="mobile-menu">
+				
+				<i id ="barButton" class="fa fa-bars fa-2x"  aria-hidden="true"></i>
+				<ul	id ="drop-down-list">
+							<li>
+								<a href ="index.html">                       <i class="fa fa-home" aria-hidden="true">&nbsp; </i>  Hjem! </a>
+							</li> 
+						<li><a href = "installasjon-av-wordpress-og-wamp.html">Installasjon av wamp og wordpress</a></li>
+						<li><a href = "tema-og-tilpasning.html">Temaer og tilpasning av disse</a></li>
+						<li><a href = "widgets-utvidelser.html">Widgets og utvidelser</a></li>
+						<li><a href = "innlegg-og-sider.html">Innlegg og sider</a></li>
+						<li><a href ="dynamiske-og-statiske-sider.html">Statiske forsider i wordpress</a></li>
+						<li><a href ="_sass/stil.scss">SCSS-fil</a></li>
+					</ul>					
+				</nav>
+	
+				<header id = "mainHeader"><h1>	Ådnenes Makt  </h1>
+					<aside>
+						<p>
+							<a href = "#flexWrapperIndex">Hopp til hovedinnhold</a>
+						</p>
+						
+					</aside>	
+				</header>
+				
+				
+				<!--Main -->
+				
+				<main id ="flexWrapperIndex" tabindex = "1">
+					<aside>
+						<h2>Meny</h2>
+						<ul><li>Statiske og dynamiske sider i wordpress	</li>
+							<li><a href="#statisk-vs-dynamisk-side-wordpress">Statisk vs. dynamisk forside</a></li>
+							<li><a href = "#gjor-side-om-til-statisk">Hvordan faktisk gjøre en side om til en statisk forside?</a></li>
+							<li><a href = "#gjor-side-om-til-dynamisk">Å gjøre om en side til et dynamisk nettsted</a></li>
+						</ul>
+					
+					</aside>
+				
+					<article id ="article-article">
+					
+						<header >
+							<h2>Statiske og dynamiske sider i wordpress</h2>
+						</header>
+						
+						
+						<h3 id ="statisk-vs-dynamisk-side-wordpress">Statisk vs. dynamisk forside</h3>
+						
+						<p>
+							En dynamisk side er noe som endres i takt med endringer som evt. skjer, for eksempel innlegg som legges ut kommer gjerne først på denne siden. En side som ikke oppdateres på samme måte representerer antonymet til dette og kalles derfor statisk. Et nettsted kan gjerne bestå av begge deler
+						</p>
+						
+						<h4 id ="gjor-side-om-til-statisk">Hvordan faktisk gjøre en side om til en statisk forside?</h4>
+						
+							<p> Dersom vi ønsker å vise konstante ting, f.eks en firmaside som er relativt bra designet, vil det være bra å ha en statisk forside.
+								Prosedyren for å lage en statisk side er ganske rett fram
+								Det første vi bør gjøre er å lage en tom side kalle denne hjem og ikke fylle det med noen ting, deretter gå inn på modifikasjoner.
+								Her kan vi modifisere den valgte siden, og trykke om den skal være statisk eller dynamisk.
+							</p>
+							<a href ="bilder/lag-hjem.png">
+								<img alt ="Hvordan du lager en hovedside for nettstedet ditt " src = "bilder/lag-hjem.png"/>
+							</a>	
+							
+							<a href ="bilder/velg-hvilken-statisk.png">
+								<img alt ="Et bilde av hvilken side man ønsker at skal være statisk" src = "bilder/velg-hvilken-statisk.png"/>
+							</a>
+							<p>
+								I tilfellet med dette temaet så blir de siste innleggene lagt lenger ned i en seksjon på siden.
+								<a href ="bilder/siste-nytt-statisk.png">
+									<img alt = "Et bilde av hvordan siste nytt vil se ut på en statisk side" src = "bilder/siste-nytt-statisk.png" />
+								</a>
+							</p>
+							
+						<h4 id ="gjor-side-om-til-dynamisk">Å gjøre om en side til et dynamisk nettsted</h4>	
+						<p>
+							På blogger eller andre steder hvor vi oppdaterer kontinuerlig vil der være en fordel å ha ihvertfall en side som er dynamisk.
+							For å velge en dynamisk side
+							gjøres dette enkelt vha å trykke på den andre radio-knappen og å velge ifra listen hvilken side som skal være blogg, resultatet blir noe ala dette. Her vil innleggene på vises
+							helt kronologisk.
+						</p>
+						<a href="bilder/lag-blogg.png">	
+							<img alt ="Hvordan du kan lage en dynamisk blogg-side" src = "bilder/lag-blogg.png" />
+						</a>	
+						<a href =	"bilder/lag-blogg.png">
+							<img alt =	"Hvordan den endelige bloggsiden vil se ut" src = "bilder/blogg.png"/>
+						</a>	
+					</article>
+					
+					
+				</main>
+				
+				
+				<footer>
+					<p>
+						<i class="fa fa-copyright" aria-hidden="true"></i> 
+						Ådne Tobiesen
+					</p>
+					<p>
+						<a href ="https://www.facebook.com/smygen91"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i> </a>
+						<a href ="https://github.com/adntob"><i class="fa fa-github-square fa-3x" aria-hidden="true"></i></a>
+						<a href ="mailto:aadne.t@live.com"><i class="fa fa-envelope-square fa-3x" aria-hidden="true"></i> </a>
+						<a href ="https://www.linkedin.com/feed/"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+						
+					</p>
+				</footer>
+				
+			
+			</div>
+		</body>
+
+	</html>

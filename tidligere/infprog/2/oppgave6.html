@@ -1,0 +1,74 @@
+<!-- Ådne Tobiesen 04.09.17 -->
+ <!-- ctrl + f5 vil refreshe CSS-ark også-->
+
+<!DOCTYPE html>
+	<html>
+
+		<head>
+				<meta charset="utf-8" />
+				<title> Tittel </title>
+				<!-- <script src="myScript.js"></script> -->
+				
+				
+				<style>				
+				
+					textArea{
+						height:200px;
+					
+					}
+					
+					
+				
+				</style>
+				
+					<script>
+					
+							var tallInput= "";
+					
+							window.onload = main;
+							
+							function main() {  
+								document.getElementById("btnBekreft").onclick = trykket;  //* Sett funksjonen som en funksjon av hendelsen trykk*//
+							
+							}
+							
+							function trykket() {
+							
+							
+							
+							
+								tallInput = document.getElementById("txtBrukerInput").value;  /*Denne gangen kan vi ikke skrive inn +=, fordi da vil scriptet fungere kun en gang*/
+								console.log(tallInput);
+								
+								
+								for (var inkrement = tallInput; inkrement>0; inkrement--){  //*inkrement må settes lik tallinput, hvis vi hadde satt inn "for var tallinput", ville den printet ut ett tall mindre enn det foregående
+								
+									document.getElementById("txtInnfort").value	+=tallInput + "\n" }
+									}
+							
+								
+						
+							
+								
+				
+					</script>
+				
+				
+		</head>
+			
+			
+
+		<body>
+			<h1>Oppgave 6</h1>
+		
+			<p>Skriv inn et tall, 
+			få tallet skrevet ut på antall linjer som tallet</p> 
+			<input id = "txtBrukerInput" type = "number" />
+			
+			<p>Her skal det være output,</p>
+			<textarea id ="txtInnfort"></textarea>
+			<button id =	"btnBekreft" type ="button" >Initier</button>
+			
+		</body>
+
+	</html>

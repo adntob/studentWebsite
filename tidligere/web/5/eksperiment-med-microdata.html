@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang ="nb">
+
+	<head>
+		<title> Eksperiment med MicroData -Ådne Tobiesen  </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type= "text/css" href="_style/minstil.css">
+		<link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta charset= "utf-8">
+		<meta name="author" content="Ådne Tobiesen" />
+		<meta name ="keywords" content = "Microdata, SEO, Videospill, film, arrangement, artikkel, musikkalbum"/>
+		<meta name	= "description" content="Dette er et eksperiment med microdata, webutvikling 5 " />
+		<script src ="script/myscript.js"></script>
+		
+	</head>
+	
+	<body>
+		
+		<div id="masterGrid">
+			
+					
+				<header id ="main-header">
+					<h1>Webutvikling 5</h1>
+				<nav id ="navigation-menu-computer">
+					<ul>
+						<li><a  href="index.html"> Hjem </a> </li>
+						<li><a  href="sammenheng-i-mellom-seo-og-mye-annet.html">Oppgave2</a></li>
+						<li><a id ="active-dir" href="eksperiment-med-microdata.html">Oppgave3</a></li>
+						<li><a href="eksterne-kilder-som-kan-bruke-microdata.html">Oppgave4</a></li>
+						<li><a href="kopling-mot-sosiale-medier.html">Oppgave5</a></li>
+						<li><a href="analyse-av-arngren.html">Oppgave6</a></li>
+						
+					</ul>
+				</nav>
+				</header>
+				
+				<nav id ="mobile-menu">
+				
+				<i id ="barButton" class="fa fa-bars fa-2x"  aria-hidden="true"></i>
+				
+					<ul	id ="drop-down-list">
+					
+						<li><a href="index.html"><i class="fa fa-home fa-2x" aria-hidden="true">&nbsp; </i> Hjem</a></li>
+						<li><a href="sammenheng-i-mellom-seo-og-mye-annet.html">Oppgave2</a></li>
+						<li><a href="eksperiment-med-microdata.html">Oppgave3</a></li>
+						<li><a href="eksterne-kilder-som-kan-bruke-microdata.html">Oppgave4</a></li>
+						<li><a href="kopling-mot-sosiale-medier.html">Oppgave5</a></li>
+						<li><a href="analyse-av-arngren.html">Oppgave6</a></li>
+					</ul>					
+				</nav>
+				
+				
+				<main id ="main-content">
+					
+						<article class ="article-article">
+							<h2> Oppgave 3: Eksperimentering med micro-data og Rich-snippets</h2>
+							<h3>Kort om microdata</h3>
+							<p>
+								Det nyeste verktøyet for søkemotorer er microdata.
+								Dette brukes på div. sider for å gi innholdet en kontekst, kontekst her er mer direkte enn de vanlige HTML-taggene og de nye semantiske taggene som brukes innen HTML-5.
+								Dette kan være å hjelpe maskinen å tolke et tidspkt, å finne ut tid, å finne sted etc. Maskinen kan ellers ikke finne ut slikt på egenhånd. Resultatet tolkes, og settes inn på landingsplassen for de ulike temaene på Google. Resultatet blir noe som kalles rich-snippets. Nedenfor vises et eksempel på hvordan dette kan se ut etter vi er ferdige med kodingen.
+							</p>	
+								<figure>
+									<a href ="bilder/rich-snippets-google.png">
+										<img class ="article-pic" src ="bilder/rich-snippets-google.png" alt ="Eksempel på hvordan Google tolker Rich-snippets, her tatt ifra Wikipedia"/>
+									</a>
+									<figcaption>
+										Et bilde for ønsket resultat med micro-data
+									</figcaption>
+								</figure>
+							
+							
+							
+						</article>
+						<article class = "article-article">
+							
+								<h3>Egne eksperimenter</h3>
+							<p>
+								I denne oppgaven har jeg lagd  5 ulike eksempler som bruker microdata, eksemplene kan besøkes ifra listen under. 
+								Spillartikkelen er også knyttet imot Twitter, Facebook og Google+:
+							</p>	
+								<ul>
+									<li>
+										<a href ="mikrodata-eksperiment/bruk-av-microdata-event.html">
+											Sportsarrangement
+										</a>
+									</li>
+									<li>
+										<a href ="mikrodata-eksperiment/bruk-av-microdata-vitenskapelig-artikkel.html">
+											Vitenskapelig artikkel
+										</a>
+									</li>
+									
+									<li>
+										<a href ="mikrodata-eksperiment/bruk-av-microdata-videospill.html">
+										Sportsarrangement
+										</a>
+									</li>
+									
+									<li>
+										<a href ="mikrodata-eksperiment/bruk-av-microdata-musikkalbum.html">
+											Musikkalbum
+										</a>
+									</li>
+									<li>
+										<a href ="mikrodata-eksperiment/bruk-av-microdata-film.html">
+											Film
+										</a>	
+									</li>
+								</ul>
+								
+							
+							
+							<h4>Spillartikkel</h4>
+							<p>
+								Spillet er i dette tilfellet "Eternal Darkness Sanity's Requiem". Selve artikkelen starter med
+								<code> 	&#60;article itemscope = "itemscope" itemtype ="http://schema.org/VideoGame"  &#62; </code>. Denne sier at hele innholdet i artikkelen involverer dette eksakte videospillet, og må forstås i sammenheng. Innenfor denne artikkelen, vil vi bruke diverse attributter som omhandler sjanger, platform, antall spillere, utgiver, utvikler, utgivelsesdato, sjanger, screenshot (Som kan brukes generelt på alle schema). I prinsippet kan vi gå ennå dypere enn dette (Dess mer informasjon, jo bedre), men dette vil gi en pekepinn på hvordan systemet fungerer ihvertfall. Nedenfor har jeg lagt ved noen bilder for hvordan dette tolkes som rich-snippets.
+							</p>
+								<figure>
+									<a href ="bilder/spill-microdata.png">
+										<img class ="article-pic" src ="bilder/spill-microdata.png" alt ="skjermdump av mikrodata for spill på google, øverst" >
+									</a>
+									<a href ="bilder/spill-microdata2.png">
+										<img class ="article-pic" src ="bilder/spill-microdata2.png" alt ="skjermdump av mikrodata for spill på google, nederst" >
+									</a>
+									<figcaption>
+										Bilder for hvordan validatoren til Google tolker microdataen i spillartikkelen.
+									</figcaption>
+								</figure>
+							
+							
+							<h4>Vitenskapelig artikkel</h4>
+							<p>
+								Den valgte artikkelen er en hvor jeg står som bidrager og omhandler forskning på glykosidase-inhibitorer.
+								itemtype settes i dette tilfellet lik http://schema.org/Article. Valgte attributer er "name", "datecreated", "author", "issueNumber", "publisher", "publisher", "pagestart", "pagestop" og "accessibilitySummary". Disse taggene er knyttet til selve artikkelen og betyr eksakt hva man forventer at de vil bety. Nedenfor har jeg gitt bilder for hvordan det ser ut i richsnippet hos Google.com. Det må nevnes at Google sin rich-snippets er mer strikt enn både Schema sine hjemmesider, og læreboken.
+							</p>
+								<figure>
+									<a href ="bilder/vitenskapelig-artikkel.png">
+										<img class ="article-pic" src = "bilder/vitenskapelig-artikkel.png" alt ="Microdata for vitenskapelig artikkel øverst" />
+									</a>
+									<a href ="bilder/vitenskapelig-artikkel2.png">
+										<img class ="article-pic" src = "bilder/vitenskapelig-artikkel2.png" alt ="Microdata for vitenskapelig artikkel nederst" />
+									</a>
+									<figcaption>
+										To bilder som viser hvordan Google sin validator tolker den vitenskapelige artikkelen.
+									</figcaption>
+								</figure>
+							
+							
+							<h4>Sportsarrangement</h4>
+							<p>
+								Det valgte arrangementet er en Oilers - Lørenskog ishockeykamp som skjedde lørdag den 04.11.17.
+								Denne gang er itemtype ="http://schema.org/sportsEvent"
+								I dette eksempelet har jeg markert hjemme/bortelag, tid, dato og adresse. For å se hvordan dette ser ut i Rich Snippets, se bildene under.  
+							</p>	
+								<figure>
+									<a href ="bilder/sports-arrangement.png">
+									<img src ="bilder/sports-arrangement.png" alt ="Microdata for sportsarrangement Oilers vs Lørenskog" />
+									</a>
+									<figcaption>
+										Et bilde som viser hvordan Validatoreni til Google tolker sportsarrangementet.
+									</figcaption>
+								</figure>
+							
+							
+							<h4>Musikkalbum</h4>
+							<p>
+								Det valgte albumet er "Songs of Love and Hate" av Leonard Cohen.
+								Artikkelen starter i dette tilfellet med at itemtype = "http://schema.org/MusicAlbum".
+								Til tross for at Leonard Cohen var en soloartist, må navnet hans inkapsles i en gruppe, slik som dette:
+								&#60; span itemprop = "byArtist" itemtype= "http://schema.org/MusicGroup" &#62; .I prinsippet, hvis vi ønsker å spille av sangene hans eller laste opp musikken hans (Som ikke er lovlig), kan vi finne visse attributter for både sanglengde. Nedenfor vises det hvordan Google tolker rich-snippets.	
+							</p>	
+								<figure>
+									<a href ="bilder/microdata-musikkalbum.png">
+										<img class ="article-pic" src ="bilder/microdata-musikkalbum.png" alt ="Rich Data snippets for Leonard Cohen sitt Songs of Love and Hate" />
+									</a>
+									<figcaption>
+										Et bilde for hvordan Google tolker musikkalbums-artikkelen.
+									</figcaption>
+								</figure>
+							
+							
+							
+							<h4>Film</h4>
+							<p>
+								Den valgte filmen er "Spiderman: Homecoming". &#60; article itemscope itemtype = "http://schema.org/Movie" &#62; er starten på artikkelen, i prinsippet kan man gå veldig dypt, både med å inkludere annmeldelser, flere skuespillere, manusforfattere, produsenter, filmselskap, musikk. I dette tilfellet har jeg valgt å gjøre det ganske simpelt, ved å ta kun noen hovedroller, regissør, navn på film, beskrivelse etc. Resultatene for hvordan Google tolker dette vises nedenfor.
+							</p>	
+								
+								<figure>
+									<a href ="bilder/film-eksempel.png">
+										<img class ="article-pic" src="bilder/film-eksempel.png" alt ="Bilde av rich snippets for spiderman-homecoming, topp" />
+									</a>
+									<a href ="bilder/film-eksempel.png">
+										<img class ="article-pic" src="bilder/film-eksempel2.png" alt ="bilde av rich snippets for Spiderman-homecoming, bunn" />
+									</a>
+									<figcaption>
+										To bilder for hvordan Google tolker film-artikkelen
+									</figcaption>
+								</figure>
+							
+							
+						</article>
+						
+				
+						
+				</main>
+				
+					
+				
+				
+				<footer>
+					<p>
+						<a href ="#main-content">
+							Ta meg tilbake til toppen
+						</a>
+					</p>
+					
+					<p><i class="fa fa-copyright" aria-hidden="true"></i>  Ådne Tobiesen 	<i class="fa fa-map-marker fa-2x" aria-hidden="true"></i> B.R.A Veien 8a, Halden</p>
+					<p>
+						<a href ="https://www.facebook.com/smygen91"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i> </a>
+						<a href ="https://github.com/adntob"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
+						<a href ="mailto:aadne.t@live.com"><i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i> </a>
+						<a href ="https://www.linkedin.com/feed/"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+					
+					</p>
+				</footer>
+			
+			</div>
+		
+	</body>
+
+
+</html>

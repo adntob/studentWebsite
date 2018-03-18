@@ -1,0 +1,76 @@
+<!-- Ådne Tobiesen 06.09.17 -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8" />
+		<title> Oppgave 6 - Obligatorisk innlevering 1 </title>
+		<!-- <script src="myScript.js"></script> -->
+		
+		<script>
+		var teller = 0;
+		
+		window.onload = oppstart;
+			function oppstart(){
+			var inputFelt = "";
+			
+		
+		
+			document.getElementById("knapp").onclick = leggTil;
+		}
+		
+		function leggTil(){;
+		
+			var tekst = document.getElementById("txtVare").value;
+			var mengde = document.getElementById("txtAntall").value;
+			
+			teller++;
+		
+			
+
+			var nyttElement = document.createElement("li");
+		
+			nyttElement.innerHTML = mengde + " " + tekst;
+			
+			document.getElementById("handleListe").appendChild(nyttElement);
+			
+		
+				//* Sliter med å finne lengden
+				
+		
+			document.getElementById("lengde").innerHTML = teller;
+	
+	}
+	
+	
+	</script>
+		
+		
+		
+</head>
+	
+	
+
+<body>
+	<h1> Handleliste </h1>
+	
+		<p>
+		Antall: <input type="text" id="txtAntall" placeholder = "antall"/>
+		</p> <p>
+		Varer: <input type="text" id="txtVare" placeholder= "vare"/>
+		
+		
+		</p>
+		
+		
+		<button type="button" id="knapp">Legg til!</button>
+		
+		<ul id = "handleListe"></ul>
+		
+		<p>Antall varelinjer: <span id = "lengde"></span></p>
+		
+</body>

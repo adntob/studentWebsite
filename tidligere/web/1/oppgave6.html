@@ -1,0 +1,134 @@
+<!-- Ådne Tobiesen 04.09.17 -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8" />
+		<title> Oppgave 6 </title>
+		<link rel="stylesheet" type= "text/css" href="stiler/boxmodelstil.css">
+		<meta name="viewport" content ="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<!-- <script src="myScript.js"></script> -->
+</head>
+
+<body>
+
+
+	<div id = "wrapper">
+		<header>
+			<h1>Oppgave 6: Box-model </h1> <!--Dette e en boks, så jeg lager en border -->
+		</header>
+		
+		<nav>
+		<h1> Swag </h1>
+		<ul>
+			<li><a href = "index.html">Hjem</a></li>
+			<li><a href = "oppgave2.html">Oppgave 2</a></li>
+			<li><a href = "oppgave3.html">Oppgave 3</a></li>
+			<li><a href = "oppgave4.html">Oppgave 4</a></li>
+			<li><a href = "oppgave6.html">Oppgave 6</a></li>
+			<li><a href = "oppgave8.html">Oppgave 8</a></li>
+		
+		</ul>
+		
+		<!-- Dekorasjon, bilder osv. Siden vi skal ha flere bilder, og mer eller mindre samme tingene med disse, lager vi class og ikke ID -->
+		
+		
+		<img class = "musikk" src ="bilder/Slipknot-logo-24999CDDB7-seeklogo.com.png" alt ="slipknot logo" />  
+		<img class = "musikk" src = "bilder/marilyn-manson-best-albums-ever-mechanical-animals-review-music-e1483849986199.jpg" alt ="marilyn manson" />
+		<img class = "musikk" src = "bilder/Heartagram.png" alt ="him-logo">
+		
+	
+	</nav>
+		
+		<main>
+			<h1>Swag 2: the revenge </h1><!--Dette er også en boks, så jeg lager en til border -->
+			<h3> 
+				Swag 3: The return of the swag   <!-- Boksene er kun div-er, ellers er grunn-stylingen for disse tatt ifra W3Schools. Border tydeliggjør at CSS er boksdominert.
+				Ellers så tar jeg selvkritikk på at de har ganske dårlig navngiving, inkludert blanding av norsk-tall og engelsk "box" -->
+			</h3>
+			<div class="floating-box" id ="boxEn">
+				<p>Dette er en simpel boks uten noe særlig mikkmakk</p>
+			</div>
+			
+			<div class="floating-box" id = "boxTo">
+				<p>Her har paddingen (dist. mellom innhold og marg) blitt endret til 100px totalt. Grovt sett er padding=inni, margin=utenfor. Vidden i hver retning er lik padding*2 + width</p>
+			</div>
+			
+			<div class="floating-box" id = "boxTre">
+				<p>padding = 0, men padding-right=100px.</p>
+			</div>
+			<div class="floating-box" id = "boxFire">
+				<p>Her er også padding = 0, men denne gang er padding-top =100px;. Hadde jeg endret til venstre eller høyre, ville dette provosert frem linjeskift for neste boks</p>
+			</div>
+			
+			<div class="floating-box" id = "boxFem">
+				<p>
+					Ennå en boks, men med skygge! box-shadow lager bokstavalig talt en skygge av boksen, med samme dimensjoner. Det vi her angir er vertikal-skygge, horisontal-skygge, hvor "blurry" og farge
+				</p>
+			</div>
+			
+			<div class="floating-box" id = "boxSeks">
+				<p>Hver gang man adderer et element, vil det adderes i en rekke fra venstre til høyre. Dette er tydeliggjort her med bokser, men teknisk sett er alt bokser i CSS (Som du kan se på overskriftene). Dette fortsetter frem til neste rekke.
+				</p>
+			</div>
+			
+			<div class="floating-box" id ="boxSyv">
+				<p>Ved margin vil margen flytte seg ut. dvs. et usynlig felt som omgir UTSIDEN av boksen vil flytte på seg. Legg merke til at det kun er distansen som er ulik</p>
+			</div>
+			
+			<div class="floating-box" id ="boxAtte"> 
+				<p> Turn to page 394 </p>
+			</div>
+			
+			<div class="floating-box" id = "boxNi"> 
+				<p>Her har vi endret margin-left. Boksen skyver dermed vekk ifra venstre og mot høyre, men ingenting har endret seg størrelsesmessig </p>
+			</div>
+			
+			<div class="floating-box" id = "boxTi">
+				<p>Forresten har akuratt denne boksen runde hjørner. Dette angis ved border-radius </p>
+			</div>
+			
+			<div class="floating-box" id= "boxElleve"><img id = "ernaKaffe" src = "bilder/anigif_enhanced-buzz-26852-1373916330-17.gif" alt = "Cheesy 90-talls gif" /></div>
+		</main>
+		
+		<aside>
+		
+			<p>Reklame? En veldig diffus semantisk tagg, ingen vet hva denne gjør..</p>	<p> Tilogmed ikke foreleser! Ønsker du å reklamere her kan du få det rimelig</p>
+			<img class = "musikk" src="bilder/UnderConstructionPikachu.gif" alt ="Under construction pikachy"/>
+			
+			
+				<p>
+					<a href="http://jigsaw.w3.org/css-validator/check/referer">
+					<img style="border:0;width:88px;height:31px"
+					src="http://jigsaw.w3.org/css-validator/images/vcss"
+					alt="Valid CSS!" />
+					</a>
+					
+				
+				</p>
+				
+				<p>
+					<a href="http://jigsaw.w3.org/css-validator/check/referer">
+						<img style="border:0;width:88px;height:31px"
+							src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+							alt="Valid CSS!" />
+					</a>
+				</p>
+			
+		</aside>
+		
+			<a href = "index.html"> Tilbake! </a>
+		
+			
+		<footer> Kaptein Ådne Tobiesen </footer>
+
+		
+	</div>
+
+	
+</body>
+
+</html>

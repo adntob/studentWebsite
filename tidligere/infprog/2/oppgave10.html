@@ -1,0 +1,54 @@
+<!-- Ådne Tobiesen 04.09.17 -->
+ <!-- ctrl + f5 vil refreshe CSS-ark også-->
+
+<!DOCTYPE html>
+	<html>
+
+		<head>
+				<meta charset="utf-8" />
+				<title> Tittel </title>
+				<!-- <script src="myScript.js"></script> -->
+				
+					<script>
+				
+							window.onload = oppstart;
+							
+							function oppstart() {
+							
+							var ctx = document.getElementById("lerret").getContext("2d")
+							
+							for (var i = 0; i<=400; i+=100){ /*Vi ser på toppen at den ytre forløkken beveger seg maksimalt 5 ganger */
+								for (var j=0; j<=400; j+=25){
+									var ctx = document.getElementById("lerret").getContext("2d"); /*Den indre beveger seg 20 ganger, med start og slutt kan denn ha et inkremet på 25 per gang*/
+									ctx.beginPath()
+										if (j%2===0)
+											{ctx.strokeStyle = "green"} /*På alle partall + 0 vil pktet være grønt*/
+										else{
+											ctx.strokeStyle = "red"}
+									ctx.fill();
+									ctx.moveTo(i,0); /*Alle startpkt vil være på y=0, og en varierende x */
+									ctx.lineTo(j,400); /* alle sluttpkt vil være på y=400, og en varierende y */
+									ctx.stroke();
+									
+									}
+							
+								} 
+							
+							
+							}
+				
+					</script>
+				
+				
+		</head>
+			
+			
+
+		<body>
+			<h1>Oppgave ekstra 3</h1>
+			
+			<canvas id =	"lerret"	width="400" height="400"></canvas> <!--Lerretet har en høyde/bredde på 400px-->
+			
+		</body>
+
+	</html>

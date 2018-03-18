@@ -1,0 +1,94 @@
+<!-- Ådne Tobiesen 04.09.17 -->
+ <!-- ctrl + f5 vil refreshe CSS-ark også-->
+
+<!DOCTYPE html>
+	<html>
+
+		<head>
+				<meta charset="utf-8" />
+				<title> Tittel </title>
+				<!-- <script src="myScript.js"></script> -->
+				
+				
+					<style>
+						textarea{
+						height: 200px;
+						
+						}
+					
+					</style>
+				
+					<script>
+				
+					var strSvar = "";
+				
+							window.onload = oppstart;
+							
+								var karakterOutput = "";
+							
+							function oppstart() {
+								document.getElementById("btnBeregn").onclick = trykket;
+								}
+								
+							function trykket(){	
+								
+								
+								var startbelop = parseFloat(document.getElementById("txtPenge").value);
+								
+								var ar = parseInt(document.getElementById("txtAr").value);
+								
+								var rente = parseFloat(document.getElementById("txtRente").value);
+									rente = 1 + rente/100;
+								
+								var tekstfelt = document.getElementById("txtSvar").value
+								
+								
+								for (var inkrement = 0; inkrement<ar; inkrement++){
+									
+									belop = startbelop
+									 belop += startbelop*Math.pow(rente, ar);
+									
+									strSvar = "Etter" + " " + ar +  " " + "har du" + " " + belop + " i banken";
+									
+									
+								
+									}
+									console.log(strSvar);
+									
+								}
+				
+					</script>
+				
+				
+		</head>
+			
+			
+
+		<body>
+			<h1>Oppgave 1 ekstra: pengeoppgave</h1>
+			
+			<p>
+				Pengebeløp:
+				<input id ="txtPenge" type = "text"/>
+			</p>
+			
+			<p>
+				Antall år:
+				<input id ="txtAr" type = "text"  />
+			</p>
+			
+			<p>
+				Rente:
+				<input id ="txtRente" type = "text"/>
+			</p>
+			
+			<p><button id =	"btnBeregn">Regn ut!</button></p>
+			
+			<p>
+				<textarea id = "txtSvar">
+				</textarea>
+			</p>
+			
+		</body>
+
+	</html>

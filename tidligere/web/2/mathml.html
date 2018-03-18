@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+	<HTML>
+		<head>
+			<title>MathML</title>
+			
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+			<link rel="stylesheet" type= "text/css" media =	"all" href="stilark/stilark.css"> 
+			<meta charset= "utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+			
+			<script type="text/javascript" async
+			  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+			</script>
+			
+			
+		</head>
+		<body>
+		
+		
+			<div id ="wrapper">
+			
+				<span id ="breadCrumbs">
+				
+				<a href="index.html">Hjem</a>><a href =	"projects.html">Innleveringer</a>><span id ="currentSite">MathML</span>
+				</span>
+				
+				<header>
+					<i class="fa fa-rebel fa-3x" aria-hidden="true"></i>
+					<h1><a href ="index.html">Webutvikling</a></h1>
+				
+				</header>
+				
+			
+				
+				
+				
+				<nav id ="navigationMenu">
+					<ul>
+						<li><a   href	="index.html">Hjem</a></li>			<!--Active link settes lik den siden vi er på nå -->
+						<li><a id =	"active" href	= "projects.html">Innleveringer</a></li>
+						<li><a 	href = "links.html">Lenker</a></li>
+						
+					
+					</ul>
+				
+				</nav>
+				
+					<main>
+							<article>
+								<h1>MathML</h1>
+								<h2 id ="def">Definisjon og bruksområder</h2>
+								<p>Definisjon MathML: Markup-språk for matematikk innen HTML. Det minner derfor på mange måter om LaTeX i filosofien. HTML-kode er dårlig egnet for å vise matematiske formler og man vil derfor trenge alternative måter å formulere dette. 
+								Vi kan også benytte dette til å vise reaksjonslikninger i kjemi.</p>
+								
+								<h2 id ="pros">Fordeler</h2>
+								<p>
+								Et alternativ er å lime inn et bilde av formelen, dog dette vil være relativt lite fleksibelt siden det vil hindre oss i å stilsette det, redigere det, og å søke det opp enten på siden eller på nett.
+								En annen viktig faktor er at kvaliteten på MathML ikke vil minke, gitt at vi forstørrer det slik som et bilde vil gjøre. Det minner derfor mye om vektor-grafikk (SVG)
+								Andre problemer ved bilder kan være at folk som ikke kan lese bilder vil være ute av stand til å se formelen, samt det vil hindre tekst til tale generatorer.
+								MathML brukes både for å vise formler, men også som anvendelse innen matematikk. Det bidrar dermed til spredning av matematikk og en felles standard.</p>
+								
+								<h2 id ="cons">Ulemper</h2>
+								<p>Den eneste ulempen som kan nevnes i forbifarten er at det kan være vanskelig å komme inn i det for en nybegynner, og at der kan være vanskelig å finne en god generator på internett.</p>
+								
+								<h3 id="syntax">Syntaks</h3>
+								<p>Hver MathML tag begynner med taggen math, etterfulgt av mrow. Andre tagger som bruker er mi (minteger), mo (math operator). mrow (matterekke). 
+								Vi har også tagger for funksjoner, slik som eksponenter og brøker 
+								Man kan enten huske på disse og skrive dette direkte inn i HTML-koden, eller så kan vi bruke en generator.
+								Dette hender ofte i praksis, ettersom uttrykkene kan bli ganske komplekse. Dette gjøres enten ved å skrive det inn som LaTeX-kode, eller ved å skrive det inn direkte.</p>
+							</article>
+						
+							<nav id=	"sideNav"> <h2>MathML</h2>
+								<ul>
+									<li><a href="#def">Definisjon og bruksområder </a></li>
+									<li><a href="#benefit">Fordeler </a></li>
+									<li><a href="#cons">Ulemper</a></li>
+									<li><a href="#syntax">Syntaks </a></li>
+									<li><a href="#support">Støtte for MathML</a></li>
+									<li><a href="#examples">Eksempler på formler i MathML </a></li>
+									
+									
+								</ul>
+							</nav>
+						
+							<article>
+								<h2 id =	"support">Støtte for MathML</h2>
+								<p>
+								MathMl er en integrert del av HTML 5, hvilket betyr at alle browsere skal støtte det uten installering av plugins. I praksis,
+								derimot, støttes dette for eksempel ikke av Internet Explorer, og er ikke lenger støttet av Google Chrome. Dersom du leser denne siden i Chrome, vil årsaken til at du leser dette være pågrunn av en detalje i Script-taggen min.
+								Disse klientene må bruke MathJax for å vise det, MathJax gjør det om til TeX som så .
+								sørger for at det vises på en enhetlig måte i alle browsere. 
+								</p>
+							</article>
+							
+							<article>
+								<h2 id ="examples">Eksempel på formler skrevet i MathML</h2>
+										
+										
+										<figure class = "mathFormula">
+											<p>Generisk andregradsuttrykk.</p>
+											<math>
+												<mrow>
+												  <mrow>
+														<msup> <mi>x</mi> <mn>2</mn> </msup> <mo>+</mo>
+																<mrow>
+																  <mn>4</mn>
+																  <mo>&InvisibleTimes;</mo>
+																  <mi>x</mi>
+																</mrow>
+														<mo>+</mo>
+														<mn>4</mn>
+													  </mrow>
+														<mo>=</mo>
+														<mn>0</mn>
+													</mrow>
+												</math>
+											</figure>
+										
+										
+										
+										<figure class = "mathFormula">
+											<p>Eulers formel</p>
+											<math>
+												<mrow>
+													<mrow><msup>
+														<mi>e</mi>
+															<mrow>
+																<mi>i</mi>
+																<mo>&InvisibleTimes;</mo>
+																<mi>&#960;</mi>
+															</mrow>
+														</msup>				
+															<mrow>
+															<mo>+</mo>
+															</mrow>
+														</mrow>
+														<mi>1</mi>
+														<mo>=</mo>
+														<mn>0</mn>
+												</mrow>																	
+											</math>
+										</figure> 
+									
+										
+										<figure class = "mathFormula">
+											<p>Matrise på redusert trinnform</p>
+											<math>
+												<mfenced>
+													<mtable>
+														<mtr>
+															<mtd> <mn>1</mn> </mtd>
+															<mtd> <mn>0</mn> </mtd>
+															<mtd> <mn>0</mn> </mtd>
+														</mtr>
+														<mtr>
+															<mtd> <mn>0</mn> </mtd>
+															<mtd> <mn>1</mn> </mtd>
+															<mtd> <mn>0</mn> </mtd>
+														</mtr>
+														<mtr>
+															<mtd> <mn>0</mn> </mtd>
+															<mtd> <mn>0</mn> </mtd>
+															<mtd> <mn>1</mn> </mtd>
+														</mtr>
+													</mtable>
+													</mfenced>
+											</math>
+										
+										</figure>
+							
+							
+										<h3>Les mer!</h3>
+										<ul>
+											<li><a href="https://www.w3.org/Math/whatIsMathML.html">W3 sin side om MathML</a></li>
+										</ul>
+							
+							</article>
+							
+							
+						
+						
+					</main>	
+						
+					
+				
+				
+				
+				
+				
+				
+					
+			
+				<footer>
+						<p>
+						
+							<a href =	"about.html">Les mer om denne siden! <i class="fa fa-external-link" aria-hidden="true"></i></a>
+						</p>
+						
+						
+						<p id=	"contact">
+							Ådne Tobiesen 	
+							<a href="https://www.linkedin.com/in/%C3%A5dne-tobiesen-0b44b5a8/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+							<a href ="mailto:aadne.t@live.com"><i class="fa fa-envelope" aria-hidden="true"></i> </a>
+							<a href="http://www.facebook.com/smygen91" ><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href = "https://github.com/adntob/webutvikling2017"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+						</p>
+						
+				</footer>
+				
+			</div>
+			
+			
+			
+		 
+		
+		
+		</body>
+
+
+	</HTML>

@@ -1,0 +1,119 @@
+<!-- Ådne Tobiesen 04.09.17 -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+		<meta charset="utf-8" />
+		<title> Obligatorisk innlevering 1 - oppgave 3 </title>
+		
+		<script>
+	
+		window.onload = oppstart;
+		
+		
+		function oppstart(){
+		
+			document.getElementById("btnGange").onclick = gange;
+			document.getElementById("btnDiv").onclick = divisjon;
+			document.getElementById("btnSub").onclick = subtraksjon;
+			document.getElementById("btnAdd").onclick = addisjon;
+		
+		
+		
+		
+		}
+		
+		
+		//*Lager en knapp for hendelsen hvor bruker ønsker multiplikasjon
+		
+		function gange() {  //Lag et pop-up vindu for begge verdiene og operatoren
+
+			var A = document.getElementById("tallA").value.replace("," , "."); //*Erstatt alle kommaer med punktum.
+			var B = document.getElementById("tallB").value.replace("," , ".");
+			var cGang = A * B;
+			document.getElementById("svar").innerHTML = "Svar = " + cGang;
+		}
+		
+		//*Lager en knapp for hendelsen hvor bruker ønsker divisjon
+		
+		function divisjon() {
+			
+			var A = document.getElementById("tallA").value.replace("," , "."); 
+			var B = document.getElementById("tallB").value.replace("," , ".");
+			
+			var cDiv = A/B;
+			
+			document.getElementById("svar").innerHTML = "Svar = " + cDiv;
+		}
+	
+		//*Lager en knapp for hendelsen hvor bruker ønsker subtraksjon
+	
+		function subtraksjon() {
+				
+			var A = document.getElementById("tallA").value.replace("," , ".");
+			var B = document.getElementById("tallB").value.replace("," , ".");
+			var cMin = A - B;
+			
+			document.getElementById("svar").innerHTML = "Svar = " + cMin;
+		}
+		
+		//* Lager en knapp for hendelsen hvor bruker ønsker addisjon
+		
+		function addisjon() {
+			
+			var A = parseFloat(	document.getElementById("tallA").value.replace("," , ".")	);
+			var B = parseFloat(	document.getElementById("tallB").value.replace("," , ".")	);
+			
+			var cPluss = A + B; //* ParseFloat gjør at det ikke blir konkantinert
+			
+			document.getElementById("svar").innerHTML = "Svar = " + cPluss;
+			
+		
+		}
+	
+	</script>
+		
+		
+		
+</head>
+
+
+	
+	
+
+<body>
+	<h1> Simpel kalkulator </h1>
+	
+	<p>Skriv inn to variable: "A" og "B".</p>
+	
+	
+	Tall A: 
+	<input type = "text" id="tallA"/>
+	
+	
+	
+	
+	Tall B: <input id="tallB" type = "text"/>
+	
+	
+	<p>Velg hvilken matematisk operator du ønsker å bruke.</p>
+	
+	
+	<p>Avslutt ved å trykke på den matematiske operatoren du ønsker </p>
+	
+		<button id="btnGange" type="button" >*</button>
+		
+		<button id="btnDiv" type="button"  >/</button> 
+	
+		<button id= "btnSub" type = "button">-</button>
+	
+		<button id ="btnAdd" type = "button">+</button>
+	
+		<p id="svar"> Svar = </p>
+	
+</body>
+
+</html>

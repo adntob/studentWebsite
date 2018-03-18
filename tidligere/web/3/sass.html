@@ -1,0 +1,266 @@
+
+ <!-- ctrl + f5 vil refreshe CSS-ark også-->
+<!DOCTYPE html>
+	<html lang="nb">
+
+		<head>
+			<meta charset="utf-8" />
+			<title> Sass! </title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="stylesheet" type= "text/css" media =	"all" href="_style/stilark.css">
+			<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			
+			<script src="scripts/myscript.js"></script> 
+			
+			<!--An external JavaScript will give us less of a hassle, and a cleaner code overall -->
+		</head>
+			
+			
+
+		<body>
+			
+			<div id ="master-grid">
+			<div id ="bread-crumbs"><a href	=	"index.html">Hjem</a>>Sass</div>
+				
+				<header id = "main-header">	
+					<h1>Sass!</h1>
+				</header>
+				
+				<nav id =	"top-menu">
+					<ul>
+						<li>
+							<a href="index.html">
+							<i class="fa fa-home" aria-hidden="true">&nbsp; </i>
+						Hjem</a></li>
+						<li><a href="kom-i-gang.html">Kom i gang</a></li>
+						<li><a href="kode.html">Kode</a></li>
+						<li><a href="innhold.html">Innhold</a></li>
+						<li><a href="analyse.html">Analyse</a></li>
+						<li><span id =	"active-directory"><a href="sass.html">Sass</a> </span></li>
+						<li><a href="stylesheets/stilark.css">Stilark</a></li>
+					</ul>
+				
+				
+				</nav>
+				
+				
+				<nav id ="mobile-menu">
+				
+					<i class="fa fa-bars fa-2x" id ="barButton" aria-hidden="true"></i>
+						
+					<ul	id ="drop-down-list">
+						<li><a href="kom-i-gang.html">Kom i gang</a></li>
+						<li><a href="kode.html">Kode</a></li>
+						<li><a href="innhold.html">Innhold</a></li>
+						<li><a href="analyse.html">Analyse</a></li>
+						<li><a href="sass.html">Sass</a></li>
+						<li><a href="stylesheets/stilark.css">Stilark</a></li>
+					</ul>
+							
+				</nav>
+				
+				
+				
+				
+				<aside id ="side-bar">
+				
+					<header id ="sideHeader">
+						<h2>
+							Eksterne resursser om <abbr title = "Search Engine Optimization">SEO </abbr> 
+						
+						</h2>
+					</header>
+
+				
+						<section id = "sideLinks">
+						<h3>Lenker</h3>
+						
+							
+							<ul>
+								<li>
+									<a target="_blank" href="https://moz.com/beginners-guide-to-seo">The beginners guide to SEO
+									<i class="fa fa-external-link" aria-hidden="true"></i>
+									</a>
+								</li>
+								
+								<li>
+									<a target="_blank" href = "http://www.seowebpageanalyzer.com/"> SEO-webpage analyzer		<i class="fa fa-external-link" aria-hidden="true"></i>			
+								
+									</a>
+								</li>
+								
+								
+								<li>
+									<a target="_blank" href= "https://searchengineland.com/guide/what-is-seo">Search Engine Land - What is SEO?
+										<i class="fa fa-external-link" aria-hidden="true"></i>
+									</a>
+								</li>
+								
+								<li>
+									<a target="_blank" href	=	"	https://static.googleusercontent.com/media/www.google.com/en//webmasters/docs/search-engine-optimization-starter-guide.pdf">
+										Search Engine Optimization - a starter guide <i class="fa fa-external-link" aria-hidden="true"></i>
+									</a>
+								</li>
+							</ul>
+							
+							
+							
+						</section>
+						
+						
+						
+						<section id ="sideVideo">
+						
+						
+						
+							<h3>Youtubeklipp</h3>
+							
+							<iframe id ="seoClip" title = "SEO for noobs, hentet ifra https://www.youtube.com/embed/5bKM_rphj3E"
+								src="https://www.youtube.com/embed/5bKM_rphj3E">
+								
+							</iframe>
+							
+							<p id ="clipAccess">
+								For å se et klipp som omhandler <abbr title="Search Engine Optimization">SEO </abbr>, trykk <a target="_blank" href = "https://www.youtube.com/embed/5bKM_rphj3E"> her<i class="fa fa-external-link" aria-hidden="true"></i> </a>. Dette heter "SEO for noobs", er hentet ifra Youtube, og tar for seg det mest grunnleggende om SEO. 
+									
+								
+							</p>
+							
+						</section>
+						
+						<section id ="sideHit">
+						
+						
+							<h3>Søketreff</h3>
+							
+							<a target="_blank" href	=	"https://tinyurl.com/y7rgz8kf">Søketreff hos Google om søkemotoroptimalisering.
+								<i class="fa fa-external-link" aria-hidden="true"></i>
+							
+							</a>
+							
+						</section>
+					
+					
+				</aside>
+				
+				<main id =	"main-content">
+						<section id ="flexion">  <!-- More like flex-ion.. badum-tsh -->
+						<article>
+							<h2>SASS</h2>
+							
+							<p>
+								SASS - "Syntactically Awesome Style Sheets". <abbr title	=	"Cascading Style Sheet">CSS</abbr>, men raskere, og enklere! (I flere betydninger) CSS har flere problemer: mange av de samme tingene gjøres om igjen og om igjen, CSS-filene kan bli lange og føre til at siden kjører sakte, vi kan ha mange CSS-stilark, CSS bruker ikke variabler for komplekse uttrykk (Noe som for eksempel kan bli vanskelig ved f.eks unicode-farger) og CSS bruker ikke innrykk for å vise at noe hører sammen. SASS er ambisiøst og ønsker å fikse alle disse problemene ved at man kan lage et scss (Sassy-CSS)-dokument i en editor på samme måte som andre dokumenter. SCSS minner om CSS i syntaks på mange måter, men for å bli lesbart for nettleste må dette kompileres om til et CSS-dokument. Dette kan enten gjøres vha. kommandolinjen eller ved bruk av en GuI. På dettte nettstedet og i dette eksempelet har jeg brukt Scout-App.
+							</p>
+							
+							<h2>Komme i gang med SASS</h2>
+							<p>
+								For å komme i gang med SASS må vi først installere Ruby og SASS. Dette kan gjøres vha. kommandolinja i Windows.
+							</p>
+							
+							<h2>Syntaks</h2>
+							
+							<h3>Variabler</h3>
+							<p> En variabel lages vha $variabelnavn.  Hver gang vi ønsker å bruke variabelen, skriver vi bare <code>$variabelnavn </code>.
+								Dette kan f.eks være praktisk med komplekse navn, slik som fargenavn i hex.</p>
+							
+							<h3>Nøsting</h3>
+							<p>
+								Nøsting/nesting gjøres ved å sette klammer slik som vi gjør i javascript. Dette betyr at elementene hører til under denne seksjonen, og sparer oss ifra å gjenta kode.
+								Vi kan enten bruke innrykk eller la være å bruke dette. Personlig er innrykk foretrukket ettersom det får koden til å minne mer om andre språk, men også for å holde det mer ryddig.
+							</p>
+							
+							<h3>Hypotetisk strukturering</h3>
+							<p>
+								Her er hvordan jeg ville ha strukturert de ulike elementene sånn noenlunde om jeg hadde brukt SASS. Her brukes menyen som et eksempel, siden det gjerne er her man bruker flest elementer, med pseudotagger for lenker, lister etc.
+							</p>
+							
+								<a href= "enkelt-syntaks-ekempel.png"><img class = "sassImg" src =	"enkelt-syntaks-ekempel.png" alt ="	Et eksempel på enkel bruk av syntaks i SASS"><img/> </a>
+							
+							<h3>Mixins</h3>
+							<p>
+								Mixins kan sammenliknes med en funksjon i et vanlig programmeringsspråk, vi definerer en innverdi og en funksjon, og bruker fra nå av funksjonen til alt vi ønsker å gjøre med de ulike innparametrene. Dette kan være praktisk både med tanke på debugging og ved å begrense antall linjer med kode.
+							</p>
+							
+							
+							
+							
+							<h3>Praktisk eksempel for komprimering</h3>
+							
+							<p>
+								Jeg kom ikke i gang med SASS før jeg allerede var nesten ferdig med kodingen av både CSS-filen og HTML-dokumentene. Følgelig er ikke CSS-filen skrevet vha SASS. I dette tilfellet er derfor bruk av SASS begrenset til komprimering. Komprimering vil gjøre at filen kjører raskere enn ellers.
+							</p>
+							
+							<p>
+								Det første bildet viser stilarket for dette dokumentet før behandling med Scout. For å komme i gang med dette må vi bytte ut filnavnet med .SCSS
+							</p>
+							<div>
+								<a href= "for-sass.png"><img src = "for-sass.png" alt="Et CSS-stilark før SASS" class ="sassImg"/></a> <!--width = "50%" -->
+							</div>		
+							
+							<p> Det andre bildet viser resultatet for stilarket etter at det har blitt behandlet med Scout. Som vi klart kan se: dette dokumentet er tilnærmet uleselig for mennesker, men vil kjøre mye raskere i en nettleser grunnet at størrelsen på dette er færre byte. Vi kan forøvrig velge innstilling på hvor komprimert dette skal være, dog det vanligste vil være å la det være så kompakt som mulig med færrest mulig mellomrom.</p>
+							
+							<div>
+								<a href = "etter-sass.png" class ="sassImg">
+								<img  src = "etter-sass.png" alt = "Stilark etter behandling med SASS" class ="sassImg"/></a>
+									<!--width	= "50%" -->
+							</div>
+							
+							<p></p>
+							</article>
+								
+							<article>
+								
+								
+								<h4>Kilder/les mer</h4>
+								<ul>
+									<li>
+										<a target="_blank" href = "https://www.webdesignerdepot.com/2013/11/the-beginners-guide-to-sass/">
+											The Beginners guide to SASS <i class="fa fa-external-link" aria-hidden="true"></i>.
+										</a>
+									</li>
+									
+									<li> 
+										<a target="_blank" href= "https://www.youtube.com/watch?v=CV2fdPMdkn0&t=6s">
+											Youtubeklipp om hvordan man kan bruke SASS <i class="fa fa-external-link" aria-hidden="true"></i>.
+										</a>
+									</li>
+									
+									<li>
+										<a target="_blank" href= "http://scout-app.io/">
+											Nedlastingsdirectory for Scout-App <i class="fa fa-external-link" aria-hidden="true"></i>.
+										</a>
+									</li>
+									<li>
+										<a target="_blank" href= "http://sass-lang.com/guide">
+											SASS-lang guide <i class="fa fa-external-link" aria-hidden="true"></i>.
+										</a>
+									</li>
+								</ul>
+								
+								
+								
+							
+							</article>
+							
+							
+							
+						</section>
+				</main>
+				
+				<footer>
+				
+					<p id = "someParagraph">© Ådne Tobiesen <a href= "aadne.t@live.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+					<a href = "https://www.google.no/maps/place/Mordor+Druk/@52.1787293,20.99628,17z/data=!3m1!4b1!4m5!3m4!1s0x47193326cf0063c9:0xebb60829d683158e!8m2!3d52.178726!4d20.998474"><i class="fa fa-map-pin" aria-hidden="true"></i></a>
+					
+					</p>
+					
+				</footer>
+				
+				
+			</div>
+			
+		</body>
+
+	</html>

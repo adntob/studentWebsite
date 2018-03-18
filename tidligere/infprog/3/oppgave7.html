@@ -1,0 +1,117 @@
+
+ <!-- ctrl + f5 vil refreshe CSS-ark også-->
+<!DOCTYPE html>
+	<html>
+
+		<head>
+			<meta charset="utf-8" />  <!--Dette er for å få til skandinaviske språk -->
+			<title> Her skal det stå en tittel</title>
+			<link rel= "stylesheet" type = "text/css" href =	"stylesheet/stilark.css">
+			<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+			<script>
+			
+				function find(tall, fra, til) {		//Lag en find funksjon som finner ut om et tall
+													// er mindre enn høyre grense, og større enn venstre grense
+													// Vi antar her på forhånd at brukeren vet hvilket som er størst, og hvilket som er minst
+													// Ellers så kunne vi i prinsippet ha lagd en funksjon som sjekker
+													// Hvis så er tilfelle, så befinner tallet seg i dette intervallet. 
+						
+						if (tall	<	fra || tall	>	til){
+						
+							return false
+						}
+						return true;
+				}
+			
+			
+				window.onload = main;
+										// La main kjøre ved oppstart, inneholdt i denne er der to funksjoner som kjører
+					function main() {
+					
+						 mellomNullMilliard();
+						 document.getElementById("btnActivate").onclick = betweenEandPi;
+						
+					}
+
+										// Lag et veldig åpenbart eksempel bare for å finne ut om funksjonen faktisk fungerer
+				
+					function mellomNullMilliard(){
+					
+						var condition = "";
+						
+						var statement	=	find(5,0,10000000);
+						
+						 if	(	statement === false	){
+						 
+							condition =	"ikke"
+							
+							}
+							
+							document.getElementById("utskriftMellomNullMilliard").innerHTML = "Tallet befinner seg" + condition + " i dette intervallet";
+					}
+				
+										// Lag en brukerstyrt funksjon som sjekker om et taller i mellom de irrasjonelle tallene e og Pi
+										
+					function betweenEandPi(){
+					
+						var tall = parseFloat(document.getElementById("userInput").value);
+						var condition ="";
+						
+						var statement = find(tall, Math.E, Math.PI);
+						
+						if(statement != true){
+						
+							condition =	"ikke"
+							
+						}
+						console.log(statement);
+						
+						document.getElementById("utskriftEogPi").innerHTML	=	"Tallet befinner seg" + " " + condition + " " + "i intervallet" + "[" +
+						"e"+ "," + " " + "&pi;" + "]";
+					}
+			
+			</script>
+	
+			
+		</head>
+
+		<body>
+		
+			<header>
+				<h1>Obligatorisk innlevering 3</h1>
+			
+			</header>
+		
+		
+			<nav>
+				<ul>
+					<li>	<a href =	"oppgave1.html">Oppgave1</a>	</li>
+					<li>	<a href =	"oppgave2.html">Oppgave2</a>	</li>
+					<li>	<a href =	"oppgave3.html">Oppgave3</a>	</li>
+					<li>	<a href =	"oppgave4.html">Oppgave4</a>	</li>
+					<li>	<a href =	"oppgave4alt.html">Oppgave4(alt)</a>	</li>
+					<li>	<a href =	"oppgave5a.html">Oppgave5a/b</a>	</li>
+					<li>	<a href =	"oppgave5c.html">Oppgave5c</a>	</li>
+					<li>	<a href =	"oppgave6a.html">Oppgave6a</a>	</li>
+					<li id = "activeLink">	<a href =	"oppgave7.html">Oppgave7</a>	</li>
+					<li>	<a href =	"oppgave8.html">Oppgave8</a>	</li>
+					
+				
+				</ul>
+			
+			</nav>
+			
+			<h1>Dette er en header</h1>
+			
+			<h3>Ligger tallet 5 mellom 0 og 10000000?</h3>
+			<p id = "utskriftMellomNullMilliard">Dette er en paragraf</p>
+			
+			<h3>Ligger et vilkårlig tall mellom e og &pi; ?</h3>
+			<input id =	"userInput" />
+			<button id ="btnActivate">Make it so!</button>
+			
+			<p id ="utskriftEogPi"></p>
+			
+		</body>
+
+	</html>

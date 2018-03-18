@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+	<html>
+
+		<head>
+				<meta charset="utf-8" />
+				<title> Oppgave 3 </title>
+				<!-- <script src="myScript.js"></script> -->
+				<link rel= "stylesheet" type = "text/css" href =	"stylesheet/stilark.css">
+				<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	
+			<script>
+				
+					/**
+					
+					*	Lag en array
+					
+					*/
+				
+				var arr = ["Marianne" , "Kjetil" , "Mohammed" , "Pernille" , "Ida" , "Rolf" , "Guttorm"
+						, "Tomine" , "Eline" , "Ronald" , "Bjarte"];
+				
+				
+				window.onload = oppstart;
+							
+				function oppstart() {
+								
+					
+					
+					var arrTom = [""];
+					
+					
+					
+						for(var i=0; i<3; i++)
+						
+						{
+							var indeksering = arr.length-1
+							
+							var rand = Math.round	(Math.random()	*	(indeksering));
+							
+								arrTom[i]	=	arr[rand];
+								
+								arr.splice(rand,1);
+						}
+							
+					document.getElementById("utskriftNavn").innerHTML = "De tilfeldig valgte navnene er : " + arrTom;
+				}
+				
+				</script>
+				
+				
+		</head>
+			
+			
+
+		<body>
+			<header>
+				<h1>Obligatorisk innlevering 3</h1>
+			
+			</header>
+		
+
+			<nav>
+				<ul>
+					<li>	<a href =	"oppgave1.html">Oppgave1</a>	</li>
+					<li>	<a href =	"oppgave2.html">Oppgave2</a>	</li>
+					<li id = "activeLink"	>	<a href =	"oppgave3.html">Oppgave3</a>	</li>
+					<li>	<a href =	"oppgave4.html">Oppgave4</a>	</li>
+					<li>	<a href =	"oppgave4alt.html">Oppgave4(alt)</a>	</li>
+					<li>	<a href =	"oppgave5a.html">Oppgave5a/b</a>	</li>
+					<li>	<a href =	"oppgave5c.html">Oppgave5c</a>	</li>
+					<li>	<a href =	"oppgave6a.html">Oppgave6a</a>	</li>
+					<li>	<a href =	"oppgave7.html">Oppgave7</a>	</li>
+					<li>	<a href =	"oppgave8.html">Oppgave8</a>	</li>
+					
+				
+				</ul>
+			
+			</nav>
+			
+		
+			<h2>Obligatorisk innlevering 3 -oppgave 3</h2>
+			
+			<h3>Liste med navn</h3>
+			<p>Array: [Marianne, Kjetil, Mohammed , Pernille, Ida, Rolf, Guttorm, Tomine, Eline, Ronald, Bjarte]
+			
+			
+			</p>
+			
+			<h3>Generert utskrift med tilfeldige navn</h3>
+			
+			<p id="utskriftNavn"></p>
+
+		</body>
+
+	</html>

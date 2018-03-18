@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+	<html lang = "nb">
+		<head>	
+			<title>Hjem</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta charset="utf-8"/>
+			<script src="scripts/myscript.js"></script>  <!--Eksternt JavaScript for mobilmeny -->
+			
+			<link rel="icon" type="image/png" sizes="32x32" href="bilder/favicon-32x32.png">
+			<link rel="stylesheet" type= "text/css" media =	"all" href="_style/stil.css"> 
+			<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">	
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+			
+			<meta name="author" content="Ådne Tobiesen" />
+			<meta name ="keywords" content = "Responsivt web-design, arbeidskrav webutvikling, content management system, WAMP-server"/>
+			<meta name	= "description" content="Dette er webinnleveringsnettstedet for arbeidskrav 4 i Webutvikling Ådne Tobiesen, student ved årskurs for informasjonsteknologi ved HiØ.
+			Dersom du er en student ved samme institusjon: ikke plagier!. " />
+		
+		</head>
+		
+		<body>
+
+		
+			<div id ="master-grid">
+			
+			<!--Navigation menu-computer -->
+				
+				<nav id ="bread-crumbs">
+					<ul>
+						<li>Hjem</li>
+					</ul>
+				</nav> 
+				
+				<nav id ="navigation-menu-computer">
+					<ul>
+						
+							<li>
+								
+								<a id = "activeSite" href ="index.html"> <i class="fa fa-home" aria-hidden="true">&nbsp; </i>  Hjem! </a>
+								
+							</li> 
+						
+						<li><a href = "installasjon-av-wordpress-og-wamp.html">Installasjon av wamp og wordpress</a></li>
+						<li><a href = "tema-og-tilpasning.html">Temaer og tilpasning av disse</a></li>
+						<li><a href = "widgets-utvidelser.html">Widgets og utvidelser</a></li>
+						<li><a href = "innlegg-og-sider.html">Innlegg og sider</a></li>
+						<li><a href ="dynamiske-og-statiske-sider.html">Statiske forsider i wordpress</a></li>
+						<li><a href ="_sass/stil.scss">SCSS-fil</a></li>
+					</ul>
+
+				</nav>
+				
+				<!-- Mobile-menu -->
+				
+				<nav id ="mobile-menu">
+				
+				<i id ="barButton" class="fa fa-bars fa-2x"  aria-hidden="true"></i>
+				
+					<ul	id ="drop-down-list">
+					
+						
+							<li>
+								<a href ="index.html">                       <i class="fa fa-home" aria-hidden="true">&nbsp; </i>  Hjem! </a>
+							</li> 
+						<li><a href = "installasjon-av-wordpress-og-wamp.html">Installasjon av wamp og wordpress</a></li>
+						<li><a href = "tema-og-tilpasning.html">Temaer og tilpasning av disse</a></li>
+						<li><a href = "widgets-utvidelser.html">Widgets og utvidelser</a></li>
+						<li><a href = "innlegg-og-sider.html">Innlegg og sider</a></li>
+						<li><a href ="dynamiske-og-statiske-sider.html">Statiske forsider i wordpress</a></li>
+						<li><a href ="_sass/stil.scss">SCSS-fil</a></li>
+					</ul>					
+				</nav>
+				
+				<!-- Header- -->
+				
+				<header id = "mainHeader"><h1>	Ådnenes Makt  </h1>
+					<aside>
+						<p>
+							<a href = "#flexWrapperIndex">Hopp til hovedinnhold</a>
+						</p>
+						
+					</aside>	
+				</header>
+				
+				<!-- Main-section -->
+				
+				<main id ="flexWrapperIndex" tabindex = "1">
+				
+				
+						<article class = "articleIndex">
+							<header >
+								<h2>Installasjon av wordpress og Wamp</h2>
+							</header>
+							<p>
+								Wordpress er idag det mest bruke CMS-systemet på internett. I dette eksempelet kjøres det på en WAMP-server. For å finne ut mer om hvordan man kommer i gang med begge disse komponentene, trykk les mer.
+							</p>
+							
+							<p>
+								<a class = "button" href = "installasjon-av-wordpress-og-wamp.html">Les mer!</a>
+							</p>
+						
+						</article>
+						
+						<article	class = "articleIndex">
+							<header><h2>Widgets og utvidelser i wordPress</h2></header>
+							<p>
+								WIDGET er et miniatyrprogram, for eksempel en søkemotor, plugin er det vi på norsk kaller en utvidelse og er mindre snevert. 
+								For å finne ut mer om disse, trykk les mer.
+							</p>
+							<p><a class = "button" href = "widgets-utvidelser.html">Les mer!</a></p>
+						</article>
+
+						
+						<article	class = "articleIndex">
+							<header><h2>Page/post-dynamikk</h2></header>
+							<p>
+								En wordpress-side kan grovt sett deles inn i sider og innlegg, for å finne ut mer om disse og evt. forskjeller trykk "les mer".
+							</p>
+							<p><a class = "button" href = "innlegg-og-sider.html">Les mer!</a></p>
+						</article>
+						
+						<article	class = "articleIndex">
+							<header><h2>Videre tilpasninger: Bytte/modifisere tema</h2> </header>
+							<p>
+								Noe av det fine med WordPress er at vi lett kan bytte utseende på hele siden ved bare noen få tastetrykk. Wordpress har også gitt oss muligheten til å endre til ferdige temaer som man ytterligere kan skreddersy etter behov. For å finne ut mer om dette, trykk "les mer".
+							</p>
+							<p><a class = "button" href = "tema-og-tilpasning.html">Les mer!</a></p>
+						</article>
+						
+				</main>
+				
+				<!--Footer -->
+				
+				<footer>
+					<p>
+						<i class="fa fa-copyright" aria-hidden="true"></i> 
+						Ådne Tobiesen
+					</p>
+					<p>
+						<a href ="https://www.facebook.com/smygen91"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i> </a>
+						<a href ="https://github.com/adntob"><i class="fa fa-github-square fa-3x" aria-hidden="true"></i></a>
+						<a href ="mailto:aadne.t@live.com"><i class="fa fa-envelope-square fa-3x" aria-hidden="true"></i> </a>
+						<a href ="https://www.linkedin.com/feed/"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+						
+					</p>
+				</footer>
+				
+			</div>
+		</body>
+
+	</html>

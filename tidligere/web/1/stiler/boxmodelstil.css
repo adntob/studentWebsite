@@ -1,0 +1,179 @@
+﻿/*11.09.17*/
+/*FLEX-BOX */
+/* BEMERK!! Denne siden er bevisst lagd for å imitere en 90-talls side, og dermed overdrive stylingen. */
+
+h1 {
+	text-shadow: 4px 2px #ff0000;
+	border-style:dotted;
+}
+
+h2 {
+	background-color: green;
+	
+}
+
+* {
+	color: pink;
+	
+}
+
+body {
+	background-image: url("star-space-tile.jpg");
+
+	
+}
+
+p{
+	
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	
+}
+.musikk {
+	
+	width:90%;
+	
+}
+
+
+/* FLEX-BOX */
+
+#wrapper {
+	display: flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	border-style:solid;
+	border-color:green;
+	justify-content: space-between;
+	
+}
+
+header {
+	border-style:solid;
+	flex-basis: 100%;
+	background-color: gray;
+
+	
+}
+
+/*ASIDE*/
+
+aside {
+	background-color: brown;
+	
+}
+
+
+/*NAV-menu */
+
+nav {
+	border-style:solid;
+	background-color: cyan;
+	flex-basis:200px;
+	
+}
+
+nav ul li {  /*Stort sett i disse tilfellene vil egenskapen "etterkommer" utnyttes. Dette er enkelt og greit mellomrom mellom et element og et som er under */
+	
+	
+}
+
+nav ul li a { /* For eksempel vil alle lenker, som er etterkommere av et listeelement, som er etterkommer av en uordnet liste som befinner seg i nav-taggen være påvirket av dette */
+	text-decoration: none;
+	color: yellow;
+	font-weight: bold;
+	
+}
+
+nav ul li a:hover {  /* Hover representerer en pseudoklasse, og gjør at man kan gjøre mye kult hvis man tar musen over*/
+	color: blue; 
+	background-color:black;
+}
+
+main {
+	border-style: solid;
+	flex-basis:400px;
+	flex-grow: 1;
+	flex-shrink: 1;
+	min-height: 200px;
+	
+}
+
+aside {
+	border-style:solid;
+	flex-basis: 200px;
+	
+	
+}
+
+footer {
+	border-style:solid;
+	flex-basis: 100%;
+	
+}
+
+footer text:hover {
+	;
+	
+}
+
+/*GENERELT */
+
+h3 {
+	border-style: double dashed;
+	
+	
+}
+
+/* */
+
+#ernaKaffe {
+	width:200px;
+	
+}
+
+
+
+/*BOX- */
+
+.floating-box {  /*Punktum virker som en selector på en klasse. I disse tilfellene deler alle boksene samme klasse. Ettersom vi gjenbruker disse egenskapene, vil en klasse være bedre enn x antall id-er	*/
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+	border: 3px solid #73AD21;}  
+/* Selv om alle våre bokser deler samme klasse, vil id-selector ha et forrang foran klasseselektoren . */
+
+boxInt{
+	background-color: red;
+	
+}
+
+#boxTo {
+	padding:100px;
+	
+}
+
+#boxTre {
+	padding:0;
+	padding-right: 100px;
+	
+}
+
+#boxFire{
+	padding: 0;
+	padding-top: 100px;
+	
+}
+
+#boxFem {
+	background-color: red;
+    box-shadow: 10px 15px 5px #888888;
+}
+
+#boxNi{
+	margin:0;
+margin-left:200px;}
+
+#boxTi {
+	border-radius: 10px;
+}

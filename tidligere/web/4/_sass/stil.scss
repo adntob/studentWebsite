@@ -1,0 +1,426 @@
+@import url('normalize.css');
+
+/*
+=============================================================================================
+	Variables
+=============================================================================================
+*/
+
+$blue: #608CA9;
+$orange: #c53211;
+$header-font: 'Jura', sans-serif;
+$main-font: 'EB Garamond', serif;
+$dark-gray: #2e3830;
+$purplish-white: #e6dbc9;		
+$light-gray: #e6dbc9;
+	
+
+	
+/*
+=============================================================================================
+		Structure
+=============================================================================================		
+*/		
+
+html {							
+		font-size: calc(1em + 1vw);
+	
+	}
+
+	
+body {
+	margin:0 auto;
+	background-color:$purplish-white;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display:block;
+}
+
+
+h1, h2, h3, h4, h5 {
+	font-family: $header-font;
+	font-weight:lighter;
+}
+
+
+p, li{
+	font-family: $main-font;
+} 	
+	
+
+
+/*
+=============================================================================================	
+	Navigation-menu	& Bread-crumbs
+=============================================================================================	
+*/
+
+#bread-crumbs{
+
+	grid-area:bread-crumbs;
+	
+		ul {
+		
+			list-style:none;
+			
+				li{
+				
+					display:inline;
+					font-size:18px;
+						
+					
+						+li:before{
+							padding:8px;
+							content:">";
+						}
+						
+							&:last-child{
+								font-weight:bold;
+						}
+						
+							a{
+								color:darkBlue;
+								
+									&:hover{
+										color:red;
+									}
+							}
+					
+				}
+					
+		}
+}
+
+#mobile-menu{
+	display:none;
+}
+
+
+#navigation-menu-computer{
+
+	grid-area:navigation-menu;
+	background-color:$orange;
+	
+		nav ul {
+			margin-left: auto;
+		}
+				li {
+					display: inline-block;
+					padding: 0 20px;
+					
+						a {
+							text-decoration:none;
+							color:white;
+							
+							font-size:18px;
+							
+								&:active{
+									opacity:0.5;
+								}
+							
+								&:visited{
+									color:yellow;
+								}
+							
+								&:hover{
+									border-bottom: solid white;
+			}
+		}
+	}		
+}
+
+
+#activeSite{
+	border-bottom: solid white;
+}
+
+/*
+=============================================================================================
+	Grid
+=============================================================================================
+*/
+
+#master-grid{
+
+	display:grid;
+	grid-template-rows: 70px auto 700px auto 250px; 
+	/*grid-gap:10px; */
+	grid-template-areas: 
+						"bread-crumbs"
+						"navigation-menu"
+						"header"
+						"main-content"
+						"footer";
+						
+							main {
+							
+								width: 100%;
+								max-width: 1400px;
+								margin: 0 auto;
+		
+	}
+}
+
+/*
+=============================================================================================
+	Flex-box front page
+=============================================================================================
+*/
+
+main{
+	
+	display:flex;
+	align-items:flex-start;
+	flex-wrap:wrap;
+	
+	
+		article {
+			border-style:solid;
+			border-radius:5px;
+			width:40%;
+			border-color:$light-gray;
+			margin:10px;
+			overflow:hidden;
+			width: 45%;
+			
+				p {
+					padding:15px;
+					}
+			
+				.button {
+					
+					text-decoration:none;
+					padding:20px;
+					border-radius:10px;
+					background-color: $blue;
+					color:yellow;
+			
+						&:hover{
+							opacity:0.9;
+							color:yellow;	
+			}
+		}
+	}
+}
+
+/* 
+=============================================================================================
+	Article pages
+=============================================================================================
+*/
+
+main {
+	aside{
+		width:25%;
+		overflow:auto;
+		flex:1 1 auto;
+		background-color:$blue;
+			ul li{
+				padding: 10px;
+					a{
+						text-decoration:none;
+						color:white;
+						
+							&:hover{
+								color: yellow;
+							}
+					}
+			}
+	}
+	#article-article{									
+			width:70%;
+				img{
+					display:block;		
+					border:solid $light-gray;
+					margin:auto 10px;
+					border-radius: 10px;	
+					width:50%;
+						&:hover{
+							opacity:0.8;
+						}
+				}
+	}
+
+}
+
+/*
+=============================================================================================
+	IMG-header
+=============================================================================================
+*/
+
+
+#mainHeader{
+	background-image:url("ghost.png"); /*Taken from Unsplash.com, artist Rosie Fraser, modded by me, using the free software GIMP*/
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-attachment:fixed;
+	grid-area:header;
+	color:yellow;
+	text-align:center;
+	
+						a {
+							border-style: solid;
+							border-radius:5px;
+							color:white;
+							text-decoration:none;
+							padding: 20px;
+
+								&:hover{
+									background-color:white;
+									color:black;
+									border-color:white;
+								}
+	}
+}
+
+h1{
+	font-size: 60px;
+	text-shadow: 2px 2px black;
+}
+
+
+/*
+=============================================================================================
+	Footer
+=============================================================================================
+*/
+
+
+
+footer {
+	background-color:$dark-gray;
+	color:white;
+	grid-area: footer;
+	text-align:center;
+	
+		a{
+			opacity:0.5; 
+			color:yellow;
+				
+				&:hover {
+					opacity:1.0;
+					
+		}
+	}
+}
+
+	
+
+main {
+	grid-area:main-content;
+	background-color:#FEF6E2;
+}
+
+/*
+=============================================================================================
+	Mobile menu 
+=============================================================================================
+*/
+
+@media all and (max-width: 800px)	{
+
+	#navigation-menu-computer{
+		display:none;
+	}
+
+	
+	#mobile-menu{
+		grid-area: mobile-menu;
+		display:inline-block;
+			ul
+				{
+				list-style-type:none;
+				
+					li{
+					
+						border-bottom:solid;
+						background-color:$dark-gray;
+						text-align:center;
+						padding:30px;
+						
+							&:hover{
+										background-color:$orange;
+									}
+						
+							a{
+								text-decoration:none;
+								color:white;
+								display:block;
+									
+						}
+					}
+				}
+	}
+
+
+#drop-down-list{
+		margin-left:-50px;
+		display:none;
+	}	
+
+	
+/*
+=============================================================================================
+	Flexbox & grid
+=============================================================================================
+*/
+	#master-grid{
+		grid-template-rows: auto auto auto auto 200px;
+		grid-template-areas: "bread-crumbs"
+							"header"
+							"mobile-menu"
+							"main-content"
+							"footer";
+	}
+
+	main {
+		aside{
+			width:100%;
+		}
+		#article-article{
+			width:100%;
+		}
+		.articleIndex {
+			width:100%;
+		}
+	}
+
+/* 
+=============================================================================================
+	IMG-header
+=============================================================================================
+
+*/
+
+#mainHeader{
+	background-attachment:scroll;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;		
+	}
+	
+/*
+=============================================================================================
+	Font-sizing 
+=============================================================================================
+*/
+
+	
+	html {							
+		font-size: calc(1em + 1vw);
+	
+	}
+	
+	h1 { 
+		font-size: 3rem; }
+	h2 { 
+		font-size: 2.2rem; }
+	h3 {
+		font-size: 1.8rem; }
+	h4 {
+		font-size: 1.2rem; }
+	p {
+		font-size: 1rem; }
+	}

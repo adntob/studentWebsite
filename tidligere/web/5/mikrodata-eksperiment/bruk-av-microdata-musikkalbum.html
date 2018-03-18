@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Praktisk bruk av microdata på Leonard Cohen sitt album songs of love and hate </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta charset= "utf-8">
+		<meta name="author" content="Ådne Tobiesen" />
+		<meta name ="keywords" content = "Leonard Cohen, songs of love and hate, webutvikling HiØ, microData, Ådne"/>
+		<meta name	= "description" content="Dette er praktisk bruk av microdata på Leonard Cohen sitt album 'Songs of Love and Hate' " />
+		
+	</head>
+	
+	<body>
+		<h1>Musikkalbum</h1>
+		
+		
+
+		<article itemscope itemtype= "http://schema.org/MusicAlbum" >
+		
+			<h2><span itemprop = "name">Songs of Love and Hate</span> av <span itemprop = "byArtist" itemtype= "http://schema.org/MusicGroup">Leonard Cohen</span></h2>
+			
+			<a href ="bilder/songs-of-love-and-hate.jpg">
+				<img src="bilder/songs-of-love-and-hate.jpg" alt ="Bilde av coveret til Leonard Cohen sitt album, Songs of love and Hate. En klassiker!">
+			</a>
+			<h3>Liste over sanger på albumet:</h3>
+			
+			<span itemprop = "numTracks" content = "7"></span>
+			<span itemprop = "genre" content = "folk"></span>
+			<ol>
+				<li itemprop = "itemListElement" itemscope itemtype ="http://schema.org/ListItem">Avalanche
+					<span></span>
+				</li>
+				
+				<li itemprop= "itemListElement" itemscope itemtype = "http://schema.org/ListItem">Last years man
+					<span></span>
+				</li>
+				
+				<li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">Dress Rehearsal Rag
+					<span></span>
+				</li>
+				
+				<li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">Diamonds in the Mine
+					<span></span>
+				</li>
+				
+				<li	itemprop = "itemListElement" itemscope itemtype ="http://schema.org/ListItem">Love calls you by your name
+					<span></span>
+				</li>
+				
+				<li itemprop = "itemListElement" itemscope itemtype ="http://schema.org/ListItem">Famous Blue Raincoat
+				</li>
+				
+				<li	itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">Sing Another Song, Boys
+					<span></span>
+				</li>
+				
+				<li itemprop = "itemListElement" itemscope itemtype ="http://schema.org/ListItem">Joan of Arc
+					<span></span>
+				</li>
+				
+			</ol>
+		</article>
+		<a href="#">Tilbake</a>
+	</body>
+
+
+</html>

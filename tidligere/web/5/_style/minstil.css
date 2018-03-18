@@ -1,0 +1,294 @@
+@import url("normalize.css");
+/*
+=================================================================================================================
+	Variables
+=================================================================================================================
+*/
+/*
+=================================================================================================================
+	Structure 
+=================================================================================================================
+*/
+p {
+  color: #FAED26;
+}
+
+body {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc(14px + (1vw /8));
+}
+
+body {
+  font-family: "Jura", sans-serif;
+  background-color: #6e6e6e;
+  color: #FFFFFF;
+}
+
+article p::first-letter {
+  font-size: 200%;
+  font-weight: bold;
+}
+
+/*
+=================================================================================================================
+	Navigation-menu
+=================================================================================================================
+*/
+#mobile-menu {
+  display: none;
+}
+
+#navigation-menu-computer {
+  margin: 5px;
+  width: 100%;
+}
+
+#navigation-menu-computer ul {
+  list-style: none;
+}
+
+#navigation-menu-computer ul li {
+  padding: 0 40px;
+  position: relative;
+  display: inline-block;
+}
+
+#navigation-menu-computer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+#navigation-menu-computer ul li a:hover {
+  border-bottom: solid;
+}
+
+#active-dir {
+  border-bottom: solid;
+}
+
+/* 
+=================================================================================================================
+	MAIN CONTAINER
+=================================================================================================================
+*/
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.article-article {
+  width: 100%;
+}
+
+.article-article img {
+  box-sizing: border-box;
+  width: 45%;
+  display: inline-block;
+}
+
+.article-article img:hover {
+  opacity: 0.5;
+}
+
+.article-article ul li a {
+  color: yellow;
+}
+
+.article-article ul li a:hover {
+  color: red;
+}
+
+.article-article h1, .article-article h2, .article-article h3, .article-article h4, .article-article h4, .article-article h5, .article-article h6 {
+  color: yellow;
+}
+
+.article-article p {
+  padding: 15px;
+  color: white;
+  line-height: 1.6;
+}
+
+/*
+=================================================================================================================
+	Grid
+=================================================================================================================
+*/
+#masterGrid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "main-content" "footer";
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+}
+
+main article {
+  border-radius: 10px;
+  margin: 10px;
+  background-color: #3F3F3F;
+  overflow: hidden;
+  width: 45%;
+  box-sizing: border-box;
+}
+
+main article h2, main article h3, main article h4, main article h5 {
+  text-align: center;
+}
+
+main article ol li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+main article ol li a:hover {
+  opacity: 0.7;
+}
+
+main article h2 {
+  border-bottom: solid;
+  border-color: #7d7d7d;
+}
+
+/*
+=========================================================================================
+	Header
+=========================================================================================
+ 
+*/
+#main-header {
+  position: sticky;
+  top: 0;
+  border-radius: 50px 0px 50px 0px;
+  grid-area: header;
+  background-color: black;
+  color: #FAED26;
+  height: 100px;
+  width: 100%;
+}
+
+#main-header h1 {
+  text-align: center;
+  text-shadow: 2px 2px blue;
+}
+
+h1 {
+  text-align: center;
+  color: yellow;
+}
+
+/* 
+=================================================================================================================
+	FOOTER
+=================================================================================================================
+*/
+footer {
+  border-radius: 5px;
+  grid-area: footer;
+  background-color: #A2482E;
+  width: 100%;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+}
+
+footer p .fa-copyright, footer p .fa-map-marker {
+  color: #FFA500;
+}
+
+footer p a {
+  color: white;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: gray;
+}
+
+footer p a i {
+  color: black;
+  opacity: 0.5;
+}
+
+footer p a i:hover {
+  opacity: 0.9;
+}
+
+img {
+  border-radius: 20px;
+  margin: auto;
+  display: block;
+}
+
+/* 
+=================================================================================================================
+	Mobile-menu
+=================================================================================================================
+*/
+@media all and (max-width: 800px) {
+  #mobile-menu {
+    display: block;
+    grid-area: mobile-menu;
+  }
+  #mobile-menu ul {
+    display: none;
+  }
+  #mobile-menu ul li {
+    background-color: black;
+    margin-left: -40px;
+    padding: 30px;
+    text-align: center;
+    border-bottom: solid;
+    display: block;
+  }
+  #mobile-menu ul li:hover {
+    background-color: #3F3F3F;
+  }
+  #mobile-menu ul li a {
+    text-decoration: none;
+    color: yellow;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: center;
+  }
+  main article {
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+  }
+  #masterGrid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "header" "mobile-menu" "main-content" "footer";
+  }
+  #main-header {
+    position: static;
+  }
+  #navigation-menu-computer {
+    display: none;
+  }
+  body {
+    max-width: 800px;
+  }
+}

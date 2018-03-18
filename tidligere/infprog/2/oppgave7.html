@@ -1,0 +1,160 @@
+<!-- Ådne Tobiesen 04.09.17 -->
+ <!-- ctrl + f5 vil refreshe CSS-ark også-->
+
+<!DOCTYPE html>
+	<html>
+
+		<head>
+				<meta charset="utf-8" />
+				<title> Tittel </title>
+				<!-- <script src="myScript.js"></script> -->
+				
+				
+					<script>
+				
+							window.onload = oppstart;
+							
+							function oppstart() {
+							
+							
+							
+							for (var tall = 0; tall<=100; tall++)  //* Lag en liste for alle tall mellom 0 og 100, begynnelse indeksering 100.
+									{
+										var nyttElement = document.createElement("li");
+										nyttElement.innerHTML = tall;
+										document.getElementById("lstFramlengs").appendChild(nyttElement);
+									
+									}		
+							
+							for (var tall = 100;tall>0;  tall--)  //* Lag en liste for alle tall mellom 0 og 100, begynnelse på 0
+									{
+										var nyttElement = document.createElement("li");
+										nyttElement.innerHTML = tall;
+										document.getElementById("lstBaklengs").appendChild(nyttElement);
+									
+									}
+							
+									
+								
+								
+							for (var tall = 0; tall<=100; tall++)		//*Lag en liste for alle tall mellom 1 og 100, delt på 2
+								{
+									var variabel = tall/2;									
+									
+									var nyttElement = document.createElement("li");
+									nyttElement.innerHTML = variabel;
+									document.getElementById("lstDeltPa").appendChild(nyttElement);
+								
+								
+								
+								}
+									
+							for (var tall = 0; tall<=100; tall++)  //* Lag en liste for alle tall som er delelige på 3
+								{
+									var nyttElement = document.createElement("li");
+									
+									 var kriterium = (tall%3 ===0)
+									
+										if (kriterium === true){				//* Hvis det aktuelle tallet er delelig, før det opp i listen. Dette e altså en nøstet valgsetning
+											nyttElement.innerHTML = tall;
+											document.getElementById("lstModulo").appendChild(nyttElement);
+									
+									}
+								
+									}
+									
+							for (var tall = 0; tall<=100; tall++) {  //* Lag en liste for alle partall
+																	  //* Def: partall. Et tall du kan dele på to uten å få reste	
+																		
+								var nyttElement = document.createElement("li")
+								
+								var kriterium = (tall%2 === 0)
+								
+									if (kriterium === true) {
+										nyttElement.innerHTML = tall;
+										document.getElementById("lstPartall").appendChild(nyttElement);
+										
+									
+										}
+							
+									}	
+							
+							for (var tall = 0; tall<=100; tall++){  //* Lag en liste for alle oddetall
+																	//* def: oddetall. et tall du kan dele på to og få 1 i rest
+								var nyttElement = document.createElement("li");
+								
+								var kriterium = (tall%2 ===1)
+								
+									if(kriterium === true) {
+										nyttElement.innerHTML = tall;
+										document.getElementById("lstOddetall").appendChild(nyttElement);
+									
+										}
+							
+									}
+									
+									
+									for (var tall = 0; tall<=100; tall++){  //* Lag annenhvert positivt/negativt. I prinsippet kan den løses med tall*Math.pow(-1, tall)
+										
+										var kriterium = (tall%2===0);
+										var nyttElement = document.createElement("li");
+										
+										if(kriterium ===true){
+									
+											
+											nyttElement.innerHTML = tall;  //* Ut ifra elementære matteregler, kan vi gjøre det vha. å opphøye -1 i noe
+											document.getElementById("lstAnnenhver").appendChild(nyttElement);
+											}
+										
+										else if (kriterium ===false){		
+											nyttElement.innerHTML = tall*(-1);
+											document.getElementById("lstAnnenhver").appendChild(nyttElement);
+										
+										}
+										
+										
+										}
+										
+										
+										
+									
+									}
+									
+									
+									
+							
+				
+					</script>
+				
+				
+		</head>
+			
+			
+
+		<body>
+		
+			<h2>Forlengs mellom 0 og 100</h2>
+			<ul id ="lstFramlengs"> </ul>
+			
+			<h2>Baklengs mellom 0 og 100</h2>
+			<ul	id ="lstBaklengs"> </ul>
+				
+			<h2> Delt på 2 mellom 0 og 100 </h2>
+			<ul id ="lstDeltPa"> </ul>
+				
+				
+			<h2>Tall mellom 0 og 100 delt på 3</h2>
+			<ul id ="lstModulo"></ul>
+				
+			<h2>Partall mellom 0 og 100</h2>
+			<ul id = "lstPartall"></ul>
+			
+			<h2> Oddetall mellom 0 og 100 </h2>
+			<ul id ="lstOddetall"> </ul>
+			
+			<h2> Annenhvert negativt/positivt mellom 0 og 100 </h2>
+			<ul id ="lstAnnenhver"> </ul>
+			
+		</body>
+
+	</html>

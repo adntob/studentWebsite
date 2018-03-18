@@ -1,0 +1,216 @@
+<!-- Ådne Tobiesen 16.09.17 -->
+
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+			<meta charset="utf-8" />
+			<title> Tittel </title>
+			<!-- <script src="myScript.js"></script> -->
+			
+			<style>
+			
+				#svarFeil{
+					color: red;
+					font-weight: bold;
+				
+				}
+			
+			
+			</style>
+			
+			
+				<script>
+			
+						window.onload = main;
+						
+															
+						
+						
+						
+						function main() {
+						
+						
+						
+							document.getElementById("btnRegistrer").onclick = trykkEt;
+						
+						
+						
+						}
+						
+						
+						function trykkEt() {
+																							
+							
+							
+						
+							var brukerNavn = document.getElementById("txtBrukerNavn").value;
+																															
+							var passord = document.getElementById("txtPassord").value;  
+							
+							var passordBekreft = document.getElementById("txtPassordGjenta").value;		//* Lag variabel for lengdePassord, 
+							
+																									//* og ønsket lengde på passord (I tilfelle vi ønsker å endre ifra 5 til noe annet)
+							var lengdePassord = passord.length;
+							
+							var onsketLengde = 5; //* Minimumslengde på passord er 5*//
+							
+							
+							
+							//*Oppgave 3 *//
+							
+							
+							
+							
+							 var aarsDato = new Date(document.getElementById("fodselsDato").value); //Dette gir verdien som en streng, på formen jan 25 1991 01:00:00 GMT+01:00 (Romance Standard Time) 
+							 console.log(aarsDato);
+							
+								
+							var dagsDato = new Date()  //*Dette gir datoen som den er idag *//
+														//* NB!!! DENNE FUNGERER IKKE I FIREFOX ELLER INTERNET EXPLORER*//
+							
+							
+							
+							
+							var differanseDato = dagsDato - aarsDato;  //*Dette gir differansen mellom bruker-input og dagen idag i enheten millisekunder. Kanskje litt upraktisk? *//
+							console.log(differanseDato);
+							
+							differanseDato /=1000; 				//* I enheten sekunder
+							differanseDato /=3600;				//* i enheten timer
+							differanseDato /=24;				// i enheten dager
+							differanseDato /=365.25;
+																// I enheten år. Deles på dette fordi det er et gjennomsnitt av skuddår
+							dittAar = differanseDato;
+							
+							console.log(dittAar);
+							
+							if(dittAar<18){
+								dittAar = Math.floor(dittAar); //* For de tilfellene hvor en person er nært 18, men ikke helt vil dette rundes ned til nærmeste heltall. *//
+															
+							}
+							
+							
+							
+							
+							//* Teller som går for hver if-setning, denne kan endres i takt med antall setninger vi blir nødt til å kjøre 
+							
+							var teller = 3;
+							
+							var brukerOutput = "";
+							
+							
+							
+																/* Oppgave 2) */
+							if (passordBekreft !== passord) {  									//*Hvis passord er ulikt *//
+								teller--;
+								brukerOutput += "<br>" + "*Passordene dine er ikke like";
+								document.getElementById("gjentaPara").style.color = "red";
+								}
+																
+																							/* Oppgave 1) */
+							if (brukerNavn === "" || passord === null || passord === "")  //*Hvis passord og/eller brukernavn=0, gjør det og det. Gåseøynene "" må være klint nærme hverandre
+								{
+
+									if (brukerNavn === ""){
+										teller--;
+										brukerOutput += "<br>" + "**Brukernavnet ditt er tomt"; 
+																		/* Må kjøres inni en if-test for å gi bruker input om hvilken av disse evt. disse må forøvrig være separate tester 
+																							fordi bruker kan ha gjort en eller begge feil*/
+										document.getElementById("brukerPara").style.color = "red";													
+																							
+																						
+										}
+								
+									 if (passord === ""){
+									 brukerOutput +="<br>" + "* passordet ditt er tomt";
+									 document.getElementById("passordPara").style.color = "red";
+									 
+									 
+									 
+								
+										}
+								
+								teller--;
+								}
+							
+																	/* Oppgave 2) */
+							if (lengdePassord <= onsketLengde) 							//*Må både kjøre flere if-tester (og ikke else/if), samt ha en variabel for hver iterasjon for å holde rede på evt. brukerinput
+							
+							{
+								teller--;
+								brukerOutput += "<br>" + "Ditt passord er ikke langt nok";
+								document.getElementById("passordPara").style.color = "red";
+								
+								
+							}
+							
+							
+							if (dittAar < 18){
+								brukerOutput += "<br>"+ "* Du er ikke gammel nok";
+								document.getElementById("datoPara").style.color = "red";
+								
+								} 
+							
+						
+							if (teller ===	3 ) {
+							
+								document.getElementById("svar").innerHTML= "Takk for registrering!";
+								document.getElementById("svar").style.color = "green";
+								
+							
+							}
+							
+							
+							
+								document.getElementById("svarFeil").innerHTML = brukerOutput;
+							
+						
+						
+						
+							}
+			
+				</script>
+			
+			
+	</head>
+		
+		
+
+	<body>
+		<h1>Oppgave 1,2&3</h1>
+		
+		<h2>Politisk valg (18+)</h2>
+		
+		
+		<p id  =	"brukerPara">
+			Brukernavn:
+			<input id = "txtBrukerNavn" type = "text"/>
+		</p>
+		
+		
+		<p id =	"passordPara">
+			Passord  <input id ="txtPassord" type = "password"/>
+		</p>
+		
+		<p id ="gjentaPara">
+		
+			Bekreft passord <input id ="txtPassordGjenta" type =	"password"/>
+		</p>
+		
+		<p	id =	"datoPara">Skriv inn fødselsdatoen din	<input  id ="fodselsDato" value=	"3017-09-16"	type = "date"/>  <!--En veldig poor-mans metode å sette en standard dato, men den funker, 
+																												Visse brukere vil glemme å oppgi fødselsdatoen sin, denne kalkulatoren vill være gyldig i ca 1018 år til :)-->
+																												
+																												<!--NB! funker ikke i FireFox -->
+		
+		</p>
+		
+		<button id =	"btnRegistrer">Registrer!</button>
+		
+		<p id = "svar"></p>
+		<p id ="svarFeil"></p>
+		
+		
+	</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+	<html>
+
+		<head>
+				<meta charset="utf-8" />
+				<title> Oppgave 6a </title>
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+				<!-- <script src="myScript.js"></script> -->
+				<link rel= "stylesheet" type = "text/css" href =	"stylesheet/stilark.css">
+				<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+				
+
+				<style>
+					.newImg {
+					
+						display:inline-block;
+						width:100px;
+						height:100px;
+						max-height:10%;
+						float:left;
+					}
+
+				
+				</style>
+	
+			<script>
+				
+				
+				window.onload = oppstart;
+							
+				function oppstart(){
+					
+					
+					document.getElementById("btnActivate").onclick = btnPush;}
+					
+					
+					
+				function btnPush() {
+					
+					/**
+						
+						*Gjør alle bokstaver små for å ta høyde for kontekstsensititivitet
+						
+						*Splitt strengen i en array,
+					
+					*/
+					
+					
+					document.getElementById("imgContainer").innerHTML = "";	
+					
+					var textString = document.getElementById("txtInput").value.toLowerCase();
+					
+					var splittedInput = textString.split("");
+						
+						
+						
+						/**
+						
+						*Skriv ut bokstaver og slikt. med et liggende søylediagram
+						
+						*/
+					
+
+					
+						for (var i=0; i<textString.length; i++){
+							
+							var newDiv = document.createElement("div");
+							
+							var newElement = document.createElement("img");
+							
+							newElement.src = "pics/" + splittedInput[i] + ".png";
+							
+							newDiv.appendChild(newElement);
+							
+							newDiv.className = "newImg";
+							
+							document.getElementById("imgContainer").appendChild(newDiv);}
+						
+						}
+				
+			</script>
+			
+		</head>
+			
+			
+
+		<body>
+		
+			<header>
+				<h1>Obligatorisk innlevering 3</h1>
+			
+			</header>
+		
+		
+		<nav>
+				<ul>
+					<li>	<a href =	"oppgave1.html">Oppgave1</a>	</li>
+					<li>	<a href =	"oppgave2.html">Oppgave2</a>	</li>
+					<li>	<a href =	"oppgave3.html">Oppgave3</a>	</li>
+					<li>	<a href =	"oppgave4.html">Oppgave4</a>	</li>
+					<li>	<a href =	"oppgave4alt.html">Oppgave4(alt)</a>	</li>
+					<li>	<a href =	"oppgave5a.html">Oppgave5a/b</a>	</li>
+					<li>	<a href =	"oppgave5c.html">Oppgave5c</a>	</li>
+					<li id = "activeLink">	<a href =	"oppgave6a.html">Oppgave6a</a>	</li>
+					<li>	<a href =	"oppgave7.html">Oppgave7</a>	</li>
+					<li>	<a href =	"oppgave8.html">Oppgave8a</a>	</li>
+					
+				
+				</ul>
+			
+			</nav>
+		
+			
+			<h1>Oppgave 6a</h1>
+			
+			<h2>Tekstboksgenerator</h2>
+			
+			
+			<p>Skriv inn en mengde tekst</p>
+			
+			<input id =	"txtInput"	type = "text"/>
+			
+			<p>
+				<i class="fa fa-magic" aria-hidden="true"></i>
+			</p>
+			
+			<button type="button" id	= "btnActivate">Bibbity-bobbity-translate!</button>
+			
+			<div id = "imgContainer"></div>
+		</body>
+
+	</html>

@@ -1,0 +1,101 @@
+<!-- Ådne Tobiesen 04.09.17 -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8" />
+		<title> Hjem </title>
+		<meta name="viewport" content ="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type= "text/css" href="stiler/stilO.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+</head>
+
+<body>
+	<div id="mainContainer">
+	
+		<header>
+			<h1> Oppgave 4: Domener og URL-er </h1>
+		</header>
+	<nav> 
+		<ul>
+			<li><a href = "index.html">Hjem</a></li>
+			<li><a href = "oppgave2.html">Oppgave 2</a></li>
+			<li><a href = "oppgave3.html">Oppgave 3</a></li>
+			<li><a href = "oppgave4.html">Oppgave 4</a></li>
+			<li><a href = "oppgave6.html">Oppgave 6</a></li>
+			<li><a href = "oppgave8.html">Oppgave 8</a></li>
+		
+		</ul>
+	
+	</nav>
+	
+	
+	
+		
+		<main> 
+			
+			
+			<h2>Domener og URL </h2>
+			
+			<h3>Definisjoner </h3>
+			<p>Domenene: Et domene er et websted, og inneholder både selve hjemmesiden og en e-post, domene er mye mer snevert enn en URL som vi vil behandle snarlig.</p>
+			<p>URL (Uniform Resource Locator): en adresse som består av en protokoll, et domenenavn, og katalog for de aktuelle filene. </p>
+			
+			<h3>DNS </h3>
+				<p> Domain Name System (DNS), eller domenenavn som det kalles på norsk er en adresse. Før i tiden så brukte vi IP (Internet Protocol)-adresser til domener for å få tilgang til en hjemmeside. Denne metoden kan sammenliknes med når man ringer noen med et telefonnummer.
+				Da fantes det også egne IP-kataloger, på samme måte som telefonkataloger. 
+				Teknisk sett bruker vi fortsatt IP-adresser, og dette er egentlig selve adressen til siden, men selve dirigeringen over til en hjemmeside har blitt forenklet ved
+				tekst som så konverteres tilbake til en IP-adresse, en såkalt URL (Uniform Resource Locator). Dette kan sammenliknes med maskinkode vs. vanlig kode, hvor kun den ene er leselig for maskiner og hvor den andre er lettere forståelig for mennesker.
+				Som et eksempel så kan vi ta adressen til denne siden. http//:ask.hiof.no/index.html. Denne består av en protokoll, >http://.
+				Et domenenavn hiof.no/ og en katalog hvor selve dokumentfilen kan finnes, index.html. Ask, www. og hva som måtte komme mellom domenenavn og adresse kalles et vertsnavn (eng: Host name).
+				Selve avslutningen .no, .com. gov. osv. kalles et TLD (Top Level Domain) </p>
+		
+			<h3>Katalog </h3>
+			<p>
+				Selve filnavnet er i dette tilfellet index.html (hjemmesiden), mens denne siden har \innleveringer\innlevering1 som filnavn. 
+				Filene ligger på eksakt den samme plassen som hvor filen ligger fysisk på webserveren, eller rettere sagt: hvor det ligger relativt til denne. Om jeg ønsker å lenke til en fil i samme mappe, trenger jeg bare å skrive "filnavn.html" i href til a-taggen.
+				Dersom navnet endres, vil filnavnet og dermed adressen på hjemmesiden bli forskjellig. Selve navnet er også kontekstsensitivt, dvs. der vil være skiller mellom store og små bokstaver.
+				Dersom ikke annet er oppgitt, vil en filsti uten et generelt "dokumentnavn.html" automatisk gå til "index.html".
+				Dette er også grunnen til at man ofte kaller en fil index, for å automatisk rediregere til hovedsiden.
+			</p>
+			
+			
+			<h2> Søkemotoroptimalisering </h2>
+			<h3>Definisjon</h3>
+			<p> (Eng: SEO - <i>Search Engine Optimalization</i>. Brukes for å komme høyere opp på søkene til en søkemotor, eller for å tilpasse seg indekseringen til denne.
+				SEO er et ganske omfattende emne, så denne sammenstillingen vil kun ta for seg SEO iforhold til domenenavn.</p>
+			<h3>Basis, og om hvorfor man bør være varsom med navn</h3>	
+			<p>
+				Tidligere - i allefall på Google - var det mulig å utnytte søkemotoren ved å lage et domene med eksakt samme navn som tjenesten/produktet du tilbød, eller som var populært.
+				På engelsk kalles dette et "Exact-Match Domain". F.eks "CheapPokemonCards.com". 
+				Mange av disse sidene hadde ingen reell substans, og hadde kun som hensikt å utnytte søkemotoren og dets algoritmer. Google la merke til det, og endret søkealgoritmene slik at rankingen og dermed traffikken gikk ned på disse sidene gikk ned.
+				I prinsippet vil ikke disse sidene ha merket noe, gitt at de faktisk hadde noe reelt innhold og folk besøkte disse på grunn av dette.
+			</p>
+			
+			<h3>Smarte domenenavn for SEO</h3>
+			<p>Når det gjelder selve SEO, bør man heller velge et merkenavn som et domenenavn ettersom en konsument vil finne en relasjon mellom et merkenavn/domenenavn. 
+				For eksempel vil det gi liten mening for Microsoft å ha en hjemmeside som kalles OperativeSystem.com, ettersom de som faktisk er smarte nok til å vite hva et operativsystem er, godt vet at Microsoft ikke er det eneste operativsystemet.
+				Når det gjelder et delvis matchende domene (PMD - Partial Matching Domain), så strides de lærde. 
+				På generelt basis bør man også unngå alt som inneholder: tall (Folk kan forveksle "One/en" og 1), ord som er feilstavet med vilje (Folk kan ta feil ved å skrive "RETT"), bindestrek ("Skal det være en bindestrek eller ikke") og altfor lange ord. Videre anbefales det ofte at man benytter et TLD som .Com, eller noe annet respektabelt som ikke er assosiert med søppel.
+			</p>
+			
+			<h3>Mer lesestoff om SEO og domener</h3>
+			<ol>
+				<li><a href = "https://www.searchenginejournal.com/choose-a-domain-name-maximum-seo/158951/">How to choose a domain name for  Maximum SEO</a></li>
+				<li><a href = "https://moz.com/blog/are-exact-match-domains-in-decline">Are exact-match domain names in decline?</a> </li>
+			
+			</ol>
+		
+		</main>		
+	
+	
+	
+		<footer> Navn: Bådne Tobiesel </footer>	
+	</div>
+	
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+Obligatorisk oppgave 1
+
+ Submit Assignment
+
+Due Sep 20 by 11:59pm  Points 1  Submitting a website url Available Sep 4 at 12am - Nov 24 at 11:59pm 3 months
+Det lønner seg absolutt å løse oppgavene som individuelle nettsider (spesielt om man er litt usikker på hva man driver med). Mange tror de vil spare tid ved å slippe å lage flere nettsider, men det ender ofte med mye kaos som gjør at det tar lengre tid....
+
+Husk også å lese praktisk informasjon ang. innlevering og obliger
+
+Står du fast på en oppgave, så begynn på neste. Det er ikke gitt at de står i en like logisk stigende vanskelighetsgrad for alle.
+
+Oppgave 1
+
+Lag en helt enkel nettside med to knapper og én paragraf. Registrer en hendelse på hver av kappene. Når du trykker på den første knappen, skal paragrafen vise Hei på deg, og ved trykk på den andre knappen skal Ha det bra vises.
+
+ 
+
+Oppgave 2
+
+Lag en nettside med tre påstander. Hver påstand skal stå på sin egen linje, og hver linje skal i tillegg til påstanden inneholde en "Sann"- og en "Usann"-knapp. Når brukeren trykker på knappene skal en meldingsboks (alert) vise "Riktig" eller "Galt" ettersom hvilken knapp man trykket på.
+
+ 
+
+Oppgave 3
+
+Lag et skjema der du kan skrive inn to tall i to tekstbokser, og så få ut summen(+), differansen(-), produktet(*) og kvotienten(/) når man trykker på en av tilhørende fire knapper.
+
+ 
+
+Oppgave 4
+
+Lag et "nummerisk tastatur" ved å plassere ut 10 knapper med teksten 0,1,2,3 osv. Lag så et tekstfelt, der du kan skrive inn tall som 4327 ved å trykke på knappene. Hver gang du trykker på en knapp, skal altså sifferet som står på knappen legges til innholdet som alt står i tekstboksen.
+
+ 
+
+Oppgave 5
+
+Bruk funksjonene i et canvas og tegn et hus med vindu, dør og et trekantet tak ved hjelp av JavaScript. Før du skriver koden, kan det være lurt å tegne huset inn i et koordinatsystem på et ark. Husk at x-aksen peker mot høyre og y-aksen peker nedover.
+
+hus.png
+
+ 
+
+Oppgave 6
+
+Lag et skjema som lar deg fylle ut en handleliste. Listen skal bestå av varenavnet og antall varer. Når du trykker på en knapp skal varen legges til i en <ul>-liste i nettsiden.
+
+Under listen skal det vises totalt antall varerlinjer.
+
+screenshot- 2017-08-07 10-21-03.png
+
+Oppgave 7
+
+Lag en kalkulator som utfører beregninger basert på selvvalgt brukerdata (ikke BMI eller annet som er benyttet som eksempel i kurset). Kalkulatoren skal minst inneholde en tekstboks og en nedtrekksliste.
+
+Tips: I nedtrekkslisten kan du sette tallverdier som "value". Disse benyttes da som en del av beregningen.
+
+ 
+
+Oppgave 8
+
+Lag en nettside som tegner et "kunstverk" som er basert på Math.random() og gjentakelser gjennom setInterval.
+
+Valgfritt: Forsøk å lage to variabler (bredde/høyde) som inneholder canvasets størrelse, og som alt er avhengig av. Det skal altså være nok å endre disse variablene når du endrer størrelsen på canvaset.
+
+Valgfritt: Du må gjerne benytte knapper, tekstbokser og nedtrekkslister for å gi "input" til kunstverket.
+
+ 
+
+Oppgave 9
+
+Lag en nettside som spiller en "beat" som er basert på gjentakelser gjennom setInteval og Math.random() (om ønskelig). Benytt lydfiler av instrumenter som du finner på nett. Her er en samling trommelyder (merk at jeg ikke eier rettighetene til disse lydene): ProducerSpot-808-Drums.zipPreview the documentView in a new window
+
+Valgfritt: Utvid gjerne med grafikk som tegnes samtidig.

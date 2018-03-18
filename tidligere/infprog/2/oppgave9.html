@@ -1,0 +1,49 @@
+<!-- Ådne Tobiesen 04.09.17 -->
+ <!-- ctrl + f5 vil refreshe CSS-ark også-->
+
+<!DOCTYPE html>
+	<html>
+
+		<head>
+				<meta charset="utf-8" />
+				<title> Tittel </title>
+				<!-- <script src="myScript.js"></script> -->
+				
+					<script>
+				
+							window.onload = oppstart;
+							
+							function oppstart() {
+							
+								var svar = "";
+								for(var i = 0; i<=10; i++){
+									for(j =0; j <=10; j++)
+									{
+										
+										var kombinasjon = i.toString() + j.toString();
+										svar+= " " + kombinasjon + "<br/>"
+										
+									
+									}
+								
+								
+									}
+							
+							document.getElementById("svar").innerHTML = svar;
+							
+								}
+				
+					</script>
+				
+				
+		</head>
+			
+			
+
+		<body>
+			<h1>Oppgave 10: Kombinasjon mellom alle tall mellom 0 og 10</h1>
+			<p id = "svar"> yolo </p>
+			
+		</body>
+
+	</html>

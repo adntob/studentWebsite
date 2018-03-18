@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+	<html>
+
+		<head>
+				<meta charset="utf-8" />
+				<title> Tittel </title>
+				<!-- <script src="myScript.js"></script> -->
+				
+					<script>
+				
+							window.onload = oppstart;
+							
+							function oppstart() {
+							
+								
+								document.getElementById("btnBekreft").onclick = trykkEt
+							
+								}
+								
+							function trykkEt() {
+							
+							//* Lag variabler for input-verdier
+							
+								var lengdeNavn = document.getElementById("txtNavn").value.length;
+								
+								var alder = document.getElementById("txtAlder").value;
+								
+								var hoyde = document.getElementById("txtHoyde").value;
+								
+								kjonn = document.getElementById("slctKjonn").value;
+								
+								//* Lag variabler som påvirkes av testene
+								
+								var magiskTall;
+								magiskTall = (kjonn === "mann" ? maggiskTall = lengdeNavn*alder - hoyde : magiskTall =alder*hoyde - 3); //*Er kjønn mann? da er magiskTall=, hvis ikke mann så....*//
+								
+								
+								var utsagn = 0;
+								
+								
+								if (magiskTall % 2 ==	0){
+									document.getElementById("paraSpadom").innerHTML = "Det vil gå deg godt her i verden..."
+									utsagn = " ";
+								}
+								
+								else if(magiskTall % 2 !== 0) {
+									document.getElementById("paraSpadom").innerHTML = "Stakkars deg! Alt kommer til å gå deg galt.."
+									
+									utsagn = "ikke";
+									}
+									
+								
+								
+								document.getElementById("paraUtskrift").innerHTML = "For at denne spådommen" + " " + utsagn + " " + 
+								
+								"skal gå i oppfyllelse, må du betale inn 100 kr til følgende kontonummer: 1234.12.12345";
+								
+							}
+							
+							
+							
+							
+							
+					</script>
+				
+				
+		</head>
+			
+			
+
+		<body>
+		
+			<h1>Oppgave 5</h1>
+			
+		
+			<p id = "svar">  
+			Skriv inn navn
+				<input id ="txtNavn" type ="text" />
+			</p>
+			
+			<p>
+			Skriv inn alder
+				<input id ="txtAlder" type = "text"/>
+			
+			</p>
+			
+			<p>
+			Skriv inn høyde (I cm).
+				<input id ="txtHoyde"  type =	"number"/>
+			
+			</p>
+			<p>
+			Velg kjønn:
+			<select id ="slctKjonn">
+				<option value =	"mann">Mann</option>
+				<option value =	"kvinne">Kvinne</option>
+			</select>
+			</p>
+			<p>
+				<button id ="btnBekreft">Trykk her!</button>
+			</p>
+		
+			<p id ="paraSpadom"> </p>
+		
+			<p id = "paraUtskrift"> </p>
+		
+		
+		</body>
+		
+		
+	</html>

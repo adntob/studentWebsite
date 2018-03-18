@@ -1,0 +1,229 @@
+@import url('normalize.css');
+		
+		/*Structure*/
+		
+		
+body {
+	margin:0 auto;
+	background-color:#e6dbc9;
+	max-width:1400px;
+}
+
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Jura', sans-serif;
+}
+
+
+body{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display:block;
+	
+	}
+
+p{
+	font-family: 'Montserrat', sans-serif;
+} 	
+	
+footer{
+	background-color:#2e3830;
+	color:white;
+}
+
+/*Navigation-menu*/
+
+#mobile-menu{
+	display:none;
+}
+
+
+#navigation-menu-computer{
+	background-color:#c53211;}
+
+nav ul li {
+	display: inline-block;
+	padding: 10px;
+	
+}
+
+nav ul {
+	margin-left:0 auto;
+}
+
+nav ul li a {
+	text-decoration:none;
+	color:white;
+	font-size:18px;
+}
+
+
+#activeSite{
+	border-bottom: solid white;
+}
+
+
+nav ul li a:hover{
+	border-bottom: solid white;
+}
+
+/*Grid*/
+
+#master-grid{
+	display:grid;
+	grid-template-rows: auto auto 800px auto 200px; 
+	grid-gap:10px;
+	grid-template-areas: "bread-crumbs"
+						
+						"navigation-menu"
+						
+						"header"
+						
+						"main-content"
+						
+						"footer";
+						
+	
+}
+
+/*Flex-box front page*/
+
+#flexWrapperIndex{
+	
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	flex-wrap:wrap;
+	flex-direction:flex-column;
+	
+}
+
+
+article p {
+	padding:15px;
+}
+
+article {
+	margin:10px;
+	overflow:hidden;
+	width: 45%;
+}
+
+
+main article {
+	border-style:solid;
+	border-radius:5px;
+	border-color:#e6dbc9;
+}
+
+main article a {
+	text-decoration:none;
+	padding:20px;
+	border-radius:10px;
+	background-color: #608CA9;
+	color:yellow;
+}
+
+main article a:hover {
+	opacity:0.9;
+	color:yellow;
+}
+
+/*Flex-box article pages*/
+
+
+
+/*IMG-header*/
+
+header a {
+	border-style: solid;
+	color:white;
+	text-decoration:none;
+	padding: 20px;
+}
+
+header a:hover {
+	background-color:orange;
+}
+
+#mainHeader{
+	background-image:url("ghost.png"); /*Taken from Unsplash.com, artist Rosie Fraser, modded by me, using the free software GIMP*/
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-attachment:fixed;
+}
+
+h1{
+	font-size: 60px;
+	text-shadow: 2px 2px black;
+}
+
+#mainHeader{
+	grid-area:header;
+	color:yellow;
+	text-align:center;
+}
+
+#bread-crumbs{
+	grid-area:bread-crumbs;
+	font-weight:bold;
+}
+
+/*footer*/
+
+footer {
+	grid-area: footer;
+	text-align:center;
+}
+
+footer i {
+	color:yellow;
+}
+
+footer i:hover {
+	opacity:0.5;
+	margin-bottom:10px;
+}
+
+
+#navigation-menu-computer{
+	grid-area:navigation-menu;}
+
+	
+#side-content{
+	grid-area:side-bar;
+	background-color:#608CA9;
+	border-radius:10px;
+}
+
+main {
+	grid-area:main-content;
+	background-color:#FEF6E2;
+}
+
+/*Mobile menu */
+
+@media all and (max-width: 800px)	{
+
+
+/*Font-sizing */
+
+	
+	html {							
+	font-size: calc(1em + 1vw);
+	
+	}
+	
+
+	h1 { 
+		font-size: 3rem; }
+	h2 { 
+		font-size: 2.2rem; }
+	h3 {
+		font-size: 1.8rem; }
+	h4 {
+		font-size: 1.2rem; }
+	p {
+		font-size: 1rem; }
+	}

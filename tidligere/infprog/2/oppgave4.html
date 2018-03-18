@@ -1,0 +1,276 @@
+<!-- Ådne Tobiesen 04.09.17 -->
+ <!-- ctrl + f5 vil refreshe CSS-ark også-->
+
+<!DOCTYPE html>
+	<html>
+
+		<head>
+				<meta charset="utf-8" />
+				<title> Oppgave 4 </title>
+				<!-- <script src="myScript.js"></script> -->
+				
+				
+				<style>
+				
+					#lerret {
+						border: solid;
+					}
+				
+				</style>
+				
+					<script>
+				
+							window.onload = main;
+							
+							function main() {
+								setInterval(tidsSjekk, 500);
+								
+							
+								}
+				
+							function tidsSjekk() {				
+
+														
+												
+														//*Definerer variabler *//
+														
+														//*HOVEDDEL OPPGAVE *//
+								var tid = new Date();
+								
+								var ctx = document.getElementById("lerret").getContext("2d");
+								
+								
+							
+								
+								var minutt = tid.getMinutes(); 
+								var ar = tid.getYear();
+								
+								var sekund = tid.getSeconds();
+								
+								
+								
+								var time = tid.getHours();
+								
+								
+								var dato = tid.getDay(); /* Dette gir en dag mellom 0 og 6 */
+								 var dag = tid.getDate(); /*Dag blir et tall mellom 0 og 31 */
+																														/*Array for de ulike dagene */
+								 var dager = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"]; 
+								 var dagenIdag = dager[dato];
+								 
+								
+								var maned = tid.getMonth();
+								var maneder = ["Januar", "Februar", "Mars", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Desember"];
+								var manedenIdag = maneder[maned];
+								
+								
+								
+								
+														
+														//*HOVEDDEL OPPGAVE *//
+														
+														//* Lager if/else-tester med de minst generelle først, og de mest generelle til slutt *//
+														//* Siden hilsen går igjen på alle, setter vi det lik en tom tekst-streng som blir fylt ut etter ulike betingelser *//
+								var hilsen = "";
+								
+							
+								if (time>=15 && time <=18) {
+									
+									svar = "God ettermiddag!";
+									
+									ctx.beginPath();  //Himmel/ettermiddag
+									ctx.rect(0,0, 500, 400);
+									
+									var gradient = ctx.createLinearGradient(0,0, 0,400)
+									gradient.addColorStop(0, "cyan");
+									gradient.addColorStop(1, "orange");
+									
+									ctx.fillStyle = gradient;
+									ctx.fill();
+									ctx.strokeStyle ="black";
+									ctx.lineWidth = 1;
+									ctx.stroke();	
+									
+									
+									ctx.beginPath()							//* Sol
+									ctx.arc(250, 250, 50, 0, 2*Math.PI);
+									ctx.fillStyle = "red";
+									ctx.fill();
+									ctx.stroke();
+									
+									
+									
+									
+									
+									
+									}
+								
+
+								else if (time <15 && time> 11){
+								
+									svar =	"God formiddag!";
+									
+									ctx.beginPath();  //Himmel/formiddag
+									ctx.rect(0,0, 500, 400);
+									ctx.fillStyle = "#00FFFF";
+									ctx.fill();
+									ctx.stroke();	
+									
+									ctx.beginPath();
+									ctx.arc(50, 50, 50, 2*Math.PI, 0);
+									ctx.fillStyle = "yellow";
+									ctx.fill();
+									ctx.stroke();
+									
+									
+									
+									
+									
+								}
+								
+								else if (time <=11){
+									svar = "God morgen!";
+									
+									ctx.beginPath();  //Himmel/morgen
+									ctx.rect(0,0, 500, 400);
+									ctx.fillStyle = "#7FFFD4";
+									ctx.fill();
+									ctx.stroke();	
+									
+									
+									ctx.beginPath();
+									ctx.arc(50, 400, 50, Math.PI, 0);
+									ctx.fillStyle = "yellow";
+									ctx.fill();
+									ctx.stroke();	
+									
+									ctx.beginPath();
+									ctx.moveTo(50, 300);
+									ctx.lineTo(50, 200);
+									ctx.moveTo(100, 300);
+									ctx.lineTo(150, 200);
+									ctx.moveTo(125, 370);
+									ctx.lineTo(200, 320);
+									ctx.stroke();
+									
+									
+									
+									}
+									
+								else  if (time>18) {
+									svar =	"God Kveld!";
+									
+									
+									
+									ctx.beginPath();  //Himmel/kveld
+									ctx.rect(0,0, 500, 400);
+									var grdKveld = ctx.createLinearGradient(0,0, 0, 400);
+									 
+									grdKveld.addColorStop(0, "purple")
+									grdKveld.addColorStop(1, "pink");
+									
+									ctx.fillStyle = grdKveld;
+									ctx.fill();
+									ctx.stroke();	
+									
+									ctx.beginPath();
+									ctx.arc(400,100, 50, 1.5*Math.PI, 0.5*Math.PI);
+									ctx.fillStyle ="yellow";
+									ctx.fill();
+									ctx.stroke();
+									
+									
+									
+									
+								}
+								
+								
+								
+								 var tiden = "Hei du! Klokka er nå" + " " + time + ":" + minutt + ":" + sekund + " ." + " " + svar + " "
+								 + "Det er " + dagenIdag + " " + "den" + " " + dag + ", og måneden er " + manedenIdag;
+								
+								document.getElementById("paraUtskrift").innerHTML = tiden;
+
+								
+															
+															
+															
+								
+								
+								
+															//* EKSTRA DEL AV OPPGAVEN vinter/sommertid *//	
+								
+								if (maned === 5 && dag === 21 || maned >=6){
+									var inkrement = ((Math.abs(maned-6)*30.5 + Math.abs(dag-21))*2);  //*Solnedgang*//
+									soloppgang = new Date(ar, maned, dag, 4, 24+inkrement);
+									
+									solnedgang = new Date (ar, maned, dag, 22, 53-inkrement);
+									
+								
+								}
+								
+								else {
+								
+									var inkrement = ((maned-1)*30.5 + (dag-1));
+									soloppgang = new Date(ar, maned, dag, 9, 29 - inkrement*1.5);
+									solnedgang = new Date (ar, maned, dag, 15, 54+2*inkrement)
+								
+								}
+								
+								var timesoloppgang = soloppgang.getHours();
+								var timesolnedgang = solnedgang.getHours();
+								
+								
+								
+								morkt =(time<timesoloppgang || time>timesolnedgang)
+								
+								
+							
+								
+								if (morkt === true) {
+									document.getElementById("test").innerHTML = "Ifølge årstiden er det mørkt ute.";
+								
+								}
+								
+								else {
+									document.getElementById("test").innerHTML = "Ifølge årstiden er det lyst ute.";
+								}
+									
+								
+								
+								ctx.beginPath();
+									ctx.rect(0,400,500, 100); //Grass
+									ctx.fillStyle= "green";
+									ctx.fill();
+									ctx.stroke();
+									
+									
+							
+
+
+									} 	
+									
+								
+									
+								
+				
+				
+					</script>
+				
+				
+		</head>
+			
+			
+
+		<body>
+			<h1>Oppgave 4</h1>
+		 <canvas id ="lerret" width = "500" height = "500"></canvas>
+		
+			<p id	=	"paraUtskrift"></p>
+			
+			
+			<p id =	"test"></p>
+			
+		</body>
+
+	</html>

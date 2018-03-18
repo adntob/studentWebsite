@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+	<html>
+
+		<head>
+				<meta charset="utf-8" />
+				<title> Oppgave 4 </title>
+				<!-- <script src="myScript.js"></script> -->
+				<link rel= "stylesheet" type = "text/css" href =	"stylesheet/stilark.css">
+				<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	
+			<script>
+				
+				var arr = ["R2D2" , "Jar-Jar" , "Qui-Gon" , "Yoda" , "Obi-Wan" , "Chewbacca"
+						, "Padmè" , "Anakin" , "Lando" , "Leia", "Luke", "C3PO"];
+						
+				var antallGanger = 1;	
+					/**
+						*	1). Ha en urne med tilfeldige variabler (1-11)
+							
+						*	2). La en variabel samsvare med en person
+						
+						*	3). Trekk en kule
+						
+						*	4). Sjekk listen
+						
+						*	5) Legg til i listen
+						
+						*	6) Null ut tallet ifra listen for å hindre at de trekkes på ny, og fjern det ene tallet.
+						
+						*	7). Fortsett to ganger til!
+				
+					*/
+					
+				window.onload = oppstart;
+							
+							
+				function oppstart()
+				
+				{
+					document.getElementById("btnActivate").onclick = trykket;
+				}
+				
+				//**
+				
+				// * Lag if setning for å finne ut om vi har nok navn igjen
+				
+				// * 
+				
+				
+				
+				function trykket() {
+				
+					if (arr!=""){
+					
+						trekning()
+					}
+					
+					else{
+					
+						alert('Du har overskredet antall folk det går ann å trekke...')
+						document.getElementById("btnActivate").disabled = true;}
+					
+					antallGanger++
+					}
+				
+				//**
+				
+				//*	Lag en funksjon som trekker navn
+				
+				//
+				
+				
+				function trekning(){
+					
+					var arrTom = [""];
+					
+					for(var i=0; i<3; i++){
+					
+						var indeksering = arr.length-1 //** indekseringen er alltid en mindre enn lengdevariabelen
+															//* Siden lengden er en dynamisk størrelse, inkluderes den i løkka.	
+						var rand = Math.round	(Math.random()	)	// *	(indeksering));
+							
+						arrTom[i]	=	arr[rand];
+						arr.splice(rand,1);
+						}
+								
+								
+							document.getElementById("utskriftNavn").innerHTML = "De tilfeldig valgte navnene er : " + arrTom 
+							+ "</br>" + "Antall ganger du har trykket: " + antallGanger;
+																						//* Array-ikke-lenger-fullt-så-tom.
+							}
+								
+				</script>
+				
+				
+		</head>
+			
+			
+
+		<body>
+			<header>
+				<h1>Obligatorisk innlevering 3</h1>
+			
+			</header>
+			<nav>
+				<ul>
+					<li>	<a href =	"oppgave1.html">Oppgave1</a>	</li>
+					<li>	<a href =	"oppgave2.html">Oppgave2</a>	</li>
+					<li>	<a href =	"oppgave3.html">Oppgave3</a>	</li>
+					<li>	<a href =	"oppgave4.html">Oppgave4</a>	</li>
+					<li id = "activeLink">	<a href =	"oppgave4alt.html">Oppgave4(alt)</a>	</li>
+					<li>	<a href =	"oppgave5a.html">Oppgave5a/b</a>	</li>
+					<li>	<a href =	"oppgave5c.html">Oppgave5c</a>	</li>
+					<li>	<a href =	"oppgave6a.html">Oppgave6a</a>	</li>
+					<li>	<a href =	"oppgave7.html">Oppgave7</a>	</li>
+					<li>	<a href =	"oppgave8.html">Oppgave8</a>	</li>
+					
+				
+				</ul>
+			
+			</nav>
+		
+		
+			<h2>Obligatorisk innlevering 2 -oppgave 3</h2>
+			<h3>Liste med navn</h3>
+			<p>[C3PO, Jar-Jar, Qui-Gon, Obi-Wan, Yoda, Obi-Wan, Chewbacca, Padmè, Leia, Anakin, Lando, Luke, R2D2]</p>
+			
+			<h3>Navn-trekning</h3>
+			<p id="utskriftNavn"></p>
+			<button id ="btnActivate">Trekning!</button>
+
+		</body>
+
+	</html>

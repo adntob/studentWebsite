@@ -1,0 +1,354 @@
+@import url('normalize.css');
+
+
+/*
+=================================================================================================================
+	Variables
+=================================================================================================================
+*/
+
+$regular-font:'Jura', sans-serif;
+$main-color:#6e6e6e;
+$article-color:#3F3F3F;
+$text-color:#FFFFFF;
+$orange:#FFA500;
+$yellow: #FAED26;
+$brown: #A2482E;	//#E46A6B;
+
+
+/*
+=================================================================================================================
+	Structure 
+=================================================================================================================
+*/
+
+
+p{
+	color:$yellow;
+	//line-height: 1.6;
+}
+
+body {
+	margin:0 auto;	
+												
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;  							
+}
+
+html{
+	font-size: calc(14px + (1vw /8));
+}
+
+
+body{
+	font-family:$regular-font;
+	background-color:$main-color;
+	color:#FFFFFF;
+}
+
+
+article p::first-letter{
+	font-size:200%;
+	font-weight:bold;
+}
+
+/*
+=================================================================================================================
+	Navigation-menu
+=================================================================================================================
+*/
+
+#mobile-menu{
+	display:none;
+}
+
+#navigation-menu-computer{
+	
+	margin:5px;
+	width:100%;
+		ul {
+		
+			list-style:none;
+			
+			li{
+			
+				padding:0 40px;
+				position:relative;
+				display:inline-block;
+			
+				a{
+					color:white;
+					text-decoration:none;
+					&:hover{
+						border-bottom:solid
+					}
+			}
+				
+		}
+	}
+}
+
+
+#active-dir{
+	border-bottom:solid;
+}
+
+
+/* 
+=================================================================================================================
+	MAIN CONTAINER
+=================================================================================================================
+*/	
+
+body{
+	margin:0 auto;
+	max-width:1200px;
+}
+
+
+
+.article-article{
+	width:100%;
+	img {
+		box-sizing:border-box;
+		width:45%;
+		display:inline-block;
+		
+			&:hover{
+			opacity:0.5;
+			}
+	}
+	
+		ul{
+			li{
+				a{
+					color:yellow;
+					&:hover{
+						color:red;
+					}
+				}
+			}
+		}
+	
+	h1,h2,h3,h4,h4, h5, h6{
+		color:yellow;
+	}
+	
+	
+	
+		p {
+			padding:15px;
+			color:white;
+			line-height:1.6;
+		}
+}
+
+
+/*
+=================================================================================================================
+	Grid
+=================================================================================================================
+*/
+#masterGrid{
+
+	
+	display:grid;
+	grid-template-columns: auto;
+	grid-template-areas: "header"
+						"main-content"
+						"footer";
+}
+
+
+
+ main {
+	max-width:1000px;
+	margin:0 auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-around;
+	
+		article{
+			border-radius: 10px;
+			margin: 10px;
+			background-color: $article-color;
+			overflow:hidden;
+			width:45%;	
+			
+			box-sizing:border-box;
+				h2,h3,h4,h5{
+					text-align:center;
+				}
+				ol{
+					li {
+						a{
+							text-decoration:none;
+							color:black;
+							font-weight:bold;
+							
+								&:hover{
+									opacity:0.7;
+								}
+						}
+					}
+				}
+				
+				h2{
+					border-bottom:solid;
+					border-color: rgba(125, 125, 125, 1)
+				}
+		}
+ }
+ 
+/*
+=========================================================================================
+	Header
+=========================================================================================
+ 
+*/ 
+	#main-header{
+		position:sticky;
+		top:0;
+		border-radius: 50px 0px 50px 0px;
+		grid-area: header;
+		background-color: black;
+		color:$yellow;
+		height:100px;
+		width:100%;
+		
+		h1{
+			text-align:center;
+			text-shadow: 2px 2px blue;
+		}
+	}
+		
+	h1{
+		text-align:center;
+		color:yellow;
+	}
+
+	
+/* 
+=================================================================================================================
+	FOOTER
+=================================================================================================================
+*/
+	
+	
+footer {
+	border-radius: 5px;
+	grid-area:footer;
+	background-color:$brown;
+	width:100%;
+	p {
+		text-align:center;
+		color: white;
+			
+			.fa-copyright, .fa-map-marker{
+				color:$orange;
+				}
+		
+			a{
+				color:white;
+				text-decoration:none;
+					&:hover{
+					color:gray;
+					}
+				i{
+				color:black;
+				opacity:0.5;
+					
+					&:hover{
+						opacity:0.9;
+					}
+				}
+			}
+	}
+}
+img {
+	border-radius:20px;
+	margin:auto;
+	display:block;
+	
+}
+
+/* 
+=================================================================================================================
+	Mobile-menu
+=================================================================================================================
+*/
+
+@media all and (max-width: 800px){
+	
+	#mobile-menu{
+		display:block;
+		grid-area:mobile-menu;
+			ul{
+				
+				display:none;
+				
+				li{
+					background-color:black;
+					margin-left:-40px;
+					padding:30px;
+					text-align:center;
+					border-bottom:solid;
+					display:block;
+					
+					&:hover{
+						background-color:$article-color;
+						}
+		
+				
+					a{
+					text-decoration:none;
+					color:yellow;
+						
+					}
+				}
+			}
+		}
+	
+	main
+		{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: stretch;
+		align-content: center;
+
+			article{
+				margin:0;
+				border-radius:0;
+				width:100%;
+			}	
+		}	
+	#masterGrid{
+		display:grid;
+		grid-template-columns: auto;
+		grid-template-areas: "header"
+						"mobile-menu"
+						"main-content"
+						"footer";
+}
+
+	
+	
+#main-header{
+	position:static;}
+		
+	
+#navigation-menu-computer{
+		display:none;
+	}	
+	
+	body{
+		max-width:800px;
+		}
+	
+}

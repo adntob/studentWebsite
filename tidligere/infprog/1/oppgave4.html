@@ -1,0 +1,121 @@
+<!-- Ådne Tobiesen 06.09.17 -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8" />
+		<title> Oppgave 4 - Obligatorisk innlevering 1 </title>
+		<script>
+	
+		
+	
+		window.onload = main; 
+		
+		var tallInput = ""; //* La input-feltet være en tom vektor, hvis ikke vil det komme opp undefined hver gang
+		
+		function main() {
+
+			document.getElementById("btnNull").onclick = leggTilNull;  //* Ti ulike knapper for hvert tall, og med en tilhørende funksjon som kjører når hver av disse klikkes.
+			document.getElementById("btnEn").onclick = leggTilEn;
+			document.getElementById("btnTo").onclick = leggTilTo;
+			document.getElementById("btnTre").onclick = leggTilTre;
+			document.getElementById("btnFire").onclick = leggTilFire;
+			document.getElementById("btnFem").onclick = leggTilFem;
+			document.getElementById("btnSeks").onclick = leggTilSeks;
+			document.getElementById("btnSyv").onclick = leggTilSyv;
+			document.getElementById("btnAtte").onclick = leggTilAtte
+			document.getElementById("btnNi").onclick = leggTilNi;
+		
+		
+		}
+		
+		function leggTilNull () {
+			tallInput += document.getElementById("btnNull").value; //* += for hvis man vil presse flere ganger (Denne verdien + forrige)
+			document.getElementById("txtTall").value = tallInput //* Value brukes i input-felt, og ikke innerHTML
+		
+		}
+		
+		function leggTilEn() {
+			tallInput += document.getElementById("btnEn").value; //* Samme prosedyre 9 ganger til....
+			document.getElementById("txtTall").value = tallInput;
+		}
+		
+		function leggTilTo() {
+			tallInput += document.getElementById("btnTo").value;
+			document.getElementById("txtTall").value = tallInput;
+		
+		}
+		
+		function leggTilTre() {
+			tallInput += document.getElementById("btnTre").value;
+			document.getElementById("txtTall").value = tallInput;
+		}
+		
+		function leggTilFire() {
+			tallInput += document.getElementById("btnFire").value;
+			document.getElementById("txtTall").value = tallInput;
+		}
+		
+		function leggTilFem() {
+			tallInput += document.getElementById("btnFem").value;
+			document.getElementById("txtTall").value = tallInput
+		
+		}
+	
+		function leggTilSeks() {
+			tallInput += document.getElementById("btnSeks").value;
+			document.getElementById("txtTall").value = tallInput;
+		}
+		
+		function leggTilSyv() {
+			tallInput += document.getElementById("btnSyv").value;
+			document.getElementById("txtTall").value = tallInput;
+		}
+		
+		function leggTilAtte() {
+			tallInput += document.getElementById("btnAtte").value;
+			document.getElementById("txtTall").value = tallInput;
+		}
+		
+		function leggTilNi() {
+			tallInput += document.getElementById("btnNi").value;
+			document.getElementById("txtTall").value = tallInput;
+		}
+	
+	</script>
+		
+</head>
+	
+
+<body>
+	<h1>  Oppgave 4 - Numerisk tastatur </h1>
+	
+	<p>
+		<button type = "button" value = "0" id = "btnNull">0</button>
+		
+		<button type = "button" value = "1" id = "btnEn">1 </button>
+		
+		<button type = "button" value = "2" id = "btnTo">2</button>
+		
+		<button type = "button" value = "3" id = "btnTre">3</button>
+		
+		<button type = "button" value = "4" id ="btnFire">4</button>
+		
+		<button type = "button" value = "5" id = "btnFem">5</button>
+		
+		<button type = "button" value = "6" id = "btnSeks">6</button>
+		
+		<button type = "button" value = "7" id ="btnSyv">7</button>
+		
+		<button type = "button" value = "8" id ="btnAtte">8</button>
+		
+		<button type = "button" value = "9" id = "btnNi">9</button>
+	<p>
+	
+	<input type = "text" id = "txtTall"/>
+	
+</body>
+
+</html>

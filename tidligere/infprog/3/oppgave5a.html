@@ -1,0 +1,162 @@
+
+ <!-- ctrl + f5 vil refreshe CSS-ark også-->
+<!DOCTYPE html>
+	<html>
+
+		<head>
+				<meta charset="utf-8" />
+				<title> Tittel </title>
+				<!-- <script src="myScript.js"></script> -->
+				<link rel= "stylesheet" type = "text/css" href =	"stylesheet/stilark.css">
+				<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+				<style>
+					.colRed{
+						background-color:red;
+						display: inline-block;
+						height:	20px;
+						margin-left:	10px;
+					}
+					
+					.colBlue{
+						background-color:blue;
+						display: inline-block;
+						height: 20px;
+						margin-left: 10px;
+					
+					}
+
+				
+				
+				</style>
+	
+	
+			<script>
+				
+				window.onload	=	oppstart;
+				
+				function	oppstart() {
+				
+					//1). Lag brukergrensesnitt for  input av [1,1,1,1,1,4,2,4,4,]
+					//2). Split denne opp i en array
+					//3). Skann hvert tall i denne arrayen for [0-9]
+					//4). Hvis det er samsvar mellom verdi og det vi skanner for 
+					//	->	Før det inn i en ny matrise med indeks for alle tall [0-9].
+					//5). Lag statistikk over de vanligste tallene ut ifra denne.
+				
+					document.getElementById("btnInitiate").onclick	=	trykket;
+				
+				}
+				
+				function	trykket() {
+				
+					document.getElementById("lstStatistics").innerHTML = "";
+				
+					var counter = [0,0,0,0,0,0,0,0,0,0];
+					
+					var numbers = document.getElementById("txtInput").value; //*Import
+					
+					var lengdeInput = numbers.length;
+					
+					
+					var numberArray = numbers.split(","); //*	Split ved å bruke split-metoden
+						
+						//* Skann hver verdi i din array for tallverdier i intervallet [0-9]
+						
+						for (var i =0; i<lengdeInput; i++){
+						
+							var tallverdi1 =  parseInt(numberArray[i]);
+							
+								for (var j=0; j<=9; j++){
+								
+									if (tallverdi1 ===	j){
+									
+										counter[j]++;
+									}									
+								}
+							}
+							
+							document.getElementById("utskrift").innerHTML = "For din array " + numbers +
+								
+								", finner vi denne særdeles spennende statistikken:" + "</br>";
+							
+							//* Skriv ut statistikken 10 ganger (1 for hvert tall)
+							
+							for (var k=0; k<=9;k++){
+							
+								var nyttElement	= document.createElement("li")
+								nyttElement.innerHTML = "Forekomst av tall" + " " + k + " " + "=" + " " + counter[k];	
+								document.getElementById("lstStatistics").appendChild(nyttElement);
+								
+								//* Lag søyler som endrer farge utifra partall/oddetall
+								//* La bredde være en funksjon av frekvens
+								
+								if(k%2===0){
+								
+									var newRedCol = document.createElement("span");
+									
+									newRedCol.className = "colRed";
+									newRedCol.style.width = counter[k]*50  + "px";
+									nyttElement.appendChild(newRedCol);}
+									
+								else{
+									
+									var newBlueCol = document.createElement("span");
+									
+									newBlueCol.className = "colBlue";
+									newBlueCol.style.width = counter[k]*50  + "px";
+									nyttElement.appendChild(newBlueCol);}
+										
+								}	
+							}	
+				
+			</script>
+			
+		</head>
+			
+			
+
+		<body>
+		
+			<header>
+				<h1>Obligatorisk innlevering 3</h1>
+			
+			</header>
+		
+			<nav>
+				<ul>
+					<li>	<a href =	"oppgave1.html">Oppgave1</a>	</li>
+					<li>	<a href =	"oppgave2.html">Oppgave2</a>	</li>
+					<li>	<a href =	"oppgave3.html">Oppgave3</a>	</li>
+					<li>	<a href =	"oppgave4.html">Oppgave4</a>	</li>
+					<li>	<a href =	"oppgave4alt.html">Oppgave4(alt)</a>	</li>
+					<li id = "activeLink">	<a href =	"oppgave5a.html">Oppgave5a/b</a>	</li>
+					<li>	<a href =	"oppgave5c.html">Oppgave5c</a>	</li>
+					<li>	<a href =	"oppgave6a.html">Oppgave6a</a>	</li>
+					<li>	<a href =	"oppgave7.html">Oppgave7</a>	</li>
+					<li>	<a href =	"oppgave8.html">Oppgave8</a>	</li>
+					
+				
+				</ul>
+			
+			</nav>
+		
+			
+			<h1>Oppgave 5a/b</h1>
+			<h2> </h2>
+			
+			<p>Skriv inn en tallrekke på en rekke tall mellom 0 og 9 på formen 1,2,3,4,5,6,1,2,5,6,7,8,9</p>
+			
+			<p>
+				<input id ="txtInput" type="text"/>
+			
+				
+				<button id ="btnInitiate">Make it so!!</button>
+			</p>
+			<p id =	"utskrift"></p>
+			
+			
+			<ul id =	"lstStatistics"></ul>
+			
+		</body>
+
+	</html>

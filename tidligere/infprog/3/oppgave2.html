@@ -1,0 +1,110 @@
+
+
+<!DOCTYPE html>
+	<html>
+
+		<head>
+				<meta charset="utf-8" />
+				<title> Oppgave 2 </title>
+				<!-- <script src="myScript.js"></script> -->
+				<link rel= "stylesheet" type = "text/css" href =	"stylesheet/stilark.css">
+				<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	
+			<script>
+
+
+			
+				var dagerMaaned = [31, 28, 31, 30, 31, 31, 30, 31, 30, 31, 30, 31];
+				
+				
+				var navnMaaned = ["Januar", "Februar", "Mars", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Desember"]
+				
+
+
+				window.onload = oppstart;
+					
+
+					
+				function oppstart() {
+							
+					document.getElementById("btnAktiver").onclick = trykket;
+							
+					}
+							/** 
+							
+							*	Indeksering av element begynner alltid på en måned tidligere enn den vi skriver inn, derfor må vi trekke ifra
+							
+							*/
+							
+				function trykket() {
+				
+					var i = parseInt(document.getElementById("txtIndeks").value);
+						i--;
+					
+							/**
+							
+							*	Sett opp et tilfelle hvor brukeren velger en for høy eller for lav måned.
+							
+							*/
+					
+					if (i<0 || i>=dagerMaaned.length){
+					
+						document.getElementById("utskriftMaaned").innerHTML = "Ugyldig tallverdi!"
+				
+					}
+				
+					else{
+					
+						document.getElementById("utskriftMaaned").innerHTML = "Antall dager i måneden du valgte " + "(" + navnMaaned[i]
+						+ ")" + " er" + " " + dagerMaaned[i];
+					}
+				
+				
+				
+				}
+				
+					</script>
+				
+				
+		</head>
+			
+			
+
+		<body>
+		
+			<header>
+				<h1>Obligatorisk innlevering 3</h1>
+			
+			</header>
+		
+			<nav>
+				<ul>
+					<li>	<a href =	"oppgave1.html">Oppgave1</a>	</li>
+					<li id = "activeLink">	<a href =	"#">Oppgave2</a>	</li>
+					<li>	<a href =	"oppgave3.html">Oppgave3</a>	</li>
+					<li>	<a href =	"oppgave4.html">Oppgave4</a>	</li>
+					<li>	<a href =	"oppgave4alt.html">Oppgave4(alt)</a>	</li>
+					<li>	<a href =	"oppgave5a.html">Oppgave5a/b</a>	</li>
+					<li>	<a href =	"oppgave5c.html">Oppgave5c</a>	</li>
+					<li>	<a href =	"oppgave6a.html">Oppgave6a</a>	</li>
+					<li>	<a href =	"oppgave7.html">Oppgave7</a>	</li>
+					<li>	<a href =	"oppgave8.html">Oppgave8</a>	</li>
+					
+				
+				</ul>
+			
+			</nav>
+		
+		
+		
+		<h1>Oppgave 2</h1>
+			
+			<!--Lag et brukergrensesnitt -->
+			<p>Skriv inn nummeret på en måned, og finn ut hvor mange antall dager der er i den.</p>
+			
+			<input id ="txtIndeks" type ="number"/>
+			<button id ="btnAktiver">Trykk her!</button>
+			<p id ="utskriftMaaned"></p>
+		</body>
+
+	</html>

@@ -1,0 +1,18 @@
+Disse skal i prinsippet være endret for å hindre sikkerhetshull
+
+define('AUTH_KEY',         '[GZ?T9Si ::?;b.?OuUCj@>%juipF8OB$QoN+TH|psb5NS &cAmKe|#p?7?zD<<J');
+define('SECURE_AUTH_KEY',  'Hu${svLYT|*.E}3$r0c$:ND|H+$Y}{Q^ig1k2?8:p<`Vz0l:sA).*RU] VLzdo-u');
+define('LOGGED_IN_KEY',    'T`Tlb3LOOQ$EUdSUpTiU5hLV.!:`}ci({,XYiir$;EU*rIr#]=]$0Zs6nd9q}kQT');
+define('NONCE_KEY',        '6hgeZEhM!VuV>i#)CA~49G%;)P{lw=bQadq(.4q`p9|OzwSSm/g&<Zf99&YSZP|K');
+define('AUTH_SALT',        '`2^^B>]Uc2d`&^1veFU=vuokf)Q 6 R_|p8icWY!QixX6fHo<S-%OrV[VCVcK<<?');
+define('SECURE_AUTH_SALT', '}uKW~l:f1xWN(0,=vQi cnm?T^$PXS!YJ?;*$d|t]QW9)11G]l20Lt= 6i1ds<x7');
+define('LOGGED_IN_SALT',   'El[~^o`JFxee]#ulmo)eTaA[a/5kpR7G1COJ^F x@`3^QjSDbQ?#WwV;8Ea-C<4N');
+define('NONCE_SALT',       'u[2s.Cd^A#DxmLA( _)z@I[gj,.R;JGJ.@TF!I2?f~3/-Nw[=iw0[,rQ+$4,*EaC');
+
+
+
+i prinsippet bør linje 66 endres til noe unikt, alle har i prinsippet samme wp_table
+
+i prinsippet bør readme fjernes, ettersom det inneholder versjonsbeskrivelse, og er en instruksjons
+
+brukernavn bør fjernes 3 minutter etter at vi har lagd nettsted.

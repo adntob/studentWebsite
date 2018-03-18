@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+	<html lang = "nb">
+		<head>	
+			<title>Innlegg og sider!</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta charset="utf-8"/>
+			<script src="scripts/myscript.js"></script>  <!--Eksternt JavaScript for mobilmeny -->
+			<link rel="stylesheet" type= "text/css" media =	"all" href="_style/stil.css"> 
+			<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">	
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+			<meta name	= "description" content="Dette er webinnleveringsnettstedet for oblig 4 webutvikling Ådne Tob. Dette omhandler installasjonen av WAMP og Wordpress." />
+		
+		</head>
+		
+		<body>
+
+		
+			<div id ="master-grid">
+			
+			<!--Navigation menu-computer -->
+				
+				<nav id ="bread-crumbs">
+					<ul>
+						<li><a href = "index.html">Hjem!</a></li>
+						<li>Innlegg og sider!</li>
+						
+					</ul>
+				
+				</nav> 
+				
+				
+				
+				<nav id ="navigation-menu-computer">
+					<ul>
+						<li>
+							<a href ="index.html">                       <i class="fa fa-home" aria-hidden="true">&nbsp; </i>  Hjem! </a>
+						</li>
+						<li><a href = "installasjon-av-wordpress-og-wamp.html">Installasjon av wamp og wordpress</a></li>
+						<li><a href = "tema-og-tilpasning.html">Temaer og tilpasning av disse</a></li>
+						<li><a href = "widgets-utvidelser.html">Widgets og utvidelser</a></li>
+						<li><a id = "activeSite" href = "innlegg-og-sider.html">Innlegg og sider</a></li>
+						<li><a href ="dynamiske-og-statiske-sider.html">Statiske forsider i wordpress</a></li>
+						<li><a href ="_sass/stil.scss">SCSS-fil</a></li>
+					</ul>
+
+				</nav>
+				
+				<!-- Mobile-menu -->
+				
+				<nav id ="mobile-menu">
+				
+				<i id ="barButton" class="fa fa-bars fa-2x"  aria-hidden="true"></i>
+				
+					<ul	id ="drop-down-list">
+					
+						<li><a href="index.html"><i class="fa fa-home fa-2x" aria-hidden="true">&nbsp; </i> Hjem</a></li>
+						<li><a href="kom-i-gang.html">Kom i gang</a></li>
+						<li><a href="kode.html">Kode</a></li>							<li><a href="innhold.html">Innhold</a></li>
+						<li><a href="analyse.html">Analyse</a></li>
+						<li><a href="sass.html">Sass</a></li>
+						<li><a href="stylesheets/stilark.css">Stilark</a></li>
+					</ul>					
+				</nav>
+	
+				<header id = "mainHeader"><h1>	Ådnenes Makt  </h1>
+					<aside>
+					
+						<p>
+							<a href = "#flexWrapperIndex">Hopp til hovedinnhold</a>
+						</p>
+						
+					</aside>	
+				</header>
+				
+				<main id ="flexWrapperIndex" tabindex = "1">
+					<aside>
+						<h2>Meny</h2>
+						<ul>
+							<li><a href ="#innlegg-og-sider" >Forskjell mellom innlegg og sider</a></li>
+							<li><a href ="#legg-til-fremhevet-bilde" >Legg til fremhevet bilde</a></li>
+							<li><a href = "#legge-til-side-under-meny">Legge til sider under meny</a></li>
+						</ul>
+					
+					</aside>
+				
+					<article id ="article-article">
+					
+						<header >
+							<h2 id = "innlegg-og-sider">Forskjell mellom innlegg og sider</h2>
+						</header>
+						
+						<p>
+							Et innlegg er knyttet til et tidspunkt, f.eks dag til dag. Et eksempel på to typiske ting som belyser hva et innlegg er vises i de to bildene nedenfor.
+						</p>
+						
+						
+						<a href ="bilder/typisk-innlegg.png">
+							<img alt ="Et bilde som viser hvordan et typisk innlegg ser ut" src = "bilder/typisk-innlegg.png">
+						</a>
+						
+						<a href ="bilder/typisk-innlegg2.png">
+							<img alt ="Et annet bilde av hvordan et typisk innlegg ser ut" src = "bilder/typisk-innlegg2.png" />
+						</a>
+						
+						<p>
+							En side er noe generelt som ikke endrer seg ifra dag til dag, et eksempel kan være "om siden", eller "om meg". Nedenfor er der et eksempel på en "om siden" som jeg fikk lagd i forbindelse med prosjektet, og en "om meg".
+						</p>
+						<a href ="bilder/om-siden.png">
+							<img alt = "En side som viser en typisk om-siden side" src = "bilder/om-siden.png" />
+						</a>
+						
+						<a href ="bilder/om-meg.png">
+							<img alt = "En side som viser en typisk om-meg side" src = "bilder/om-meg.png"/>
+						</a>
+						<h3 id ="legg-til-fremhevet-bilde">Legge til fremhevede bilder</h3>
+						<p>I praksis vil det av og til lønne seg å fremheve bilder, for å oppsummere sånn noenlunde hva innlegget handlet om.</p>
+						
+						<a href ="bilder/fremhevet.png">
+							<img alt = "Et bilde som viser hvordan man fremhever bilder i praksis" src = "bilder/fremhevet.png"/>
+						</a>
+						
+						<a href ="bilder/fremhevet-i-praksis.png">
+							<img alt = "Hvordan et fremhevet bilde ser ut etter at det er publisert" src = "bilder/fremhevet-i-praksis.png"/>
+						</a>
+						
+						<h3 id ="legge-til-side-under-meny">Legge til side under meny</h3>
+						<p>
+							Generelt sett må en side alltid organiseres under noe for at vi i det hele tatt skal kunne se den. I dette tilfellet har det blitt satt under menyen, og kan gjøres på den måten som vist på bildet under. 
+						</p>
+						
+						<a href ="bilder/inkludering-av-hjem-under-meny.png">
+							<img alt ="Et bilde som viser hvordan man inkluderer en side under meny" src = "bilder/inkludering-av-hjem-under-meny.png" />
+						</a>
+						
+					</article>
+					
+				</main>
+				
+				<footer>
+					<p>
+						<i class="fa fa-copyright" aria-hidden="true"></i> 
+						Ådne Tobiesen
+					</p>
+					<p>
+						<a href ="https://www.facebook.com/smygen91"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i> </a>
+						<a href ="https://github.com/adntob"><i class="fa fa-github-square fa-3x" aria-hidden="true"></i></a>
+						<a href ="mailto:aadne.t@live.com"><i class="fa fa-envelope-square fa-3x" aria-hidden="true"></i> </a>
+						<a href ="https://www.linkedin.com/feed/"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+						
+					</p>
+				</footer>
+				
+			
+			</div>
+		</body>
+
+	</html>

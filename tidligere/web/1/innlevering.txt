@@ -1,0 +1,53 @@
+Oppgavene under utgjør Oblig 1. Disse skal leveres som HTML-filer på ditt Frigg-område, og i denne innleveringen skal du oppgi en URL til en samleside for oppgavene.I tillegg skal filene leveres som en komprimert (zippet) mappe (leveres i egen oppgave "OBLIG1 - filinnlevering").
+
+Oppgave 1: The frontpage
+Lag en HTML-fil med filnavnet "oppgave1.html". Filen skal inneholde strukturkode for en forside med tre artikler:
+
+Artikkel en skal ha tittelen "Oppgave 2: Webserver", en kort ingress, og en les mer-link som går til oppgave2.html
+Artikkel to skal ha tittelen "Oppgave 3: FTP", en kort ingress, og en les mer-link som går til oppgave3.html
+Artikkel tre skal ha tittelen "Oppgave 4: Domener og mappestrukturer", en kort ingress, og en les mer-link som går til oppgave4.html
+Under artiklene skal det ligge en uordnet liste med linker til filene "oppgave5.html", "oppgave6.html" og "oppgave7.html".
+
+Oppgave 2: Webservere
+Lag filen "oppgave2.html" med samme strukturkode for en artikkel. Redegjør for hva en webserver er, hvilke ulike typer som finnes og funksjonalitet som ligger i en webserver som tekst i artikkelen.
+
+Finn to til tre artikler på nett om webservere, og lag en ordnet liste med linker til artiklene under teksten.
+
+Både strukturkoden og innholdet i teksten utgjør besvarelsen av oppgave 2.
+
+Oppgave 3: Hva er FTP?
+Lag filen "oppgave3.html" med samme strukturkode for artikkel som i oppgave 2. Beskriv hva FTP står for, hva denne protokollen brukes til og hvordan den henger sammen med webservere. Legg inn et bilde (skjermdump) av FileZilla hvor du er tilkoblet en webserver og forklar hva bildet viser, samt hvordan programmet fungerer.
+
+Både strukturkoden og innholdet i teksten utgjør besvarelsen av oppgave 3.
+
+Oppgave 4: Domener og URLer
+Lag filen "oppgave4.html" med samme strukturkode for en artikkel som i oppgave 2 og 3. Redegjør for hva domener er, hvordan de er bygget opp strukturelt, og hvordan de fungerer (DNS). Redegjør for hvordan domener/URLer påvirkes av mappe- og filstrukturer på webserveren.
+
+Finn ut og beskriv om et domene kan påvirke søkemotoroptimalisering (search engine optimalization (SEO)).
+
+Både strukturkoden og innholdet i teksten utgjør besvarelsen av oppgave 4.
+
+Oppgave 5: Stilsett oppgave 1 - oppgave 4
+Lag et eksternt stilsett kalt "stilark.css". Minimumskrav:
+
+Importer to googlefonter, en som brukes på titler og en på brødtekst. Sett passende fontstørrelser på titler og brødtekst.
+Sørg for at artiklene maximalt blir 800 pixler brede og sentrert på skjermen (både på forsiden og artikkelsidene)
+Få les mer-linken til å se ut som en knapp.
+Bilder i en artikkel skal være halvparten av artikkelbredden. De skal ha flyte til høyre for teksten, og ha en avstand på 15 pixler til teksten på alle sider.
+Link opp stilarket til filene i oppgave 1, 2, 3 og 4 så endringene synes på disse sidene.
+
+Oppgave 6: Box model
+Lag en HTML-fil kalt oppgave6.html. Lag eksempler der du tester ut box model-prinsippet og flest mulig av css-egenskapene som gjelder box model. Eksemplene trenger ikke ha noe fornuftig innhold.
+
+Ekstraoppgaver
+Disse oppgavene må ikke gjøres for å få obligen godkjent, men er nyttige øvelser!
+
+Ekstra 1: Meny
+
+Lag en semantisk korrekt meny i toppen av nettsidene som peker til alle oppgavene (i tillegg til artiklene og listene fra oppgavene tidligere).
+
+Ekstra 2: Analysere nettsted
+
+Åpne siden http://www.arngren.net (Lenker til en ekstern side.)Lenker til en ekstern side.. 
+
+Lag en HTML-fil kalt oppgave7.html. Beskriv problematikk med funksjonalitet, utseende og koden bak Arngren.net. Finn ut om det er brukt en sidegenerator, system eller om siden er kodet selv.

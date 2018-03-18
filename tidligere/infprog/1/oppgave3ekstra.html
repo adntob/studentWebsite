@@ -1,0 +1,89 @@
+<!-- Ådne Tobiesen 04.09.17 -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8" />
+		<title> Tittel </title>
+		<!-- <script src="myScript.js"></script> -->
+		
+		<script>
+	
+		window.onload = main; //* Etter at siden er ferdig lastet, så
+		
+		function main() {
+			document.getElementById("btnYeah").onclick = trykkEt;
+			document.getElementById("btnWhat").onclick = trykkTo;
+			document.getElementById("btnOkay").onclick = trykkTre;
+			
+			setInterval(bass, 500);
+			setInterval(bass2, 1250*Math.random());
+			setInterval(klapp, 1000*Math.random());
+	
+		
+		}
+		
+		function trykkTo() {
+			var what = new Audio('Lil Jon What.mp3');
+			what.play();
+		
+		}
+		
+		function trykkEt() {
+			var yeah = new Audio('yeeeeeeeah.mp3');
+			yeah.play();
+		
+		}
+		
+		function trykkTre() {
+			var okay = new Audio('lil-jon-okay.mp3')
+			okay.play();
+		
+		}
+		
+		function bass() {
+			var snare = new Audio('808-snare-42.wav');
+			snare.play();
+		
+		}
+		
+		function bass2() {
+			var snare2 = new Audio('808-snare-42.wav');
+			snare2.play();
+		
+		}
+		
+		
+		function klapp() {
+			var cymbal = new Audio('808-clap-01.wav');
+			cymbal.play();
+		} 
+		
+	 
+		
+		
+		
+	
+	
+	</script>
+		
+</head>
+	
+
+<body>
+	<h1> Swag!	 </h1>
+	
+	<p id = "txtFaenskap">Swag </p>
+	
+	<img src = "funny-animal-gifs14.gif" alt = "en pandabjørn og en miksepult" />
+	<p>
+		<button id ="btnYeah" type = "button"> YEAHHHH!!!</button>
+		<button id ="btnWhat" type = "button">WHAT! </button>
+		<button id = "btnOkay" type = "button">Okay</button>
+	</p>
+	
+</body>
+
+</html>

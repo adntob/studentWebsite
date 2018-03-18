@@ -1,0 +1,263 @@
+
+ <!-- ctrl + f5 vil refreshe CSS-ark også-->
+<!DOCTYPE html>
+	<html>
+
+		<head>
+		
+			<meta charset="utf-8" />  <!--Dette er for å få til skandinaviske språk -->
+			<title> Oppgave 5c</title>
+			<link rel= "stylesheet" type = "text/css" href =	"stylesheet/stilark.css">
+			<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+			<script src =	"functions/longestkey.js" ></script>
+			
+			<style>
+			
+				.colRed{
+					background-color:red;
+					height:	20px;
+					margin-left:	10px;
+					display-inline-block;
+				}
+			
+			</style>
+			
+			<style>
+				.colRed{
+					display:inline-block;
+					ba
+				}
+			
+			
+			</style>
+			
+			
+			<script>
+			
+
+					//**
+						
+						//* Generell algoritme for telling av ord:
+						
+						//			1) Skriv inn en setning, finn antall ord totalt sett.
+						
+						//			2) Se på hvert enkelt ord
+								
+						//			2.1) Finnes ordet?
+						
+						//			2.1.1) Nei? Adder og sett teller =1;
+						
+						
+						//			2.1.2) ja? Ikke adder i listen, men øk teller med 1.
+					
+				
+		
+			
+				
+			
+				window.onload = main;
+		
+				
+				
+				function main() {
+				
+				
+				
+					document.getElementById("btnInitiate").onclick = importText; 
+					
+					
+				}
+				
+							
+				
+				
+				
+				
+				//	**
+				
+				//	*Importer brukerverdi, og gjør om til en tekstrstreng
+				
+				//*
+				
+				
+				
+				
+				
+				
+				function importText(){
+			
+					var obj = {};
+				
+						
+					
+					
+					var textString = document.getElementById("txtInput").value.toLowerCase().replace(	"," , ""	).replace(	"."	,	""	);
+					
+					
+					
+					var strLength = textString.length;
+					
+					
+					
+					var words = textString.split(" "); //* Splitt på mellomrom, får da en array med ord
+					
+					// console.log(replaceCharacters(words));
+					
+					
+					
+					var frequency = "";
+					
+					for (var i=0; i<words.length; i++){							//key = ord:, farge: +++
+						
+						
+						var word = words[i];								// Alle elementer i verdien er på en linje, hvert ord (nøkkel) har si
+						
+						if (	/\w/.test(	word	)	){
+
+							if(	obj	[ word] === undefined) {						// Veldig getto måte å bruke "if undefined" (Skal egentlig ikke brukes)
+							
+																				//	, men hasOwnProperty funket ikke
+								obj[word] = 0;
+								
+							}	
+							
+							obj[word]++;
+							
+							}
+					}
+	
+					
+					
+					
+					//**
+					
+					//*	Skriv ut frekvensen på de ulike ordene
+					
+					//*
+					
+					
+					
+					document.getElementById("lstFrequency").innerHTML = "";
+					
+					var frequency =	"";
+					
+					for (key in obj){
+						
+						var newSpan = document.createElement("span");
+						
+						newSpan.className = "colRed";
+						
+						newSpan.style.width =	obj[key]*10	 +	"px";
+						
+						
+						
+						var newElement = document.createElement("li");
+						
+						frequency = key + ":" + " " + obj[key] +  "\n";
+						
+						newElement.innerHTML = frequency;
+						
+						newElement.appendChild(newSpan);
+						
+						document.getElementById("lstFrequency").appendChild(newElement);
+						
+						
+					}
+					
+					
+					//document.getElementById("txtFrequency").innerHTML	= "Frekvens på ord i teksten" + "\n" + "\n" +	frequency;
+			
+			
+					//**
+					
+					//*	Finn det lengste ordet
+					
+					//*
+					
+										
+					var	maxKey = longestKeyInObject(obj);
+				
+					document.getElementById("txtTheLongest").innerHTML	=	"Det lengste ordet er" + " " + maxKey + " " + "med" +	" " +
+					maxKey.length+ " " + "bokstaver"; 
+			
+				
+				
+				//**
+				
+				//* Topp ti
+				
+				//*
+				
+				//* Bubble-sort algoritme
+				
+				//* H
+				
+			}
+			
+			</script>
+	
+			
+		</head>
+
+		<body>
+		
+			<header>
+				<h1>Obligatorisk innlevering 3</h1>
+			</header>
+		
+		<nav>
+				<ul>
+				
+					<li>	<a href =	"oppgave1.html">Oppgave1</a>	</li>
+					
+					<li>	<a href =	"oppgave2.html">Oppgave2</a>	</li>
+					
+					<li>	<a href =	"oppgave3.html">Oppgave3</a>	</li>
+					
+					<li>	<a href =	"oppgave4.html">Oppgave4</a>	</li>
+					
+					<li>	<a href =	"oppgave4alt.html">Oppgave4(alt)</a>	</li>
+					
+					<li>	<a href =	"oppgave5a.html">Oppgave5a/b</a>	</li>
+					
+					<li id = "activeLink">	<a href =	"oppgave5c.html">Oppgave5c</a>	</li>
+					
+					<li>	<a href =	"oppgave6a.html">Oppgave6a</a>	</li>
+					
+					<li>	<a href =	"oppgave7.html">Oppgave7</a>	</li>
+					
+					<li>	<a href =	"oppgave8.html">Oppgave8</a>	</li>
+					
+				
+				</ul>
+			
+			</nav>
+		
+			
+			<h2>Oppgave 5c</h2>
+			
+			<h3>Ordteller</h3>
+			<p>Skriv inn en tekst, finn deretter ut hvilke ord som er de vanligste og hvilket som er det lengste.</p>
+			
+			
+			<textarea id ="txtInput" cols="80" rows =	"10"  > </textarea>
+			
+			<p>
+			
+				<button id ="btnInitiate" 	type =	"button">Make it so!</button>
+				
+			</p>
+			
+			<h2>Statistikk</h2>
+			
+			<h3>Frekvens</h3>
+			<ul id ="lstFrequency"> </ul>
+			
+			<h4>Lengde på ord</h4>
+			<p id = "txtTheLongest"> </p>
+			
+			<h3>Topp 10</h3>
+			
+		</body>
+		
+	</html>

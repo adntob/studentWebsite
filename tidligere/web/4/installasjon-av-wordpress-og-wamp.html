@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+	<html lang = "nb">
+		<head>	
+			<title>Installasjon</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta charset="utf-8"/>
+			<script src="scripts/myscript.js"></script>  <!--Eksternt JavaScript for mobilmeny -->
+			
+			<link rel="icon" type="image/png" sizes="32x32" href="bilder/favicon-32x32.png">
+			
+			<link rel="stylesheet" type= "text/css" media =	"all" href="_style/stil.css"> 
+			<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+			<meta name	= "description" content="Dette er webinnleveringsnettstedet for oblig 4 webutvikling Ådne Tob. Dette omhandler installasjonen av WAMP og Wordpress." />
+		
+		</head>
+		
+		<body>
+
+		
+			<div id ="master-grid">
+			
+			<!--Navigation menu-computer -->
+				
+				<nav id ="bread-crumbs">
+					<ul>
+						<li><a href = "index.html">Hjem!</a></li>
+						<li>Installasjon</li>
+						
+					</ul>
+				
+				
+				</nav> 
+				
+				
+				
+				<nav id ="navigation-menu-computer">
+					<ul>
+						<li>
+							<a href ="index.html">                       <i class="fa fa-home" aria-hidden="true">&nbsp; </i>  Hjem! </a>
+						</li> 
+						<li><a id = "activeSite" href = "installasjon-av-wordpress-og-wamp.html">Installasjon av wamp og wordpress</a></li>
+						<li><a href = "tema-og-tilpasning.html">Temaer og tilpasning av disse</a></li>
+						<li><a href = "widgets-utvidelser.html">Widgets og utvidelser</a></li>
+						<li><a href = "innlegg-og-sider.html">Innlegg og sider</a></li>
+						<li><a href ="dynamiske-og-statiske-sider.html">Statiske forsider i wordpress</a></li>
+						<li><a href ="_sass/stil.scss">SCSS-fil</a></li>
+					</ul>
+
+				</nav>
+				
+				<!-- Mobile-menu -->
+				
+	
+				<header id = "mainHeader"><h1>	Ådnenes Makt  </h1>
+					<aside>
+						<p>
+							<a href = "#flexWrapperIndex">Hopp til hovedinnhold</a>
+						</p>
+						
+					</aside>	
+				</header>
+				
+				<nav id ="mobile-menu">
+				
+				<i id ="barButton" class="fa fa-bars fa-2x"  aria-hidden="true"></i>
+				
+					<ul	id ="drop-down-list">
+					
+							<li>
+								<a href ="index.html">                       <i class="fa fa-home" aria-hidden="true">&nbsp; </i>  Hjem! </a>
+							</li> 
+						<li><a href = "installasjon-av-wordpress-og-wamp.html">Installasjon av wamp og wordpress</a></li>
+						<li><a href = "tema-og-tilpasning.html">Temaer og tilpasning av disse</a></li>
+						<li><a href = "widgets-utvidelser.html">Widgets og utvidelser</a></li>
+						<li><a href = "innlegg-og-sider.html">Innlegg og sider</a></li>
+						<li><a href ="dynamiske-og-statiske-sider.html">Statiske forsider i wordpress</a></li>
+						<li><a href ="_sass/stil.scss">SCSS-fil</a></li>
+					</ul>						
+				</nav>
+				
+				<main id ="flexWrapperIndex" tabindex = "1">
+					<aside>
+						<h2>Meny</h2>
+						<ul>
+							<li><a>Installasjon av Wordpress og WAMP</a></li>
+							<li><a href="#info-word-press-wamp">Kort informasjon om hva WAMP og Word-press er</a></li>
+							<li><a href = "#installasjon-wamp">Installasjon av WAMP</a></li>
+							<li><a href = "#installasjon-wordpress">Installasjon av word-press og sette opp database</a></li>
+							<li><a href = "#Sikkerhetshull-i-word-press">Sikkerhetshull i Word-press</a></li>
+							<li><a href = "#eksterne-lenker">Eksterne lenker!</a></li>
+						</ul>
+					
+					</aside>
+				
+					<article id ="article-article">
+						<header >
+							<h2>Installasjon av wordpress og Wamp</h2>
+						</header>
+						
+						<h3 id ="info-word-press-wamp">Kort informasjon om hva WAMP og wordpress er</h3>
+						<p>
+							Definisjon:
+							<abbr title = "Windows Apache Mysql and PHP">WAMP </abbr> står for "Windows Apache MySQL and <abbr title = "PHP: Hypertext Processor">PHP </abbr>". Dette er en alt-i-ett-tjeneste for lokal servervirksomhet og inkluderer: en server (Apache), et dynamisk skripting-språk (PHP), en database (MySQL) og som kjører på et operativsystem (Windows). Macintosh og Linux har på sin side tilsvarende systemer i form av hhv. MAMP og LAMP.
+						</p>		
+						
+						<p>
+							Word-press på sin side er mer eller mindre en side for å styre innhold på en lettere måte, på Englandsk så kalles dette et CMS (Content Management System). Riktignok så startet wordpress som et blogg-system. Rundt 1/3 av alle sider på internett er idag word-press-sider.
+						</p>
+						
+							<h3 id ="installasjon-wamp">Installasjon av WAMP</h3>
+							
+							<a href ="bilder/word-press-nedlasting.png">
+								<img alt = "Nedlasting av word-press" src = "bilder/word-press-nedlasting.png" />
+							</a>
+						
+						<p>
+							Siden jeg har Windows som operativsystem, har jeg lastet ned WAMP.
+							Installasjonen av WAMP utføres ved å laste ned filen ifra. Denne prosedyren er rett fram, og jeg har derfor valgt å ikke beskrive dette i nærmere detalje.
+						</p>
+						
+							
+						<h3 id ="installasjon-wordpress">Installasjon av Word-press og å sette opp et nettsted</h3>
+						<p>
+							Word-press kan lastes ned som en Zip-fil, og trengs strengt talt ikke å installeres, bare flyttes over i "www"-mappen, som ligger inni WAMP sitt directory.
+						</p>
+							
+							
+							
+							<img alt= "Bilde av hvor WAMP ligger, samt hvor vi må legge wordpress" src ="bilder/wamp-mappe.png"/>
+						
+						<h4>Sette opp database</h4>
+							<p>Man begynner prosessen ved å sette opp en database ved å høyreklikke på WAMP-ikonet nederst på startskjermen.</p>
+							<a href ="bilder/ikon.png">
+								<img alt = "Ikonet til WAMP" src = "bilder/ikon.png" />
+							</a>
+							
+							<a  href ="bilder/php-myadmin.png">
+								<img alt = "bilde av innlogginsskjermen for php-myadmin i WAMP" src = "bilder/php-myadmin.png"/>
+							</a>
+							
+							<a href ="bilder/opprett-database.png">
+								<img alt = "bilde av å sette opp en WordPress-database" src ="bilder/opprett-database.png"/>
+							</a>
+							
+							<p> 
+								Deretter skriver man inn "localhost/wordpress/wp-admin/setup-config.php" i nettleseren man bruker. Gitt at man har gjort det riktig, vil bildet da se ut som dette.
+							</p>
+							
+								<a href ="bilder/start-installasjon.png">
+									<img alt = "Bilde for startmenyen for installasjonen av WordPress" src = "bilder/start-installasjon.png"/>
+								</a>
+							<p>
+								Videre, vil vi bli bedt om et brukernavn og få et kryptert passord.
+							</p>
+							
+							<a href =	"bilder/siste-steg-registrering.png">
+								<img alt =	"Siste steg i installasjonen for WordPress" src = "bilder/siste-steg-registrering.png"/>
+							</a>	
+						
+						<h4>Endelig skjermbilde</h4>
+						
+							<a href ="bilder/startskjerm-wordpress.png">
+								<img alt = "Startskjerm for det endelige wordpress-produktet" src ="bilder/startskjerm-wordpress.png"/>
+							</a>
+							
+							<h4 id ="Sikkerhetshull-i-word-press">Sikkerhetshull i Word-press</h4>
+							<p>
+								Word-press har blitt et ettertraktet mål for hackere grunnet svak (naiv) sikkerhet. Der finnes visse måter man kan helgardere seg imot dette, dog. dette må utføres på et tidlig tidspunkt. På det tidspunktet hvor jeg hadde installert Word-press visste jeg ikke om disse, og hadde allerede kommet for langt inn i prosessen. En endring av disse vil f.eks føre til at siden min hadde sluttet å fungere. Jeg har allikevel valgt å fortelle om hvordan man på best mulig måte kan helgardere seg, ettersom min installasjon avvek ifra "standard prosedyre".</p>
+							
+							<a href ="bilder/wp-config.png">
+								<img alt = "WP-config filen, filen som bør rettes opp om vi er opptatt av sikkerhet." src = "bilder/wp-config.png" />
+							</a>
+							
+							<p> Her er der en liste over punkter vi bør være obs på når vi setter opp vår bruker:</p>
+							
+							<ol>
+								<li>
+									Readme-filen inneholder en versjonsbeskrivelse og vil være et lett mål for hackere, både fordi absolutt alle Word-press installasjoner inneholder en slik, og fordi den inneholder kritisk data. Denne bør følgelig fjernes så kjapt som mulig
+								</li>
+								
+								<li>
+									Linje 66 i wp-config.php-filen bør endres til noe unikt, ettersom alle har samme wp-table
+								</li>
+								<li>
+									Brukernavn bør fjernes med en gang vi har lagd nettstedet, særlig hvis denne heter admin. Grunnen til dette er at denne vil være indeksert under ID 1. En ny bruker vil gi en annen indeks enn 1.
+								</li>
+							</ol>
+						
+							<h3 id ="eksterne-lenker">Eksterne Lenker!</h3>
+							<ul>
+								<li>
+									<a href ="http://www.wampserver.com/en/">WampServer sine hjemmesider</a>
+								</li>
+								
+								<li>
+									<a href = "https://wordpress.org/">Word-Press sine hjemmesider</a>
+								</li>
+							
+							</ul>
+							
+					</article>
+					
+					
+				</main>
+				
+				
+				<footer>
+					<p>
+						<i class="fa fa-copyright" aria-hidden="true"></i> 
+						Ådne Tobiesen
+					</p>
+					<p>
+						<a href ="https://www.facebook.com/smygen91"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i> </a>
+						<a href ="https://github.com/adntob"><i class="fa fa-github-square fa-3x" aria-hidden="true"></i></a>
+						<a href ="mailto:aadne.t@live.com"><i class="fa fa-envelope-square fa-3x" aria-hidden="true"></i> </a>
+						<a href ="https://www.linkedin.com/feed/"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+						
+					</p>
+				</footer>
+				
+			
+			</div>
+		</body>
+
+	</html>

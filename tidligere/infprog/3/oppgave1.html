@@ -1,0 +1,379 @@
+<!-- Ådne Tobiesen 04.09.17 -->
+ <!-- ctrl + f5 vil refreshe CSS-ark også-->
+
+<!DOCTYPE html>
+	<html>
+
+		<head>
+				<meta charset="utf-8" />
+				<title> Obligatorisk innlevering 3 - oppgave 1 </title>
+				<link rel= "stylesheet" type = "text/css" href =	"stylesheet/stilark.css">
+				<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	
+			<script>
+				
+				window.onload = oppstart;
+							
+				function oppstart() {
+					
+						/**
+						
+						* vektor med vilkårlige verdier
+						
+						*/
+								
+					var mengde = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+					
+						for (var j = 0; j<mengde.length; j++){
+							mengde[j] = (200*Math.random() - 100).toFixed(0); //* I intervallet (-100,100)
+						}
+						
+						
+						document.getElementById("printOutOfaHat").innerHTML = "[" + mengde + "]";
+					
+					
+					
+					
+				
+					
+						/**
+						
+						*	Lag lengdevariabel for array
+						
+						*/
+					
+					var lengde = mengde.length;
+					
+					
+					
+						/**
+						
+						*	Skriv ut arrayen forlengs
+						
+						*/
+					
+					
+		
+					
+					var utputtForlengs	=	"";
+					
+						for (var i	=	0; i	<	lengde; i++){ //Indeksering siste element=Lengde array-1
+						
+							utputtForlengs+=mengde[i] + "</br>";
+						}
+						
+						document.getElementById("utskriftForlengs").innerHTML	=	utputtForlengs;
+						
+						
+						/**
+						
+						 *	Skriv ut variablene baklengs
+						 
+						*/
+						
+						
+					var utputtBaklengs="";	
+					
+						for (var i = lengde-1; i>-1; i--){
+						
+							utputtBaklengs+=mengde[i] + "</br>"
+						
+						}
+						
+						document.getElementById("utskriftBaklengs").innerHTML = utputtBaklengs;
+						
+							
+						
+						/**	
+							*	Skriv ut annenhver av variablene,
+							
+							*	begynn indekseringen på andre element, altså 1
+						*/
+					
+					
+					var utputtAnnethvert	=	"";
+					
+						for	(var i=1; i<lengde; i+=2){
+						
+							utputtAnnethvert	+=	mengde[i] + "</br>";
+						
+						}
+					
+					/**
+					
+					 *	Skriv ut alle tall i arrayen som er mindre enn 10, vha. if-setning inni en for-løkke
+					 
+					*/
+					
+					document.getElementById("utskriftAnnethvert").innerHTML =utputtAnnethvert;
+					
+					
+					var utputtMindreenn	=	"";
+					
+						for (var i=0; i<lengde; i++){
+						
+							if(mengde[i]<10){
+							
+								utputtMindreenn+=mengde[i] + "</br>";
+							}
+						}
+						
+					document.getElementById("utskriftMindreenn").innerHTML = utputtMindreenn;
+					
+					
+					
+					/**
+
+					*	Skriv ut alle partall i arrayen, dette gjøres vha en if-setning inni en for-løkke
+					
+					*/
+					var utputtPartall = "";
+					
+						for (var i=0; i<lengde; i++){
+						
+							if(mengde[i]%2===0){
+							
+								utputtPartall+=mengde[i] + "</br>";
+							}
+						
+						}
+					
+					document.getElementById("utskriftPartall").innerHTML =  utputtPartall;
+					
+	
+	
+					/**
+					
+					*	Summer alle tallene i arrayen;
+					
+					*/
+					
+					var summert=0;
+					
+						for(var i =0; i<lengde; i++){
+						
+							summert+=parseInt(mengde[i]);
+							
+						}
+					document.getElementById("utskriftSummert").innerHTML = "Summen av alle tallene i arrayen er " + summert;
+					
+					
+					/**
+					
+					*	Finn mengde elementer i arrayen (Dette er enkelt: det er eksakt det samme som lengden)
+					
+					*/
+					
+					
+					
+					document.getElementById("utskriftAntall").innerHTML = "Antall elementer i arrayen er " + lengde;
+					
+					
+					/**
+					
+					* Gjennomsnittlig tallverdi
+					
+					*/
+					
+					
+					var gjennomsnitt = summert/mengde.length;
+					
+					gjennomsnitt = gjennomsnitt.toFixed(2)
+					
+					document.getElementById("utskriftGjennomsnitt").innerHTML ="Gjennomsnittet av alle tallverdier i arrayen er" + " " + gjennomsnitt;
+					
+					
+					
+					
+					/**
+					
+					* Summen av alle partall
+					
+					*/
+					
+					
+					var summertPartall=0;
+					
+					for (var i=0; i<lengde-1;i++){
+					
+						if(mengde[i]%2 ===0){
+						
+							summertPartall+=parseInt(mengde[i]);
+						}	
+					}
+					
+					document.getElementById("utskriftPartallsummert").innerHTML = summertPartall;
+					
+									
+						
+					
+					
+					
+					/**
+					
+					*	Finn minste element
+					
+					*/
+					var minst = mengde[0];
+					
+					var minstIndeks = 0;
+					
+					for	(var i=0; i<lengde-1; i++){
+					
+						if(mengde[i]<minst){
+						
+							minst = mengde[i];
+							minstIndeks = i;
+						
+						}
+					
+					document.getElementById("utskriftMinst").innerHTML = "Det minste tallet i indeksen er tall nr " + minstIndeks + 
+					
+					" dvs. tallet med en verdi på " + minst + " " + "(Tellt på nerde-måten)";
+					
+					}
+					
+					
+					
+					/**
+					
+					*	Finn ut om en liste inneholder en tilfeldig verdi
+					
+					*/
+					
+					
+					
+					var tall = (200*Math.random() - 100).toFixed(0);
+					
+					var teller	=	0;
+					
+					var utsagn = "";
+					
+					var forekomst = "";
+						
+					var condition = false;
+					
+					for (i=0;i<=mengde.length; i++){
+					
+						if (mengde[i] === tall)
+						{
+							condition = true;
+							
+							teller++;
+						}
+							
+						}
+						
+						if (condition === false) {
+							utsagn = "ikke";
+							
+							
+							
+						}
+						
+						if (teller>0){
+							forekomst = "antall forekomster av denne er" + " " + teller;
+						}
+						
+			
+					document.getElementById("utskriftBestemtverdi").innerHTML	=	"Tallet" + " " + tall + " finnes" 
+					
+					+ " " + utsagn +" i mengden," + " " + forekomst;
+					
+					
+					}
+					
+				</script>
+				
+				
+		</head>
+			
+			
+
+		<body>
+			<header>
+				<h1>Obligatorisk innlevering 3</h1>
+			
+			</header>
+		
+		
+		
+			<nav>
+				<ul>
+					<li id = "activeLink">	<a href =	"oppgave1.html">Oppgave1</a>	</li>
+					<li>	<a href =	"oppgave2.html">Oppgave2</a>	</li>
+					<li>	<a href =	"oppgave3.html">Oppgave3</a>	</li>
+					<li>	<a href =	"oppgave4.html">Oppgave4</a>	</li>
+					<li>	<a href =	"oppgave4alt.html">Oppgave4(alt)</a>	</li>
+					<li>	<a href =	"oppgave5a.html">Oppgave5a/b</a>	</li>
+					<li>	<a href =	"oppgave5c.html">Oppgave5c</a>	</li>
+					<li>	<a href =	"oppgave6a.html">Oppgave6a</a>	</li>
+					<li>	<a href =	"oppgave7.html">Oppgave7</a>	</li>
+					<li>	<a href =	"oppgave8.html">Oppgave8</a>	</li>
+					
+				
+				</ul>
+			
+			</nav>
+			
+			<h2>Tilfeldige verdier som er trukket ifra intet</h2>
+			<p id ="printOutOfaHat"> [10, 36, 22, 17, 7, 69, 98]</p>
+			
+			<h2>Forlengs</h2>
+			
+			<p id =	"utskriftForlengs"></p>
+			
+			
+			<h2>Baklengs</h2>
+			
+			<p id ="utskriftBaklengs"></p>
+			
+			
+			<h2>Annethvert</h2>
+			
+			<p id ="utskriftAnnethvert"></p>
+			
+			
+			<h2>Skriv ut alle tall som er mindre enn 10</h2>
+			
+			<p id ="utskriftMindreenn"></p>
+			
+			
+			<h2>Skriv ut alle partall i arrayen</h2>
+			
+			<p id="utskriftPartall"></p>
+			
+			
+			<h2>Summer alle tall i arrayen</h2>
+			
+			<p id ="utskriftSummert"></p>
+			
+			
+			<h2>Antall elementer i arrayen</h2>
+			
+			<p id ="utskriftAntall"></p>
+			
+			
+			<h2>Gjennomsnittlig tallverdi</h2>
+			
+			<p id	=	"utskriftGjennomsnitt"></p>
+			
+			
+			<h2>Summen av alle partall i arrayen</h2>
+			
+			<p id ="utskriftPartallsummert"></p>
+			
+			
+			<h2>Skriv ut det minste tallet i arrayen</h2>
+			
+			<p id ="utskriftMinst"></p>
+			
+			
+			<h2>Sjekk lista for en tilfeldig verdi)</h2>
+			
+			<p id ="utskriftBestemtverdi"></p>
+			
+			
+		</body>
+
+	</html>

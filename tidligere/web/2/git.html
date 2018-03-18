@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+	<HTML>
+		<head>
+			<title>Git og GitHub</title>
+			
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+			<link rel="stylesheet" type= "text/css" media =	"all" href="stilark/stilark.css"> 
+			<meta charset= "utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+			
+			
+		</head>
+		<body>
+		
+		
+			<div id ="wrapper">
+			
+				<span id ="breadCrumbs">
+				
+				<a href="index.html">Hjem</a>><a href =	"projects.html">Innleveringer</a>></span><span id ="currentSite">Git/GitHub</span>
+				
+				
+				<header>
+					<i class="fa fa-rebel fa-3x" aria-hidden="true"></i>
+					<h1><a href ="index.html">Webutvikling</a></h1>
+				
+				</header>
+				
+			
+				
+				
+				
+				<nav id ="navigationMenu">
+					<ul>
+						<li><a  href	="index.html">Hjem</a></li>			<!--Active link settes lik den siden vi er på nå -->
+						<li><a id ="active" href	= "projects.html">Innleveringer</a></li>
+						<li><a 	href = "links.html">Lenker</a></li>
+						
+					
+					</ul>
+				
+				</nav>
+				
+					<main>
+							
+						
+							<nav id=	"sideNav"> <h2>Git/Github</h2>
+								<ul>
+									<li><a href="#git">Git </a></li>
+									<li><a href="#github">Git Hub </a></li>
+									<li><a href="#how">Hvordan bruke GitHub </a></li>
+									<li><a href="#more">Les mer! </a></li>
+									
+									
+								</ul>
+							</nav>
+						
+							<article>
+								<h1>Git/GitHub</h1>
+								
+								<a href = "Octocat.png"><img src="Octocat.png" id ="gitlogo"  alt="GitHub sin logo" /></a>
+								
+								<h2 id ="git">Git</h2>
+								
+								<p>
+									Git er et kildehistoriesystem som lar deg føre kontroll over tidligere revisjoner av dokumenter. Git er programmet, mens Github er samarbeidssystemet. Git er på ingen måte et tekstredigeringsprogram, dette skjer i en annen editor.
+									Man kan bruke Git uten å bruke Git Hub-en.
+								</p>
+							</article>
+							
+							<article>
+							
+								<h2 id ="github"> Git Hub</h2>
+								<p>
+									Git Hub er selve sky-tjenesten. For hver gang du endrer noe, vil GitHub bli notifisert. GitHub lar deg også tilbakestille og angre på endringer. Filene er med andre ord trygge. GitHub er kompatibelt med mange filtyper, og man kan bruke den mest simple utgaven helt gratis.
+									Det området hvor GitHub briljerer er på prosjekter hvor man gjerne jobber flere sammen på et dokument. 
+									Her vil man kunne se hva 
+									ulike folk har gjort, og kan også enkelt flette sammen endringer som kolliderer. 
+									
+									<a href= "bilder/gitkrakenhistorie.png"><img id = "gitkraken" src = "bilder/gitkrakenhistorie.png" alt ="gitkraken endringer som er i konflikt"/></a>
+									
+								</p>
+							
+							</article>
+						
+							<article>
+							
+								<h2 id="how"> Hvordan bruke GitHub</h2>
+								
+								<a href="bilder/githubhomepage.png"><img id = "githubpic" src = "bilder/githubhomepage.png" alt ="GitHub-hjemmeside, forside"></a>
+								<p>
+									Man begynner ved å lage en bruker på GitHub.com, deretter lager man et repository på "open repo" i programmet.
+									
+									
+									For å bruke Git Hub kan man enten bruke kommandolinja, eller bruke et grafisk brukergrensesnitt (GUI).
+									Jeg har god peiling på kommandolinja ifra tidligere år med DOS, men har i denne omgang valgt å bruke GitKraken.
+								</p>
+							
+									<p> 
+									
+									For å endre en fil, vil man måtte "stage" den såkalte filen.</p>
+									<a href="bilder/unstaged.png"><img id ="gitstaged" src= "bilder/unstaged.png" alt="Vindu i GitKraken, unstaged"/></a>
+									
+									<a href= "bilder/staged.png"><img id = "githubstaged" src = "bilder/staged.png" alt="Vindu i GitKraken staged"/></a>
+
+									<p>
+									Dette etterfølges av en commitment. 
+									</p>
+									
+									<a href= "bilder/commit.png"><img id ="githubcommit" src = "bilder/commit.png" alt = "Commitment i GitKraken" /></a>
+									
+									<p>
+										Bildet nedenfor viser hvordan commit-historikken vil se ut etter at vi er ferdige med denne sekvensen.
+									</p>
+									
+									<a href= "bilder/commited.png"><img id = "githubcommited" src = "bilder/commited.png" alt = "Commit-historie i GitKraken"/></a>
+									
+									<p>
+										Alle endringer har nå kun skjedd lokalt på vår pc
+										For å få noe til å skje i vårt faktiske repository, må vi trykke "push" (Laste filen opp på filserveren). Antonymet til Push er pull som da er å få filen tilbake ifra slik den var på serveren.
+									
+									
+									
+									</p>
+									
+									<a href= "bilder/pushed.png"><img  id = "githubpushed" src = "bilder/pushed.png" alt = "Push i GitKraken"/></a>
+									
+									<p>
+										Dersom den andre partneren vår ønsker filene, vil denne måtte trykke "clone", som da er å lage en klone av repositoriet.
+										Dette gjøres enkelt ved clone og URL. 
+										Alle prosjekter på GitHub er i prinsippet offentlig, derimot kan man betale en liten avgift for å få dette privat.
+										Derimot, for at denne skal kunne endre siden vil det kreves brukerrettigheter. En uavhengig tredjepart kan dermed ikke endre vårt innhold.
+									</p>
+							
+							</article>
+							
+							<article>
+								<h2 id ="more"> Les mer!</h2>
+								<ul>
+									<li>
+										<a href= "https://github.com/adntob/webutvikling2017/">Mitt repository</a>
+									</li>
+									
+									<li>
+										<a href="https://github.com/">GitHub sin side</a>
+									</li>
+									
+									<li>
+										<a href="https://www.gitkraken.com/">GitKraken</a>
+									</li>
+								</ul>
+							
+							
+							
+							</article>
+						
+					</main>	
+						
+					
+				
+				
+				
+				
+				
+				
+					
+			
+				<footer>
+						<p>
+						
+							<a href =	"about.html">Les mer om denne siden! <i class="fa fa-external-link" aria-hidden="true"></i></a>
+						</p>
+						
+						
+						<p id=	"contact">
+							Ådne Tobiesen 	
+							<a href="https://www.linkedin.com/in/%C3%A5dne-tobiesen-0b44b5a8/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+							<a href ="mailto:aadne.t@live.com"><i class="fa fa-envelope" aria-hidden="true"></i> </a>
+							<a href="http://www.facebook.com/smygen91" ><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href = "https://github.com/adntob/webutvikling2017"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+						</p>
+						
+				</footer>
+				
+			</div>
+			
+			
+			
+		 
+		
+		
+		</body>
+
+
+	</HTML>

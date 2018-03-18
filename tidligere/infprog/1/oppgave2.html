@@ -1,0 +1,122 @@
+
+<!-- Ådne Tobiesen 04.09.17 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8" />
+		<title> Oppgave 2 - Obligatorisk innlevering 1 </title> 
+		
+		<script>
+	
+		window.onload = oppstart;  //*La skriptet kjøre ved oppstart
+		
+		//* Det er mulighet for å utføre denne ved hjelp av If/Else-statement, men siden vi ikke har lært om dette ennå så... ;)
+		
+		function oppstart(){
+		// påstand #1
+			document.getElementById("btnEn").onclick = trykkEn;
+			document.getElementById("btnTo").onclick = trykkTo;
+			
+		// Påstand #2
+			document.getElementById("btnTre").onclick = trykkTre;
+			document.getElementById("btnFire").onclick = trykkFire;
+		
+		//Påstand #3
+			document.getElementById("btnFem").onclick = trykkFem;
+			document.getElementById("btnSeks").onclick = trykkSeks;
+		
+		}
+		
+		// Fleip/fakta #1
+		
+		function trykkEn() {
+			alert("Feil svar!");
+		}
+	
+	
+		function trykkTo() {
+		
+			alert("Rett svar!");
+		
+		}
+		
+		// Fleip/fakta #2
+		
+		function trykkTre() {
+			alert("Rett svar!");
+		}
+		
+		function trykkFire() {
+			alert("Feil svar");
+		}
+		
+	
+		//Fleip/fakta #3
+		
+		function trykkFem() {
+			alert("Feil");
+		}
+	
+		function trykkSeks() {
+			alert("Riktig!");
+		
+
+}
+	
+	</script>
+		
+		
+		
+		
+		
+</head>
+	
+	
+
+<body>
+	<h1> Oppgave 2</h1>
+
+		<p>Knapper o.l </p>
+		
+		<!-- Påstand # 1-->
+		
+		<p> Severus Slur 	&#40; Eng: Severus Snape	&#41; er ond, og ønsker å drepe Harry Potter </p>
+		
+			<button id = "btnEn">
+				Sann
+			</button>
+			
+			
+			<button id = "btnTo">
+				Usann
+			</button>
+		
+		<!-- Påstand # 2 -->
+		
+		
+		<p>De har 17ende Mai i Japan </p>
+		
+			<button id="btnTre">
+				Sann
+			</button> 
+			
+			<button id = "btnFire">
+				Usann
+			</button>
+			
+		<!--Påstand #3 -->
+		
+		<p>Hovedstaden i Brasil heter Rio de Janeiro </p>
+		
+			<button id="btnFem">
+				Sann
+			</button> 
+		
+			<button id="btnSeks">
+				Usann
+			</button>
+</body>
+
+</html>

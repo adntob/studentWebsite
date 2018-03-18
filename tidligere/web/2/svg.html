@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+	<HTML>
+		<head>
+			<title>SVG</title>
+			
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+			<link rel="stylesheet" type= "text/css" media =	"all" href="stilark/stilark.css"> 
+			<meta charset= "utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+			
+			
+		</head>
+		<body>
+		
+		
+			<div id ="wrapper">
+			
+				<span id ="breadCrumbs">
+				
+				<a href="index.html">Hjem</a>><a href =	"about.html">Innleveringer</a>></span><span id ="currentSite">SVG</span>
+				
+				
+				<header>
+					<i class="fa fa-rebel fa-3x" aria-hidden="true"></i>
+					<h1><a href ="index.html">Webutvikling</a></h1>
+				
+				</header>
+				
+			
+				
+				
+				
+				<nav id ="navigationMenu">
+					<ul>
+						<li><a href	="index.html">Hjem</a></li>			<!--Active link settes lik den siden vi er på nå -->
+						<li><a  id =	"active"   href	= "projects.html">Innleveringer</a></li>
+						<li><a 	href = "links.html">Lenker</a></li>
+						
+					
+					</ul>
+				
+				</nav>
+				
+					<main>
+							<article>
+								<h2 id ="def">Definisjon av SVG og kort om det</h2>
+								<p>SVG (Scaleable vector graphics) er i likhet med HTML en type XML, og kan derfor redigeres i en text-editor. SVG-filer oppfører seg likt som bilder når det gjelder importeringsprosessen inn i HTML, ved at man angir en img-tag med en src.
+								SVG ble en standard i HTML5
+								
+								</p>
+					
+								<h2 id =	"how">Hvordan lage SVG</h2>
+								<p>For å lage en SVG må vi lagre en filtype som en .SVG-fil. Dette gjøres på samme måte som ved HTML og CSS, i en teksteditor. I denne fila må vi deretter lage en SVG-tagg som vi
+								må fylles med x/y-koordinater, høyde, bredde, farge for elementet, samt bredde/høyde på selve viewporten. Man kan si at det minner mye om vektorregning i tankegangen, hvilket muligens forklarer hvorfor det heter vector graphics.
+								En SVG-fil er i utgangspunktet blank. SVG minner på grunn av alle disse faktorene derfor mye om HTML-elementet Canvas som kan redigeres i JavaScript.
+								Det vi derimot må huske på er at der ikke er alle browsere som støtter HTML5 og SVG, derfor må vi i SVG-fila angi "xmlns = "http://www.w3.org/2000/svg" version = "1.1">"
+								
+								</p>
+								
+								<h3 id ="geo">Vektorer og geometri</h3>
+								
+								<p>Det aller simpleste eksempelet vi kan lage er en firkant, som vist i bilde. </p>
+								<figure class =	"vecPics"> <img src = "bilder/bilde.svg" alt	=	"rød firkant"> </figure>.
+								<p> Dette lager vi ved å angi en høyde på elementet, og å skrive en rect-tagg, 
+								og å angi en  height="80", width="80" fill="red" inni taggen. Et mer komplekst eksempel kan lages ved å tegne en sirkel, og ennå en firkant inni sirkelen. Dette gjøres på en 
+								tilsvarende måte for den mindre firkanten bare at man angir x="" og y="" i tilegg, og for sirkelen ved at man angir radius i stedet for bredde/høyde. </p>
+								<figure class ="vecPics"><img src="bilder/bildeto.svg"  alt	=	"flere former i en figur"/></figure>
+								<p>Om vi føler oss ekstra kreative, kan vi lage dette bildet. Radiusen til de fire hvite sirklene er like, mens x/y er holdt konstant og endret i tur og orden.</p> 
+										<figure class =	"vecPics"><img src= "bilder/bildetre.svg"  alt= "flere former i en figur"/></figure>
+										
+								
+							</article>
+						
+							<nav id=	"sideNav"> <h2>SVG</h2>
+								<ul>
+									<li><a href="#def">Definisjon av SVG og bruksområder </a></li>
+									<li><a href="#how">Hvordan lage SVG </a></li>
+									<li><a href="#geo">Vektorer og geometri </a></li>
+									<li><a href="#pros">Bruksområder </a></li>
+									<li><a href="#cons">Ulemper </a></li>
+									<li><a href="#examples">Eksempel på bruk av generator </a></li>
+									
+									
+								</ul>
+							</nav>
+						
+							<article>
+								<h2 id ="pros">Bruksområder</h2>
+								<p>SVG gir oss mye finere bilder enn til vanlig, hvilket er grunnen til at det kalles scaleable. Dette betyr noe så enkelt som størrelsen på bildet kan endres uten at det går på bekostning av kvaliteten. 
+								For eksempel vil bildestørrelse variere ifra skjerm til skjerm. Antonym til dette er raster-images som får dårligere kvalitet ved en forstørrelse.</p>
+							</article>
+							<article>
+							
+								<h2 id ="cons"> Ulemper</h2>
+								<p>
+									En ulempe er at det er plasskrevende, ettersom det er lagret som tekst og ikke bits. SVG bør derfor begrenses til mindre komplekse bilder som er begrenset til få farger. </p>
+									
+									<h2 id ="examples">Eksempel på bruk av generator</h2>
+									<p> Noen bilder vil være for komplekse til at man kan designe det for hånd, derfor bør man bruke en generator. Et eksempel på et slikt bilde er vist nedenfor. </p>
+									<figure class = "vecPics"><img src = "bilder/elderwand.svg" alt = "elder wand ifra Harry Potter"/></figure>
+								
+							
+							
+							</article>
+						
+						
+					</main>	
+						
+					
+				
+				
+				
+					
+			
+				<footer>
+						<p>
+						
+							<a href =	"about.html">Les mer om denne siden! <i class="fa fa-external-link" aria-hidden="true"></i></a>
+						</p>
+						
+						
+						<p id=	"contact">
+							Ådne Tobiesen 	
+							<a href="https://www.linkedin.com/in/%C3%A5dne-tobiesen-0b44b5a8/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+							<a href ="mailto:aadne.t@live.com"><i class="fa fa-envelope" aria-hidden="true"></i> </a>
+							<a href="http://www.facebook.com/smygen91" ><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href = "https://github.com/adntob/webutvikling2017"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+						</p>
+						
+				</footer>
+				
+			</div>
+			
+			
+			
+		 
+		
+		
+		</body>
+
+
+	</HTML>

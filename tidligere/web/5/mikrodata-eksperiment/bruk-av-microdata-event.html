@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Min hjemmeside! </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta charset= "utf-8">
+		<meta name="author" content="Ådne Tobiesen" />
+		<meta name ="keywords" content = "Webutvikling, Javascript, Høgskolen i Østfold, Webutvikling, Årskurs Informasjonsteknologi"/>
+		<meta name	= "description" content="Dette er nettstedet for årskurs informasjonsteknologi 2017-2018. " />
+		
+	</head>
+	
+	<body>
+		
+		<h1>Praktisk eksempel på bruk av microdata på arrangement</h1>
+		<article itemscope = "itemscope" itemtype = "http://schema.org/sportsEvent">
+			<h1><span itemprop = "name">Halloweenkampen</span>: <span itemprop ="hometeam">Oilers</span> vs.
+			
+			<span itemprop  = "awayteam">Lørenskog</span>  </h1>
+			
+			<time datetime = "2017-11-04T16:00" itemprop = "startDate">
+				16:00
+			</time>
+             <div class="event-venue" itemprop="location" itemscope 	itemtype="http://schema.org/Place">
+				<span itemprop="name">DNB-arena</span>
+				<div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				  <span itemprop="streetAddress">Ishockeyveien 1</span><br>
+				  <span itemprop="addressLocality">Hafrsfjord</span>,
+				  <span itemprop="addressRegion">Stavanger</span>
+				  <span itemprop="postalCode">4021</span>
+				</div>
+			  </div>
+						
+						
+					
+		</article>
+		</article>
+		
+		
+	
+		
+		<!--Plagiert ifra IMDB -->
+		<a href="../index.html">Tilbake!</a>
+	</body>
+
+
+</html>

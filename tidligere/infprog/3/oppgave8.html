@@ -1,0 +1,223 @@
+
+ <!-- ctrl + f5 vil refreshe CSS-ark også-->
+<!DOCTYPE html>
+	<html>
+
+		<head>
+			<meta charset="utf-8" />  <!--Dette er for å få til skandinaviske språk -->
+			<title> Oppgave 8</title>
+			<link rel= "stylesheet" type = "text/css" href =	"stylesheet/stilark.css">
+			<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+			
+			<script src="functions/storst.js"></script>
+			
+			<script	src = "functions/summert.js"></script>
+			
+			<script	src = "functions/average.js"></script>
+			
+			<script src= "functions/find.js"></script>
+			
+			<script>
+			
+			
+				window.onload = main;
+				
+				function main() {
+					
+					
+					
+					document.getElementById("btnStorst").onclick = storastverdi;
+					document.getElementById("btnSum").onclick = summertVerdi;
+					document.getElementById("btnFind").onclick = finnTall;
+					
+					
+				}
+				
+				
+				
+					//**
+				
+				//*Størsteverdi for en array, bruk funksjonen
+				
+				//
+				
+				
+				
+				
+				function storastverdi(tekst) {
+				
+					var tekst = document.getElementById("userInputString").value;
+					
+					document.getElementById("printMax").innerHTML = "Den største verdien i arrayen er" + " " +
+
+					storst(tekst) + "</br>";
+					
+							// Veldig dårlig navn, i prinsippet bør der være større forskjeller på denne funksjonen, og den som benyttes.
+					
+				}
+			
+
+
+
+
+			
+				//**
+				
+				//* Summer alle tallene i en array vha. summasjonsfunksjonen.
+				
+				//
+
+
+				
+				function summertVerdi(tekst){
+					
+					var sum = "";
+					
+					var tekst = document.getElementById("userInputString").value;
+					
+					var sum = summert(tekst);
+					
+					document.getElementById("printSum").innerHTML = "Summen av alle tallene i arrayn er" + " " +
+
+					sum + "</br>";
+					
+					
+					var lengde = parseInt(tekst.length);
+
+
+
+				
+				//**
+						
+				//* Bruk gjennomsnittsfunksjonen (Som egentlig bare er waste...... vi kunne like gjerne ha fortsatt å bruke sum-funksjonen og delt)
+						
+				//
+
+
+				
+					var gjennomsnitt = average(sum, lengde);
+					
+					document.getElementById("printAverage").innerHTML = "Gjennomsnittet av alle tallene i arrayen er lik" + " " + gjennomsnitt +
+					
+					" " + "</br>"
+					
+					
+					
+				}
+				
+
+
+				
+				
+				//**
+				
+				//*	Finn tall
+				
+				//
+				
+
+
+				
+				function finnTall(string, tall){
+				
+					var string = document.getElementById("userInputString").value;
+					
+					var findEmpty = "";
+					
+					var textArray =	string.split(",");
+					
+					var tall = document.getElementById("userInputNumber").value;
+					
+					var condition = find(textArray, tall);
+					
+					
+					(condition ===true ? findEmpty	= "Tallet" + " " + tall + "finnes i arrayen" + "</br>":
+
+					findEmpty = "Tallet" + " " + tall + " " +  "finnes ikke i arrayen" + "</br>");
+					
+					document.getElementById("printFind").innerHTML = findEmpty;
+				}
+				
+				
+				
+				
+			</script>
+	
+			
+		</head>
+
+		<body>
+		
+			<header>
+				<h1>Obligatorisk innlevering 3</h1>
+			
+			</header>
+		
+			<nav>
+				<ul>
+					<li>	<a href =	"oppgave1.html">Oppgave1</a>	</li>
+					<li>	<a href =	"oppgave2.html">Oppgave2</a>	</li>
+					<li>	<a href =	"oppgave3.html">Oppgave3</a>	</li>
+					<li>	<a href =	"oppgave4.html">Oppgave4</a>	</li>
+					<li>	<a href =	"oppgave4alt.html">Oppgave4(alt)</a></li>
+					<li>	<a href =	"oppgave5a.html">Oppgave5a/b</a>	</li>
+					<li>	<a href =	"oppgave5c.html">Oppgave5c</a>	</li>
+					<li>	<a href =	"oppgave6a.html">Oppgave6a</a>	</li>
+					<li>	<a href =	"oppgave7.html">Oppgave7</a>	</li>
+					<li id = "activeLink">	<a href =	"oppgave8.html">Oppgave8</a>	</li>
+					
+				
+				</ul>
+			
+			</nav>
+		
+		
+			
+			<h1>Oppgave 8</h1>
+			
+			<h2>Testing av funksjoner</h2>
+			
+			
+			
+			<p>Skriv inn en array på formen: 1,2,3,4,5,6 i første tekstfelt</p>
+			
+			
+			<input type ="text" id ="userInputString"/>
+			
+			
+			<p>Trykk på knappen for å finne ut sum og gjennomsnitt</p>
+			
+			
+			<button id ="btnSum" type = "button">Summer/gjennomsnitt</button>
+			
+			
+			<p>Trykk for å finne ut hvilket tall som er størst.</p>
+			
+			<p>
+				<button id =	"btnStorst">Finn storste tall!</button>
+			</p>
+			
+			
+			<p>Fyll ut den andre rubrikken med et tall, og trykk på knappen for å finne ut om dette er inneholdt i arrayen</p>
+			
+			<p><input type = "number" id =	"userInputNumber"/></p>
+			
+			
+			<button type ="button" id= "btnFind">Engage!</button>
+			
+			
+			<p id =	"printSum"></p>
+			
+			
+			<p id =	"printMax"></p>
+			
+			
+			<p id ="printAverage">	</p>
+			
+			
+			<p id =	"printFind">	</p>
+			
+			
+		</body>
+
+	</html>

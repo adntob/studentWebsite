@@ -1,0 +1,73 @@
+<!-- Ådne Tobiesen 06.09.17 -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8" />
+		<title> Tittel </title>
+		<!-- <script src="myScript.js"></script> -->
+		
+		<script>
+	
+		window.onload = oppstart; //* Etter at siden er ferdig lastet, så...
+		
+		function oppstart() {
+		
+		document.getElementById("btnBeregn").onclick = trykkEt
+		}
+		
+		function trykkEt() {
+		var masse = document.getElementById("txtMasse").value.replace("," , "."); //* Erstatt komma med punktum
+		var valgVariabel = document.getElementById("lstPlanet").value;
+		var tyngdekraft = 9.81*valgVariabel;
+		
+		var vekt = (masse*tyngdekraft);
+		
+		
+		
+		if (valgVariabel === "1.00"){				/* Siden det ser temmelig idiotisk ut med "veier 1.00 ganger av hva du hadde veid på jorden", leker vi oss litt med if/else
+		Slik at den skriver ut det du veier, og at 	der ikke er noen forskjell	*/
+		document.getElementById("svar").innerHTML = "På jorden så veier du nøyaktig det du alltid har veid, dvs." + vekt.toFixed(2) + " " + "Newton";}
+		
+		else  {
+		document.getElementById("svar").innerHTML = "På denne planeten så veier du " + vekt.toFixed(2) + " Newton, eller " + valgVariabel +  
+		" ganger av det du ellers ville veid på jorden";
+		}
+		
+		
+		
+		}
+		
+		
+		
+	
+	
+	</script>
+		
+		
+</head>
+	
+
+<body>
+	<h1> Hvor mye veier du på de ulike planetene i vårt solsystem?</h1>
+	
+	<p>Masse: <input type = "text" id = "txtMasse" placeholder ="Skriv inn din masse, i kg"> </p>
+	<select id="lstPlanet">
+		<option id = "mercury" value ="0.37">Merkur </option>
+		<option id = "venus" value = "0.9">Venus</option>
+		<option id = "earth" value = "1.00"> Jorda </option>
+		<option id = "mars" value = "0.38"> Mars </option>
+		<option id = "jupiter" value = "2.65"> Jupiter </option>
+		<option id = "saturn" value = "1.13"> Saturn </option>
+		<option id = "uranus" value = "1.09"> Uranus </option>
+		<option id = "neptune" value = "1.43"> Neptun </option>
+	</select>
+	
+	<button id="btnBeregn">Beregn</button>
+	
+	<p id="svar"></p>
+</body>
+
+</html>

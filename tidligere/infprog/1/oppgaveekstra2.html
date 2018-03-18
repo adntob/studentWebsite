@@ -1,0 +1,70 @@
+<!-- Ådne Tobiesen 04.09.17 -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8" />
+		<title> Tittel </title>
+		<!-- <script src="myScript.js"></script> -->
+		
+		<style> 
+			#lerret {
+				border-style: solid;
+			}
+		</style>
+		
+		<script>
+		
+	
+		window.onload = oppstart; //* Etter at siden er ferdig lastet, så
+		
+		function oppstart() {
+		
+		setInterval(tegn, 10);
+		}
+		
+		function tegn() {
+		
+		ctx = document.getElementById("lerret").getContext("2d");
+		
+		console.log("tall");
+		
+
+		var tall = Math.random()*300; 
+		
+		ctx.beginPath();
+		ctx.moveTo(0,tall);
+		ctx.globalAlpha = 0.1;
+		
+		ctx.lineTo(200, tall);
+		ctx.strokeStyle= "red";
+		ctx.stroke();
+		
+		if (tall >=100){
+		tall=0;
+		}
+	
+		}
+		
+		
+		//* Tekst "", kommandoer ikke hermetegn
+		
+		
+		
+	
+	
+	</script>
+		
+</head>
+	
+
+<body>
+	<h1> Dette er en tittel </h1>
+	
+	<canvas  id= "lerret" width = "200" height = "200"> Swag </canvas>
+	
+</body>
+
+</html>

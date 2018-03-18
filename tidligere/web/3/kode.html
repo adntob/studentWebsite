@@ -1,0 +1,262 @@
+
+ <!-- ctrl + f5 vil refreshe CSS-ark også-->
+<!DOCTYPE html>
+	<html lang="nb">
+
+		<head>
+			<meta charset="utf-8" />
+			<title> Kode! </title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="stylesheet" type= "text/css" media =	"all" href="_style/stilark.css">
+			<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			
+			<script src="scripts/myscript.js"></script> 
+			
+			<!--An external JavaScript will give us less of a hassle, and a cleaner code overall -->
+		</head>
+			
+			
+
+		<body>
+			
+			<div id ="master-grid">
+			<div id ="bread-crumbs"><a href="index.html">Hjem</a>>Kode</div>
+				
+				<header id = "main-header">	
+					<h1>Kode!</h1>
+				</header>
+				
+				<nav id =	"top-menu">
+					<ul>
+						<li>
+							<a href	=	"index.html">
+							<i class	=	"fa fa-home" aria-hidden="true">&nbsp; </i>
+						Hjem</a></li>
+						<li><a href	=	"kom-i-gang.html">Kom i gang</a></li>
+						<li><span id =	"active-directory"><a href="#">Kode</a></span></li>
+						<li><a href	=	"innhold.html">Innhold</a></li>
+						<li><a href	=	"analyse.html">Analyse</a></li>
+						<li><a href	=	"sass.html">Sass</a></li>
+						<li><a href="stylesheets/stilark.css">Stilark</a></li>
+					</ul>
+				
+				
+				</nav>
+				
+				
+				<nav id ="mobile-menu">
+				<i class="fa fa-bars fa-2x" id ="barButton" aria-hidden="true"></i>
+								
+					<ul	id ="drop-down-list">
+						<li><a href="index.html">Hjem</a></li>
+						<li><a href="kom-i-gang.html">Kom i gang</a></li>
+						<li><a href="kode.html">Kode</a></li>
+						<li><a href="innhold.html">Innhold</a></li>
+						<li><a href="analyse.html">Analyse</a></li>
+						<li><a href="sass.html">Sass</a></li>
+						<li><a href="stylesheets/stilark.css">Stilark</a></li>
+					</ul>
+							
+				</nav>
+				
+				
+				
+				
+				<aside id ="side-bar">
+				
+					<header id ="sideHeader">
+						<h2>
+							Eksterne resursser om <abbr title = "Search Engine Optimization">SEO </abbr> 
+						
+						</h2>
+					</header>
+
+				
+						<section id = "sideLinks">
+						<h3>Lenker</h3>
+						
+							
+							<ul>
+								<li>
+									<a target="_blank" href="https://moz.com/beginners-guide-to-seo">The beginners guide to SEO
+									<i class="fa fa-external-link" aria-hidden="true"></i>
+									</a>
+								</li>
+								
+								<li>
+									<a href = "http://www.seowebpageanalyzer.com/"> SEO-webpage analyzer		<i class="fa fa-external-link" aria-hidden="true"></i>			
+								
+									</a>
+								</li>
+								
+								
+								<li>
+									<a target="_blank" href= "https://searchengineland.com/guide/what-is-seo">Search Engine Land - What is SEO?
+										<i class="fa fa-external-link" aria-hidden="true"></i>
+									</a>
+								</li>
+								
+								<li>
+									<a target="_blank" href	=	"	https://static.googleusercontent.com/media/www.google.com/en//webmasters/docs/search-engine-optimization-starter-guide.pdf">
+										Search Engine Optimization - a starter guide <i class="fa fa-external-link" aria-hidden="true"></i>
+									</a>
+								</li>
+							</ul>
+							
+							
+							
+						</section>
+						
+						
+						
+						<section id ="sideVideo">
+						
+						
+						
+							<h3>Youtubeklipp</h3>
+							
+							<iframe id ="seoClip" title = "SEO for noobs, hentet ifra https://www.youtube.com/embed/5bKM_rphj3E"
+								src="https://www.youtube.com/embed/5bKM_rphj3E">
+								
+							</iframe>
+							
+							<p id ="clipAccess">
+								For å se et klipp som omhandler <abbr title="Search Engine Optimization">SEO </abbr>, trykk <a target="_blank" href = "https://www.youtube.com/embed/5bKM_rphj3E"> her<i class="fa fa-external-link" aria-hidden="true"></i> </a>. Dette heter "SEO for noobs", er hentet ifra Youtube, og tar for seg det mest grunnleggende om SEO. 
+									
+								
+							</p>
+							
+						</section>
+						
+						<section id ="sideHit">
+						
+						
+							<h3>Søketreff</h3>
+							
+							<a target="_blank" href	=	"https://tinyurl.com/y7rgz8kf">Søketreff hos Google om søkemotoroptimalisering.
+								<i class="fa fa-external-link" aria-hidden="true"></i>
+							
+							</a>
+							
+						</section>
+					
+					
+				</aside>
+				
+				<main id =	"main-content">
+						<section id ="flexion">  <!-- More like flex-ion.. badum-tsh -->
+						
+							
+							
+							
+							<article>
+								<header>
+									<h2> Kode</h2>
+								</header>
+								
+								
+								
+								<h3>Korrekt bruk av HTML/CSS og semantiske tagger, samt generell god struktur</h3>
+								<p>
+									Som nevnt tidligere vil en maskin lese informasjonen på et nettsted forskjellig ifra et menneske
+									Disse er begrenset til å tolke den rene HTML-fila ut ifra de tagger som er der. 
+									Dette fordi innholdet settes inn i en kontekst. Vi kan hjelpe søkemotorene ytterligere ved å putte inn eventuelle tagger for å 	hjelpe dennne.
+									Bare det å bruke HTML-basisen korrekt slik som å ikke bruke tabeller til annet enn å presentere data, å presentere innholdet i 	en logisk rekkefølge (Til tross for at dette enkelt kan endres i flexbox og grid) og å bruke overskriftene korrekt
+									vil være effektive midler.
+									Til tross for at de fungerer på eksakt samme måte som div vil
+									det å bruke de semantiske taggene ifra HTML5 korrekt (footer, header, nav etc.) også bedre SEO-en til siden.
+								</p>
+								
+								<h3>Nøkkelord spesifikt for kundesegmentet</h3>
+								<p>En side som bruker nøkkelordene sine om igjen, og på en naturlig måte vil rangere høyere enn en side som ikke bruker nøkkelordene. Dersom man har en spillside som tar for seg gamle spillmaskiner, vil denne rangere høyere for Google om man logisk nok bruker nøkkelord knyttet til gammeldagse spillmaskiner.</p>
+								
+								<h3>Tags spesifikt til SEO</h3>
+									
+								<p>
+									<code>&lt;time&gt;</code> brukes for å vise tidspunktet på et arrangement. La oss si at vi ønsker å skrive om noe som skjer på
+									juleaften, dette kan tolkes forskjellig av både nordmenn, Engelskmenn
+									samt østlig ortodokse kristne. I vårt tilfelle bør vi skrive <code>&lt;time datetime = "2017-12-24"&gt;Juleaften&lt;/time&gt; </code>
+									for at tiden skal kunne bli lesbar av evt. botter og indekseres under 24.12.17. Den siste rettelsen av dette dokumentet er forøvrig  <time datetime="2017-10-17">17.10.17</time>									
+								</p>
+									
+								<h4>Meta</h4>
+								<p>
+									En av de viktigste taggene, men som Google ikke bruker som innflytelse på søkemotor-indeksering heter meta. 
+									Denne vil være viktig fordi en søkemotor vil bruke denne som ingress på landingsstripa på Google.
+									Det er også viktig at vi ikke resirkulerer dette for hver bidige side vi lager, da forsvinner nemlig litt av poenget med meta. 
+								</p>
+									
+								<h4>Code</h4>
+								<p>
+									Taggen <code>&lt;code&gt;</code> benyttes for at maskinen skal tolke koden som kodet tekst ved et eventuelt søk.
+								</p>
+							
+								<h4>Abbreviation</h4>
+									
+								<p>
+									
+									Dersom vi har en forkortelse - gjerne en som brukes oftere enn det vanlige navnet -, og vi ønsker å fange inn de som evt. måtte søke på den fulle tittelen, kan vi bruke abbr. Dette brukes helst i tilfeller som NSB (Norges Sentralbane),NRK (Norsk RikskringKasting), VG (Verdens Gang) etc.
+									For eksempel ELO kan vi innkapsle med 
+									
+									<code>&lt;abbr title	= "Electric Light Orchestra"&gt; ELO &lt;/abbr&gt; </code>. Dette vil da fange vår side inn i evt. søk	 på Electric Light Orchestra, og ikke andre forkortelser som går på ELO. 
+									&lt; code &gt; &lt; p &gt;
+									
+								</p>
+									
+								
+								<h3>Robots og XML-sitemap</h3>
+								
+								<h4>Robots.txt</h4>
+								<p>
+									Filer vi ikke ønsker at søkemotoren skal indeksere legger vi inn i en fil som heter "robots.txt". Det er viktig at vi ikke legger sikkerhetskritisk informasjon, og kun informasjon vi ikke vil at skal indekseres i denne fila. Dette har sin sammenheng med at hackere lett kan finne den.
+									Elkjop sitt hemmelig julesalg som de allerede planlegger i September vil f.eks egne seg dårlig i robots.txt. 
+								</p>
+								
+								<h4>XML sitemap</h4>
+	
+								<p>
+									Inversen til robots.txt er XML-sitemap, og viser hvilke deler av nettsiden vi ønsker at søkemotoren skal indeksere. Dette vil uansett skje, men det vil skje mye fortere ved en egen xml-sitemap.
+									Dette lagres som en egen xml-fil..
+									Dette går på hvor ofte vi oppdaterer og planlegger å oppdatere siden, samt hvor viktig siden er for oss. Vi kan enten skrive filen på egenhånd eller bruke et program (Google Webmasters tool er et ypperlig verktøy for dette).  I disse dokumentene har jeg verken lagd XML-sitemap eller robots.txt.
+								</p>
+							</article>
+								
+							<article>
+							
+								<h4>Kilder</h4>
+								<ul>
+									<li>
+										<a target="_blank" href = "https://moz.com/beginners-guide-to-seo">
+											Beginners guide to SEO - <abbr title ="Mozilla developers network">MDN </abbr>
+											
+											<i class="fa fa-external-link" aria-hidden="true"></i>
+										</a>
+									</li>
+										
+									<li>
+										Webutvikling av Tom Heine Nätt m.flr
+										</li>
+								</ul>
+								
+							</article>
+							
+						</section>
+				</main>
+				
+				<footer>
+				
+					<p id = "someParagraph">© Ådne Tobiesen <a href= "aadne.t@live.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+					<a href = "https://www.google.no/maps/place/Mordor+Druk/@52.1787293,20.99628,17z/data=!3m1!4b1!4m5!3m4!1s0x47193326cf0063c9:0xebb60829d683158e!8m2!3d52.178726!4d20.998474"><i class="fa fa-map-pin" aria-hidden="true"></i></a>
+					
+					</p>
+					
+				</footer>
+				
+				
+			</div>
+			
+		</body>
+
+	</html>

@@ -1,0 +1,68 @@
+<!-- Ådne Tobiesen 04.09.17 -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8" />
+		<title> Oppgave  5 - Obligatorisk innlevering 1 </title>
+		<!-- <script src="myScript.js"></script> -->
+		<script>
+	
+		
+	
+		window.onload = oppstart; //* Etter at siden er ferdig lastet
+		
+		function oppstart(
+		) {
+			var ctx = document.getElementById("myCanvas").getContext("2d");
+		
+			ctx.beginPath();
+			ctx.moveTo(150, 0); //* Begynn 150 til høyre, 0 nedover
+			ctx.lineTo(0,150); //* Tegn en linje til 0 på x-aksen og 150 ned.
+			
+			ctx.moveTo(300,150); //* Begynn 300 til høyre, 150 ned
+			ctx.lineTo(150,0);  //* Tegn en linje 150 til venstre, og 0 på x aksen (dvs. opp, relativt til denne posisjonen)
+			ctx.stroke();
+			
+			
+			ctx.rect(0,150,300,150) //* (tegn et rektangel med start på (0,150) og med bredde 300px og 150px høyt)
+			ctx.fillStyle = "lightBlue";
+			ctx.fill();
+			
+			
+			ctx.rect(250, 230, 30, 100) //* Tegn døren til huset
+			
+			ctx.rect(20, 200,60,50); //* Tegn vindu
+			
+			ctx.moveTo(20,225); //*Tegn to halveringslinjer på det minste rektangelet
+			ctx.lineTo(80,225);
+			
+			ctx.moveTo(50, 200);
+			ctx.lineTo(50, 250)
+			
+			ctx.stroke(); //*Sett i gang sekvensen for hele huset
+		
+		}
+		
+		
+		
+		
+	
+	
+	</script>
+		
+</head>
+	
+
+<body>
+	<h1> Oppgave  5 - Obligatorisk innlevering 1 </h1>
+	
+	
+	<canvas id = "myCanvas" width = "300" height = "300" style="border:1px solid #d3d3d3"> Your browser does not support HTML5  </canvas>
+	
+	
+</body>
+
+</html>

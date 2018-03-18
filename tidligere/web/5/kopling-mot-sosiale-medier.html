@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Kopling mot sosiale medier! </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type= "text/css" href="_style/minstil.css">
+		<link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta charset= "utf-8">
+		<meta name="author" content="Ådne Tobiesen" />
+		<meta name ="keywords" content = "Webutvikling, Javascript, Høgskolen i Østfold, Webutvikling, Årskurs Informasjonsteknologi"/>
+		<meta name	= "description" content="Dette er nettstedet for årskurs informasjonsteknologi 2017-2018. " />
+		<script src ="script/myscript.js"></script>
+		
+	</head>
+	
+	<body>
+		
+		<div id="masterGrid">
+			
+				
+			
+				<header id ="main-header">
+					<h1>Webutvikling 5</h1>
+					<nav id ="navigation-menu-computer">
+						
+						<ul>
+							<li><a  href="index.html"> Hjem </a> </li>
+							<li><a  href="sammenheng-i-mellom-seo-og-mye-annet.html">Oppgave2</a></li>
+							<li><a  href="eksperiment-med-microdata.html">Oppgave3</a></li>
+							<li><a href="eksterne-kilder-som-kan-bruke-microdata.html">Oppgave4</a></li>
+							<li><a id ="active-dir" href="kopling-mot-sosiale-medier.html">Oppgave5</a></li>
+							<li><a href="analyse-av-arngren.html">Oppgave6</a></li>
+							
+						</ul>
+					</nav>
+				</header>
+				
+				<nav id ="mobile-menu">
+				
+				<i id ="barButton" class="fa fa-bars fa-2x"  aria-hidden="true"></i>
+				
+					<ul	id ="drop-down-list">
+						<li><a href="index.html"><i class="fa fa-home fa-2x" aria-hidden="true">&nbsp; </i> Hjem</a></li>
+						<li><a href="sammenheng-i-mellom-seo-og-mye-annet.html">Oppgave2</a></li>
+						<li><a href="eksperiment-med-microdata.html">Oppgave3</a></li>
+						<li><a href="eksterne-kilder-som-kan-bruke-microdata.html">Oppgave4</a></li>
+						<li><a href="kopling-mot-sosiale-medier.html">Oppgave5</a></li>
+						<li><a href="analyse-av-arngren.html">Oppgave6</a></li>
+					</ul>					
+				</nav>
+				
+				<main id ="main-content">
+					
+						<article class ="article-article">
+							<h2> Oppgave 5</h2>
+							<h3>Kopling mot sosiale medier</h3>	
+							<p>
+								Hjemmesidene kan også koples imot Facebook og Twitter. Tjenestene disse benytter kalles hhv. for open-graph og Twitter-cards.
+								Disse gjør landingssiden på Facebook og Twitter mer tilpasset, og ikke landingssiden på søkemotoren. 
+								Uten disse vil FB og Twitter per default ta det første bildet, og den første teksten vi har.
+								Det er også mulig å kople sidene mot Google+, men dette skjer automatisk ved bruk av microdata.
+							</p>
+							
+							<h4>Facebook (Open Graph)</h4>
+							
+								<figure>
+									<img src ="bilder/open-graph-validering.png" alt ="Et bilde ifra validatoren til Facebook" />
+									<img src = "bilder/open-graph-facebook.png" alt ="Bildet av hvordan innlegget vil se ut for brukere av facebook" />
+									<figcaption> Spillartikkel i validator, og hvordan den vil se ut på Facebook</figcaption>
+								</figure>
+							<h4>Twitter-cards</h4>
+							
+								
+							<figure>
+								<img src ="bilder/twitter-card.png" alt ="Bilde ifra hvordan artikkelen vil se ut etter at den har blitt lagt ut på twitter" />
+								<img src ="bilder/twitter-card-frontpage.png" alt = "bilde ifra hvordan  selve forsiden vil se ut etter at den har blitt lagt ut på twitter"/>
+								<figcaption>
+									Dette er bilder ifra hvordan sidene vil se ut etter at de er lagt ut på twitter
+								</figcaption>
+							</figure>
+							<h4>Kodesnutter i head-taggen</h4>
+							
+							<p>
+								Selve kodingen er enklere og mindre omfattende på sosialemedia enn på microdataen som brukes for søkemotoren. Grunnen til dette er at vi kun trenger å fylle ut noen få felter i meta-taggene i head. Nedenfor har jeg inkludert to bilder for hvordan selve koden ser ut etter at dette har blit gjort på både forsiden og på den ene artikkelen.
+							</p>	
+								<figure>
+									<a href ="bilder/kode-for-artikkel-open-graph-og-twitter-card.png">
+										<img src ="bilder/kode-for-artikkel-open-graph-og-twitter-card.png" alt ="Kode for artikkelsiden"/>
+									</a>	
+									<a href ="bilder/kode-frontpage.png">
+										<img src ="bilder/kode-frontpage.png" alt ="Kode for forsiden"/>
+									</a>
+										<figcaption>Bilder ifra koden til hjemmesiden og til forsiden  </figcaption>
+								</figure>
+						</article>
+						
+				</main>
+				
+				<footer>
+					<p>
+						<a href ="#main-content">
+							Ta meg tilbake til toppen
+						</a>
+					</p>
+					
+					<p><i class="fa fa-copyright" aria-hidden="true"></i>  Ådne Tobiesen	<i class="fa fa-map-marker fa-2x" aria-hidden="true"></i> B.R.A Veien 8a, Halden
+					</p>
+					 
+					<p>
+						<a href ="https://www.facebook.com/smygen91"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i> </a>
+						<a href ="https://github.com/adntob"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
+						<a href ="mailto:aadne.t@live.com"><i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i> </a>
+						<a href ="https://www.linkedin.com/feed/"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+					
+					</p>
+					
+						
+					
+					
+				</footer>
+			
+			</div>
+		
+	</body>
+
+
+</html>
